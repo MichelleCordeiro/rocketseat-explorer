@@ -21,8 +21,14 @@ This project was developed using the following technologies:
 </p>
 <br>
 
-### 💻 Project
-You can see the code in my [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage_02/proj_01_html_css/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/tree/main/stage_02/proj_01_html_css/).
+### 👩‍💻 Project 01
+Introduction to HTML and CSS.
+You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02/project-01-html-css/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02/project-01-html-css/).
+<br>
+
+### 🏆 Challenge
+Fix bugs.
+You can see the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02/project-01-html-css-desafio).
 <br>
 
 ### 📝 License
