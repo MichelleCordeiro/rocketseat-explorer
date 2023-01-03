@@ -7,7 +7,7 @@
 
 <!--About session-->
 <p align="center">
-  <img alt="rocketpay" src="https://i.postimg.cc/QCDHVjwv/proj-02.png" width="700">
+  <img alt="rocketpay" src="https://i.postimg.cc/brVwzQvg/proj-extra2.png" width="600">
 </p>
 <br>
 
@@ -21,15 +21,9 @@ This project was developed using the following technologies:
 </p>
 <br>
 
-### 👩‍💻 Project 02
-More concepts of HTML and CSS
-You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-02/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02-html-css/project-02/).
-<br><br>
-
-### 🏆 Challenge
-✪ Fix bugs: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-02-bugs-desafio-iniciante)
-✪ HTML semantics e A11y: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-02-a11y-desafio-intermediario)
-✪ Develop website from figma layout: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-2extra-desafio-avancado/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02-html-css/project-2extra-desafio-avancado/).
+### 🏆 Challenge - Project Extra
+Develop website from figma layout.
+You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-2extra-desafio-avancado/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02-html-css/project-2extra-desafio-avancado/).
 <br><br>
 
 ### 📝 License
