@@ -7,7 +7,7 @@
 
 <!--About session-->
 <p align="center">
-  <img alt="rocketpay" src="https://i.postimg.cc/3JCY6vrm/proj-01.png" width="700">
+  <img alt="rocketpay" src="https://i.postimg.cc/cJfDNHc3/proj-02.png" width="600">
 </p>
 <br>
 
@@ -21,15 +21,10 @@ This project was developed using the following technologies:
 </p>
 <br>
 
-### 👩‍💻 Project 01
-Introduction to HTML and CSS.
-You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02/project-01-html-css/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02/project-01-html-css/).
+### 🏆 Challenge - Project 02
+Develop website from figma layout.
+You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02/project-02-html-css-desafio/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02/project-02-html-css-desafio/).
 <br><br>
-
-### 🏆 Challenge
-Fix bugs.
-You can see the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02/project-01-html-css-desafio).
-<br><br>	
 
 ### 📝 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
