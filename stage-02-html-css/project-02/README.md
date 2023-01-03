@@ -28,6 +28,8 @@ You can see the project code in this [repository](https://github.com/MichelleCor
 
 ### 🏆 Challenge
 ✪ Fix bugs: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-02-bugs-desafio-iniciante)
+✪ HTML semantics e A11y: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-02-a11y-desafio-intermediario)
+
 <br><br>
 
 ### 📝 License
