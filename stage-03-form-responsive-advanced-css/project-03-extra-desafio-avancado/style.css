@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #BFD7E4;
+
+  margin-bottom: 120px;
+}
+
+body::before {
+  content: "";
+
+  background: #293241;
+  width: 100%;
+  min-height: 465px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+  
+}
+
+header {
+  margin-top: 107px;
+
+  text-align: center;
+  color: #FFF;
+}
+
+h1, legend, button {
+  font-family: 'Staatliches', cursive;
+}
+
+header h1 {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+header img {
+  margin: 48px 0 32px 0;
+}
+
+.form-header {
+  min-height: 133px;
+  background: #F67669;
+  border-radius: 20px 20px 0 0;
+}
+
+legend {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.form-header legend {
+  padding: 50px 0;
+
+  text-align: center;
+  color: #FFFFFF;
+}
+
+form {
+  background: #FFFFFF;  
+  padding: 32px 64px 0 64px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper .fieldset-names {
+  width: 100%;
+
+  display: flex;
+  gap: 22px;
+}
+
+.fieldset-names .name, .last {
+  width: 50%;
+}
+
+.fieldset-wrapper legend {
+  color: #253B51;
+  text-align: center;
+  border-bottom: 1px solid #E6E6F0;
+  
+  margin: 32px 0;
+  padding-bottom: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4E4958;
+
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span{
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
+}
+
+.input-wrapper label span:hover {
+  color: #8f8e92;
+}
+
+.input-wrapper input, select, textarea {
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  
+  padding: 15px;
+}
+
+.input-wrapper input, select {
+  height: 56px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper select {
+  width: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input-wrapper #input-checkbox  {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper #input-checkbox input {
+  cursor: pointer;
+  margin: 0 8px 0 0;
+}
+
+/* .input-wrapper #input-checkbox:checked {
+  background: pink;
+} */
+
+.input-wrapper #input-checkbox label {
+  margin: 0;
+}
+
+.fieldset-agenda {
+  display: flex;
+  gap: 10px;
+}
+
+.fieldset-agenda .date {
+  width: 40%;
+  margin-right: 10px;
+}
+
+.fieldset-agenda .horario {
+  width: 25%;
+}
+
+.fieldset-agenda input {
+  cursor: pointer;
+}
+
+#event-date:required:invalid::-webkit-datetime-edit,
+#event-begin:required:invalid::-webkit-datetime-edit,
+#event-end:required:invalid::-webkit-datetime-edit {
+  opacity: 0;
+}
+
+#event-date:focus::-webkit-datetime-edit,
+#event-begin:focus::-webkit-datetime-edit,
+#event-end:focus::-webkit-datetime-edit {
+  opacity: 1;
+}
+
+#btn-salvar {
+  background: #FFF;  
+  border-radius: 0 0 20px 20px;
+
+  padding: 0 64px;
+}
+
+button {
+  width: 100%;
+  background: #F67669;
+
+  color: #FFF;
+  font-size: 20px;
+  line-height: 26px;
+
+  border: none;
+  border-radius: 8px;
+  
+  margin: 45px 0 65px 0;
+  padding: 13px 0;
+
+}

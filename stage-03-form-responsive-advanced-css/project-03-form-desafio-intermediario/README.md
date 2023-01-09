@@ -25,7 +25,7 @@ This project was developed using the following technologies:
 
 <h3> 🏆 Challenge - Project Extra </h3>
 
-Develop website from figma layout: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-1extra-desafio-intermediario/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-1extra-desafio-intermediario/).
+Develop form from figma layout: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-form-desafio-intermediario/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-form-desafio-intermediario/).
 <br><br>
 
 
