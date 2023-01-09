@@ -22,7 +22,7 @@ body::before {
 }
 
 .page {
-  width: 1084px;
+  width: 750px;
   margin: 0 auto;
   margin-top: 140px;
 }
@@ -47,10 +47,6 @@ header h1 {
 header p {
   font-size: 20px;
   line-height: 30px;
-}
-
-form, footer {
-  width: 750px;
 }
 
 form {
