@@ -30,10 +30,14 @@
           <div class="fieldset-names">
             <div class="input-wrapper name">
               <label for="event-name">Nome</label>
-              <input type="text" id="event-name">
+              <input 
+                type="text" 
+                id="event-name"
+                required
+              >
             </div>
 
-            <div class="input-wrapper last">
+            <div class="input-wrapper last-name">
               <label for="event-sobrenome">Sobrenome</label>
               <input type="text" id="event-sobrenome">
             </div>
@@ -41,7 +45,11 @@
 
           <div class="input-wrapper">
             <label for="event-email">E-mail <span>(digite um email válido)</span></label>
-            <input type="email" id="event-email">
+            <input 
+              type="email" 
+              id="event-email"
+              required
+            >
           </div>
         </div>
       </fieldset>
@@ -50,27 +58,48 @@
         <div class="fieldset-wrapper">
           <legend>Informações do mentor</legend>
 
-          <div class="input-wrapper">
-            <label for="event-mentor">Selecione quem foi o seu mentor</label>
-            <select name="mentor" id="event-mentor">
-              <option value="Selecione" selected ></option>
-              <option value="Diego">Diego</option>
-              <option value="Mayk">Mayk</option>
-              <option value="Rodrigo">Rodrigo</option>
-              <option value="Jake">Jake</option>
-            </select>
+          <div class="fieldset-mentor">
+            <div class="input-wrapper input-select">
+              <label for="event-mentor">Selecione quem foi o seu mentor</label>
+
+              <select 
+                name="mentor" 
+                id="event-mentor"
+                required="true"
+              >
+                <option label="" selected ></option>
+                <option label="Diego">Diego</option>
+                <option label="Mayk">Mayk</option>
+                <option label="Rodrigo">Rodrigo</option>
+                <option label="Jake">Jake</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper input-range">
+              <label for="event-range">Avalie seu mentor</label>
+  
+              <div class="only-range">
+                5
+                <input type="range" id="event-range" min="5" max="10" value="8" step="1">
+                10
+              </div>
+            </div>
           </div>
+          
 
           <div class="input-wrapper">
             <label for="event-feedback">Feedback sobre o mentor</label>
-            <textarea id="event-feedback" cols="30" rows="10"></textarea>
+            <textarea 
+              id="event-feedback" 
+              cols="30" 
+              rows="10"
+              required
+            ></textarea>
           </div>
 
-          <div class="input-wrapper">
-            <div id="input-checkbox">
-              <input type="checkbox" id="event-checkbox">
-              <label for="event-feedback">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
-            </div>
+          <div id="checkbox-wrapper">
+            <input type="checkbox" id="event-checkbox">
+            <label for="event-checkbox">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
           </div>
         </div>
       </fieldset>
@@ -112,7 +141,7 @@
     </form>
 
     <div id="btn-salvar">
-      <button form="my-form" type="button">Salvar</button>
+      <button form="my-form" type="submit">Salvar</button>
     </div>
   </div>
 </body>

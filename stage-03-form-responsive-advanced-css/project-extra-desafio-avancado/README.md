@@ -7,9 +7,9 @@
 
 <!--About session-->
 <p align="center">
-  <img alt="rocketpay" src="https://i.postimg.cc/rm5sZzLQ/proj-03-cut-transp.png" width="900">
+  <img alt="rocketpay" src="https://i.postimg.cc/KvM6sLDk/proj-03-extra.png" width="600">
 </p>
-<br>
+<br><br>
 
 <h3> 🚀 Technologies </h3>
 
@@ -22,17 +22,10 @@ This project was developed using the following technologies:
 </p>
 <br>
 
-<h3> 👩‍💻 Project 03 </h3>
 
-Forms, validation and customizations. <br>
-You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/projeto-03/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/projeto-03/).
-<br><br>
+<h3> 🏆 Challenge - Project Extra </h3>
 
-
-<h3> 🏆 Challenges </h3>
-
-✪ Challenge intermediary: develop form from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-03-form-desafio-intermediario/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-03-form-desafio-intermediario/) <br>
-✪ Challenge advanced: develop form from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/)<br>.
+Develop form from figma layout: the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/).
 <br><br>
 
 
