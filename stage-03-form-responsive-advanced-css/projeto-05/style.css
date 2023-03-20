@@ -16,20 +16,28 @@
   --ff-primary: 'Epilogue', sans-serif;
    /*font-size */
   --fs-body: 1.6rem;
-  --fs-heading:4rem;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem);
 }
 
 body {
-  width: 33rem;
-  margin: 0 auto;
-
   background-color: var(--bg-dark);
   color: var(--text-white);
   
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   text-align: center;
+}
 
+.page {
+  max-width: clamp(33rem, 20rem + 80vw, 117rem);
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+header {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: topdown 700ms;
 }
 
 header p {
@@ -44,7 +52,7 @@ header p {
 
 header h1 {
   font-weight: 800;
-  font-size: 4.0rem;
+  font-size: var(--fs-heading);
   line-height: 4.8rem;
 
   margin-bottom: 8rem;
@@ -53,26 +61,41 @@ header h1 {
 main {
   display: grid;
   gap: 3.2rem;
-
-  padding-bottom: 10rem;
+  margin-bottom: 10rem;
+  
+  /* animation: downtop 700ms 350ms backwards;   */
 }
 
 .card {
   position: relative;
 }
 
+.card:nth-child(2n+1) {
+  animation: leftright 700ms;
+}
+
+.card:nth-child(2n) {
+  animation: rightleft 700ms;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .card img {
-  width: 32.9rem;
   height: 41.6rem;
   object-fit: cover;
   border-radius: 6px;
+  filter: brightness(0.8);
 
   transition: all 200ms;
 }
 
 .card img:hover {
-  transform: scale(1.1);
-  opacity: 0.4;
+  transform: scale(1.06);
+  /* opacity: 0.4; */
+  filter: brightness(1);
 }
 
 .card h2 {
@@ -80,14 +103,13 @@ main {
   left: 2.8rem;
   bottom: 5.2rem;
 
-  font-size: var(--fs-heading);
+  font-size: var(--fs-heading-sm);
   font-weight: 800;
-  line-height: 4.8rem;
   text-transform: uppercase;
 
   display: flex;
   flex-direction: column;
-  gap: 2.3rem;
+  gap: 2.8rem;
 }
 
 .card h2 span {
@@ -98,30 +120,12 @@ main {
   
   font-size: var(--fs-body);
   font-weight: 400;
-  line-height: 3.2rem;
   
   width: fit-content;
   height: 3.8rem;
 
   display: inline-flex;
   align-items: center;
-}
-
-header {
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  animation: topdown 700ms;
-}
-
-/* main {
-  animation: downtop 700ms 350ms backwards;
-} */
-
-.card:nth-child(2n+1) {
-  animation: leftright 700ms;
-}
-
-.card:nth-child(2n) {
-  animation: rightleft 700ms;
 }
 
 @keyframes topdown {
@@ -165,11 +169,49 @@ header {
   0% {
     opacity: 0;
     transform: translateX(50px)
-
   }
   
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+
+@media (min-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-template-areas: "A B B"
+                        "C C D"
+                        "E F F";
+  }
+  
+  .card:nth-child(1) {
+    grid-area: A;
+  }
+
+  .card:nth-child(2) {
+    grid-area: B;
+  }
+
+  .card:nth-child(3) {
+    grid-area: C;
+  }
+
+  .card:nth-child(4) {
+    grid-area: D;
+  }
+
+  .card:nth-child(5) {
+    grid-area: E;
+  }
+
+  .card:nth-child(6) {
+    grid-area: F;
   }
 }
