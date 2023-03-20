@@ -10,8 +10,7 @@
 
 
 <p align="center">
-  <img alt="rocketpay" src="https://i.postimg.cc/cLYhJpLC/projeto-05.gif" width="900">
-  
+  <img alt="Projeto 5" src="./projeto-05.gif" width="900">
 </p>
 <br>
 
@@ -38,16 +37,17 @@ This project was developed using the following technologies:
  - grid layout
 
 <br>
+
 You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/projeto-05/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/projeto-05/).
 <br><br>
 
-
-<!-- <h3> 🏆 Challenges </h3>
+<!--
+<h3> 🏆 Challenges </h3>
 
 ✪ Challenge intermediary: develop form from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-03-form-desafio-intermediario/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-03-form-desafio-intermediario/) <br>
 ✪ Challenge advanced: develop form from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/)<br>.
-<br><br> -->
-
+<br><br>
+-->
 
 <h3> 📝 License </h3>
 
