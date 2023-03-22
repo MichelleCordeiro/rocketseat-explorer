@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-style: 62.5%;
+  --ff-p: 'Palanquin', sans-serif;
+  --ff-titles: 'Staatliches', cursive;
+  --fs-title: clamp(3rem, 0.5rem + 10vw, 4rem);
+  --fs-p-tag: clamp(1.5rem, 0.3rem + 4vw, 2rem);
+
+  --hue: 233;
+  --bg-body: hsl(var(--hue), 100%, 97%);
+  --bg-header: hsl(calc(var(--hue) - 15), 17%, 62%);
+  --bg-title: hsl(calc(var(--hue) + 42), 18%, 79%);
+  --font-title: hsl(calc(var(--hue) - var(--hue)), 0%, 100%);
+  --font-p: hsl(calc(var(--hue) + 41), 84%, 12%);
+  --bg-tags: hsl(calc(var(--hue) + 79), 91%, 96%);
+  --font-tags: hsl(calc(var(--hue) - 1), 17%, 35%);
+
+}
+
+body {
+  background: var(--bg-body);
+  text-align: center;
+}
+
+.page {
+  max-width: clamp(38.4rem, 20rem + 80vw ,117rem);
+  
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: var(--bg-header);
+  height: clamp(25rem, 20rem + 20vw ,28rem);
+}
+
+header img {
+  width: clamp(1rem, 7rem + 30vw ,18.7rem);
+  height: auto;
+  margin-block: 3.2rem;
+}
+
+h1, h2 {
+  font-family: var(--ff-titles);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h1 {
+  background: var(--bg-title);
+  color: var(--font-title);
+
+  font-size: var(--fs-title);
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  padding: 0.8rem;
+}
+
+main {
+  margin: 0 auto;
+  margin-inline: clamp(3.2rem, 0.5rem + 1vw, 15rem);
+}
+
+p {
+  color: var(--font-p);
+  font-family: var(--ff-p);
+  font-size: var(--fs-p-tag);
+  font-weight: 400;
+  line-height: 3rem;
+  
+  margin: 3em 0 4.5rem;
+}
+
+#cards {
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  gap: 3.2rem;
+  
+  margin-bottom: 6rem;
+}
+
+.card  {
+  position: relative;
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 2rem;
+
+  animation: downtop 0.5s;
+  filter: brightness(0.9);
+}
+
+.card img:hover {
+  filter: brightness(1.2);
+
+}
+
+.card h2 {
+  color: var(--font-tags);
+  font-size: var(--fs-p-tag);
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  transition: all 200ms;
+}
+
+.card h2 span {
+  background: var(--bg-tags);
+
+  border-radius: 2rem;
+  padding-inline: 2.4rem;
+
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: topdown 0.8s;
+}
+
+@keyframes topdown {
+  from {
+    transform: translateY(-110px);
+    visibility: hidden;
+    opacity: 0;
+  };
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes downtop {
+  from {
+    transform: translateY(80px)
+  };
+  to {
+    top: translateY(0);
+  }
+}
+
+
+@media (min-width: 700px) {
+  #cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  };
+
+  img {
+    /* o max-height de card img só funcionou
+       c a existencia dessa tag, mesmo q vazia */
+  }
+
+  .card img {
+    height: clamp(12rem, 5rem + 30vw, 40rem);
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 900px) {
+  img {
+    /* o max-height de card img só funcionou
+       c a existencia dessa tag, mesmo q vazia */
+  }
+
+  main {
+  margin-inline: clamp(1rem, 1rem + 10vw, 15rem);
+}
+
+  .card img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* VER CARD MANSORY 
+https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/*/
