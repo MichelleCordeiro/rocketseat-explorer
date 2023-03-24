@@ -34,21 +34,21 @@ This project was developed using the following technologies:
  - var() function
  - filters
  - flex layout
- - grid layout
+ - grid masonry layout
 
 <br>
 
-You can see the project code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/projeto-05/) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/projeto-05/).
+You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/projeto-05/).
 <br><br>
 
 
 <h3> 🏆 Challenges </h3>
 
 ✪ Challenge intermediary: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-intermediario/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-intermediario/) <br>
-<!--
-✪ Challenge advanced: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-extra-desafio-avancado/)<br>.
+
+✪ Challenge advanced: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/)<br>.
 <br><br>
--->
+
 
 <h3> 📝 License </h3>
 

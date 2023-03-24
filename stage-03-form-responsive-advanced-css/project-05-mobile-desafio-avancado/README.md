@@ -8,7 +8,7 @@
 <!--About session-->
 <p align="center">
   <!-- <img alt="Space Scream" src="https://i.postimg.cc/hjXcLqNw/projeto-05-desafio.png" width="500"> -->
-  <!-- <img alt="Space Scream" src="./projeto-0-desafio.gif" width="700"> -->
+  <img alt="Space Scream" src="./projeto-05-desafio-2.gif" width="700">
 </p>
 <br><br>
 
@@ -23,9 +23,9 @@ This project was developed using the following technologies:
 </p>
 <br><br>
 
-<h3> 🏆 Challenge advanced  </h3>
+<h3> 🏆 Challenge advanced - Grid with Animations </h3>
 
-Develop project from figma layout: see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/).
+Develop project from figma layout. You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/).
 <br><br>
 
 <h3> 👩‍💻 Learnings </h3>
@@ -37,8 +37,20 @@ Develop project from figma layout: see it online [here](https://MichelleCordeiro
  - var() function
  - filters
  - flex layout
- - grid layout
+ - grid layout masonry
  - slider
+
+<br>
+<h3> 🖖 Extra implementation </h3>
+
+ - responsive layouts
+ - media queries
+
+<br>
+<h3> 🔮 Futute implementation </h3>
+
+ - fixed div
+
 
 <br>
 <h3> 📝 License </h3>
