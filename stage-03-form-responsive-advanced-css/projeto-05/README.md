@@ -46,7 +46,9 @@ You can see the project online [here](https://MichelleCordeiro.github.io/rockets
 
 ✪ Challenge intermediary: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-intermediario/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-intermediario/) <br>
 
-✪ Challenge advanced: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/)<br>.
+✪ Challenge advanced: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/)<br>
+
+✪ Challenge advanced: develop project from figma layout - [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-05-toupeiras-desafio-avancado/) and see it [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-toupeiras-desafio-avancado/)<br>
 <br><br>
 
 

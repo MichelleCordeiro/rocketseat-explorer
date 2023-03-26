@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: url(./assets/fundo.svg);
+
+  min-width: 100%;
+  min-height: 100%;
+  padding-inline: clamp(0.1rem, 1rem + 5vw, 10rem);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content;
+  /* gap: clamp(0.5rem, 0.1rem + 5vw, 2rem); */
+  gap: 1rem;
+  
+  padding-top: 14rem;
+  margin: 0 auto;
+}
+
+main img {
+  padding-bottom: 1rem;
+}
+
+main #mole-3 {
+  background: url(./assets/toupeira6.svg) no-repeat;
+  animation: Change 1s;
+}
+
+main #mole-5 {
+  background: url(./assets/toupeira6.svg) no-repeat;
+  animation: Change 1s 2s;
+}
+
+main #mole-12 {
+  background: url(./assets/toupeira6.svg) no-repeat;
+  animation: Change 1s 4s;
+}
+
+@keyframes Move {
+  to {transform: translateY(15px)}
+  from {transform: translateY(0)}
+}
+
+@keyframes Change {
+  0% {background: url(./assets/toupeira1.svg) no-repeat}
+  20% {background: url(./assets/toupeira2.svg) no-repeat}
+  40% {background: url(./assets/toupeira3.svg) no-repeat}
+  60% {background: url(./assets/toupeira4.svg) no-repeat}
+  100% {background: url(./assets/toupeira5.svg) no-repeat}
+  0% {background: url(./assets/toupeira6.svg) no-repeat}
+}
