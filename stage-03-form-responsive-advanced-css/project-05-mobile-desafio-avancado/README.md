@@ -8,7 +8,7 @@
 <!--About session-->
 <p align="center">
   <!-- <img alt="Space Scream" src="https://i.postimg.cc/hjXcLqNw/projeto-05-desafio.png" width="500"> -->
-  <img alt="Space Scream" src="./projeto-05-desafio-2.gif" width="700">
+  <img alt="Space Scream" src="./assets/projeto-05-desafio-2.gif" width="700">
 </p>
 <br><br>
 
@@ -25,34 +25,44 @@ This project was developed using the following technologies:
 
 <h3> 🏆 Challenge advanced - Grid with Animations </h3>
 
-Develop project from figma layout. You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/).
+Develop project from figma layout. 
+You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/).
 <br><br>
 
 <h3> 👩‍💻 Learnings </h3>
 
  - responsive layouts
- - media queries
- - keyframe animations
- - clamp() function
- - var() function
- - filters
  - flex layout
  - grid layout masonry
- - slider
+ - clamp() function
+ - media queries
+ - var() function
+ - keyframe animations
+ - filters
 
 <br>
 <h3> 🖖 Extra implementation </h3>
 
- - responsive layouts
- - media queries
-
-<br>
-<h3> 🔮 Futute implementation </h3>
-
- - fixed div
+ - new section Flavors
+ - flavors in slider
+ - hover flavors tags
+ - fixed column in desktop
 
 
 <br>
+<h3> 🎯 SEO </h3>
+Only SEO, accessibility and best practices were worked on. Below mobile and desktop Lighthouse reports.
+<br>
+Many animations were used for studies and images were not treated (lazy loading)
+<br><br>
+
+<img src="https://i.postimg.cc/zvS373tJ/SEO-desktop.png" alt="Desktop Lighthouse test" width="520" >
+<img src="https://i.postimg.cc/ZKHCyBvH/SEO-mobile.png" alt="Mobile Lighthouse test" width="505" >
+
+
+
+<br><br><br>
+
 <h3> 📝 License </h3>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

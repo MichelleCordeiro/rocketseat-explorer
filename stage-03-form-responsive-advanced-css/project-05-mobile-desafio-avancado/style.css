@@ -11,6 +11,7 @@
   font-style: 62.5%;
   --ff-p: 'Palanquin', sans-serif;
   --ff-titles: 'Staatliches', cursive;
+  --ff-footer: 'Open Sans', sans-serif;
   --fs-title: clamp(3rem, 0.5rem + 10vw, 3.4rem);
   --fs-title-h2: clamp(2rem, 0.5rem + 4vw, 3rem);
   --fs-p-tag: clamp(1rem, 0.3rem + 1vw, 1.5rem);
@@ -18,14 +19,15 @@
   --hue: 233;
   --bg-body: hsl(var(--hue), 100%, 97%);
   --bg-header: hsl(calc(var(--hue) - 15), 17%, 62%);
-  --bg-title: hsl(calc(var(--hue) + 42), 18%, 79%);
+  --bg-header-desktop: hsl(calc(var(--hue) + 37), 16%, 35%);
+  --bg-title: hsl(calc(var(--hue) + 73), 36%, 29%);
+  /* --bg-title: hsl(calc(var(--hue) + 42), 18%, 79%); */
   --bg-tags: hsl(calc(var(--hue) + 79), 91%, 96%);
   --bg-flavors: hsl(calc(var(--hue) + 73), 16%, 50%);
   --font-title-h1-h2: hsl(calc(var(--hue) - var(--hue)), 0%, 100%);
-  --font-p: hsl(calc(var(--hue) + 41), 84%, 12%);
+  --font-p-mobile: hsl(calc(var(--hue) + 41), 84%, 12%);
   --font-tags: hsl(calc(var(--hue) - 1), 17%, 35%);
-  --font-footer: hsla(hsl(var(--hue), 17%, 35%, 1));
-
+  --font-footer: hsla(hsl(var(--hue) + 67), 27%, 78%);
 }
 
 body {
@@ -40,7 +42,7 @@ body {
 }
 
 img {
-  width: 80%;
+  width: 100%;
   height: auto;
 }
 
@@ -49,10 +51,19 @@ header {
   padding-bottom: 2rem;
 }
 
-header img {
+header img, svg {
   width: clamp(5rem, 3rem + 20vw, 12rem);
   height: auto;
   margin-block: 3.2rem 1.5rem;
+  animation: StretchLogo 3s linear infinite;
+}
+
+#logo-mobile:hover {
+  transform: skewY(4deg);
+}
+
+#logo-desktop {
+  display: none;
 }
 
 h1, h2, h3 {
@@ -80,11 +91,11 @@ header #p-desktop {
 
 main #p-mobile,
 main #cards {
-  margin-inline: clamp(1rem, 0.2rem + 1vw, 15rem);
+  margin-inline: clamp(0.1rem, 0.1rem + 10vw, 20rem);
 }
 
 main #p-mobile {
-  color: var(--font-p);
+  color: var(--font-p-mobile);
   font-family: var(--ff-p);
   font-size: var(--fs-p-tag);
   font-weight: 400;
@@ -96,21 +107,31 @@ main #p-mobile {
 .card  {
   position: relative;
   margin-bottom: 1rem;
+  border-radius: 2rem;
+  
+  animation: FadeInTop 700ms;
+
+  overflow: hidden;
 }
 
 .card img {
   object-fit: cover;
   border-radius: 2rem;
-
-  animation: downtop 0.5s;
+  
   filter: brightness(0.8);
+  transition: all 400ms;
 }
 
 .card img:hover {
   filter: brightness(1);
+
+    /* assim transborda o tamanho da img */
+  transform: scale(1.2);
+  cursor: pointer;
+  /* add o overflow hidden no card da zoom na imagem sem transbordar */
 }
 
-.card h3 {
+.card h2 {
   color: var(--font-tags);
   font-size: var(--fs-p-tag);
   line-height: 3.4rem;
@@ -118,31 +139,32 @@ main #p-mobile {
 
   position: absolute;
   top: 1.6rem;
-  right: 5rem;
+  right: 1.8rem;
 
   transition: all 200ms;
 }
 
-.card h3 span {
+.card h2 span {
   background: var(--bg-tags);
   overflow: hidden;
   border-radius: 2rem;
-  padding-inline: 2.4rem;
+  padding-inline: 2rem;
 
   height: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  animation: topdown 0.8s;
+  animation: FadeInDown 700ms 350ms backwards;
 }
 
 .flavors {
   background: var(--bg-flavors);
+  width: 100%;
   padding-block: 1.6rem 3rem;
 }
 
-.flavors h2 {
+.flavors h3 {
   color: var(--font-title-h1-h2);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   font-size: var(--fs-title-h2);
@@ -181,7 +203,7 @@ main #p-mobile {
 }
 
 .flavors .slide-track {
-  animation: scroll 30s linear infinite;
+  animation: ScrollFlavors 30s linear infinite backwards;
   display: flex;
   width: calc(250px * 14);
 }
@@ -226,9 +248,9 @@ footer p {
   display: none;
 }
 
-@keyframes topdown {
+@keyframes FadeInDown {
   from {
-    transform: translateY(-110px);
+    transform: translateY(-15px);
     visibility: hidden;
     opacity: 0;
   }
@@ -239,48 +261,53 @@ footer p {
   }
 }
 
-@keyframes downtop {
-  from { transform: translateY(80px) }
+@keyframes FadeInTop {
+  from { transform: translateY(15px) }
   to { top: translateY(0) }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0)
+@keyframes ScrollFlavors {
+  from { transform: translateX(0) }
+  to { transform: translateX(calc(-220px * 8)) }
+}
+
+@keyframes StretchLogo {
+  0% { transform: skewY(0deg) }
+  20% { transform: skewY(8deg) }
+  40% { transform: skewY(10deg) }
+  60% { transform: skewY(-10deg) }
+  80% { transform: skewY(-8deg) }
+  100% { transform: skewY(0deg) }
+}
+
+@keyframes SliderInHeader {
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
   }
-  100% {
-    transform: translateX(calc(-220px * 8))
-    /* transform: translateX(-900px) */
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @media (min-width: 700px) {
-  @keyframes scroll {
+  @keyframes ScrollFlavors {
     100% {
       transform: translateX(calc(-100px * 18))
     }
   }
 
-  header img {
-    justify-content: center;
-    justify-self: center;
-    justify-items: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    text-align: center;
-  }
-
   main #p-mobile {
-    padding-inline: 4rem;
+    padding-inline: 2.8rem;
   }
   
   #cards {
     column-count: 2;
     column-gap: 1rem;
     gap: 1.5rem;
-    padding-inline: clamp(0rem, 0.5rem + 10vw, 4rem);
-    margin-bottom: 3rem;
+    padding-inline: clamp(0rem, 0.5rem + 1vw, 10rem);
+    margin-bottom: 3.5rem;
   }
 
   .card {
@@ -291,31 +318,50 @@ footer p {
     break-inside: avoid;
   }
 
-  img {
-    width: 100%;
-    height: auto;
+  #cards .card:nth-child(1)  {
+    animation-delay: 50ms;
+  }
+  #cards .card:nth-child(2)  {
+    animation-delay: 250ms;
+  }
+  #cards .card:nth-child(3)  {
+    animation-delay: 450ms;
+  }
+  #cards .card:nth-child(4)  {
+    animation-delay: 650ms;
+  }
+  #cards .card:nth-child(5)  {
+    animation-delay: 850ms;
+  }
+  #cards .card:nth-child(6)  {
+    animation-delay: 1050ms;
+  }
+  #cards .card:nth-child(7)  {
+    animation-delay: 1250ms;
+  }
+  #cards .card:nth-child(8)  {
+    animation-delay: 1450ms;
   }
 
   .card img {
     grid-row: 1 / -1;
     grid-column: 1;
-    height: 15rem;
+    height: 17rem;
   }
+  
+    .card h2 {
+      top: 1.6rem;
+      right: 1rem;
+    }
 
   .flavors .slider::before,
   .flavors .slider::after {
     width: 90px;
   }
-
-  .card h3 {
-    top: 1.6rem;
-    right: 1rem;
-  }
 }
 
-@media (min-width: 1100px) {  
+@media (min-width: 1100px) {
   .page {
-    background: var(--bg-flavors);
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-areas:
@@ -324,8 +370,14 @@ footer p {
   }
 
   .page > header {
+    background-color: var(--bg-header-desktop);
     grid-area: head;
-    padding: 0;
+
+    position: fixed;
+    width: clamp(10rem, 1.6rem + 29vw, 35.2rem);
+
+    height: 80.3rem;
+    animation: SliderInHeader 700ms 20ms backwards;
   }
 
   header img {
@@ -335,9 +387,15 @@ footer p {
     border-radius: 20px;
   }
 
+  #logo-mobile {
+    display: none;
+  }
+  #logo-desktop {
+    display: block;
+  }
+
   header #p-desktop {
     display: block;
-    background-color: var(--bg-header);
     color: var(--font-title-h1-h2);
     font-family: var(--ff-p);
     font-size: var(--fs-p-tag);
@@ -360,41 +418,43 @@ footer p {
     display: none;
   }
 
-  #cards {
+  main #cards {
     column-count: 3;
     column-gap: clamp(0.5rem, 0.1rem + 10vw, 1rem);
-    padding-inline: clamp(0.1rem, 0.1rem + 3vw, 4rem);
+    padding-inline: 0;
+    margin-inline: clamp(0.1rem, 0.1rem + 6vw, 10rem);
+
+    left: 1rem;
+    position: relative;
   }
 
   .card {
-    /* margin-bottom: clamp(0.8rem, 0.1rem + 10vw, 1rem); */
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
 
   img {
-    max-width: 79%;
     display: block;
-    height: auto;
   }
 
   .card img {
     grid-row: 1 / -1;
     grid-column: 1;
     height: auto;
-  }
-  
-  .card h3 {
-    position: absolute;
-    top: 1rem;
-    right: clamp(0.1rem, 0.1rem + 5vw, 5rem);
-  }
-  
-  .card h3 span {
-    padding: 1rem;
+    border-radius: 2rem;
   }
 
+  .card img:hover {
+    border-radius: 3rem;
+  }
+  
+  .card h2 {
+    position: absolute;
+    top: 1rem;
+    right: clamp(0.1rem, 0.1rem + 5vw, 1rem);
+  }
+  
   .flavors {
-    padding-bottom: 2rem;
+    padding: 0 0 2rem 1rem;
     
     display: flex;
     justify-content: center;
@@ -404,7 +464,7 @@ footer p {
     height: 130px;
   }
 
-  .flavors h2 {
+  .flavors h3 {
     align-self: center;
     margin-inline: 2rem;
   }
@@ -415,23 +475,29 @@ footer p {
   }
 
   footer {
-    grid-area: foot;
+    font-family: var(--ff-footer);
+    font-weight: 400;
+    line-height: 2.8rem;
     background-color: var(--bg-flavors);
-
+    color: var(--font-footer);
+    border-top: 1px rgb(172, 140, 172) solid;
+    
+    grid-area: foot;
     display: flex;
     justify-content: center;
     height: auto;
   }
 
   footer p {
-    color: var(--font-title-h1-h2);
-    padding-bottom: 1rem;
+    font-size: clamp(0.1rem, 0.3rem + 1vw, 1.12rem);
+    padding-bottom: 0.51rem;
     
     display: block;
   }
 
   footer p a {
     color: var(--font-p);
+    font-weight: bold;
     text-decoration: none;
     margin: auto;
   }
