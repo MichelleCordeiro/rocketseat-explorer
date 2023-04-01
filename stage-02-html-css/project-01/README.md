@@ -29,6 +29,7 @@ You can see the project code in this [repository](https://github.com/MichelleCor
 ### 🏆 Challenges
 ✪ Fix bugs:
 &emsp; You can see the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-01-bugs-desafio-iniciante)
+
 ✪ Develop website from figma layout:
 &emsp; You can see the challenge code in this [repository](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css/project-1extra-desafio-intermediario) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-02-html-css/project-1extra-desafio-intermediario)
 <br><br>
