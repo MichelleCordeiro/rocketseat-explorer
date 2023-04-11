@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62,5%;
+}
+
+body {
+  height: 100vh;
+  /* Precisa do margin: 0 auto no main */
+  /* display: flex;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+}
+
+body, p, #inputNumber, button, h2, #btnReset {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #34355B;
+}
+
+main {
+  width: min(43rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem;
+  /* margin: 0 auto; */
+  margin-top: -12rem;
+  text-align: center;
+
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  color: hsla(240, 27%, 28%, 1);
+}
+
+p {
+  opacity: 0.8;
+  line-height: 150%;
+  padding-block: 1.6rem 4.8rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+#inputNumber, button, #btnReset {
+  border: none;
+  padding: 1.6rem;
+  line-height: 2.1rem;
+}
+
+#inputNumber {
+  width: 5rem;
+  background: #DCE2E9;
+  border-radius: 10px 0px 0px 10px;
+}
+
+button, #btnReset {
+  background: #7879F1;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  
+  font-weight: 700;
+  line-height: 2.1rem;
+  color: #FFFFFF;
+
+  transition: background.3s;
+}
+
+button:hover,
+#btnReset:hover {
+  filter: brightness(0.9);
+}
+
+
+/* screen-2 */
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 150%;
+  
+  padding-bottom: 3.3rem;
+}
+
+#btnReset {
+  border-radius:10px;
+}
