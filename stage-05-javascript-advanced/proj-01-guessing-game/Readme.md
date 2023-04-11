@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img alt="Projeto 5" src="https://i.postimg.cc/85kwwpmv/stage5-proj1.png" width="700">
+  <img alt="Projeto 5" src="https://i.postimg.cc/htDF9F37/stage5-proj1-removebg-preview.png" width="700">
 </p>
 <br>
 
@@ -33,6 +33,8 @@ This project was developed using the following technologies:
  - DOM
  - events
  - callback functions
+ - anonymous function
+ - conditionals
 
 <br>
 
