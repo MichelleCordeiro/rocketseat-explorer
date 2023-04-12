@@ -9,9 +9,11 @@
 <h1 align="center"> Fortune Cookie </h1>
 
 
-<p align="center">
-  <video src="[./assets/fortune-cookie.mp4](https://user-images.githubusercontent.com/42891377/231355211-bed9a3b7-07ec-4d84-aa96-d2bf40471aa6.mp4)" width=500></video>
-</p>
+<div align="center">
+  <video src="https://user-images.githubusercontent.com/42891377/231357237-e1e89583-a44d-4aa8-b03a-7baaba03a5a1.mp4"></video>
+</div>
+
+
 <br>
 
 <h3> 🚀 Technologies </h3>
