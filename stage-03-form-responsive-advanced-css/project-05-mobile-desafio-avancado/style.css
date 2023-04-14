@@ -28,6 +28,12 @@
   --font-p-mobile: hsl(calc(var(--hue) + 41), 84%, 12%);
   --font-tags: hsl(calc(var(--hue) - 1), 17%, 35%);
   --font-footer: hsla(hsl(var(--hue) + 67), 27%, 78%);
+
+  --flavor-number: 12;
+  --flavor-width: 160px;
+  --flavor-numb-wid: calc(
+                      var(--flavor-number) * var(--flavor-width)
+                    );
 }
 
 body {
@@ -38,7 +44,6 @@ body {
 .page {
   height: 100vh;
   max-width: clamp(38.4rem, 20rem + 80vw ,117rem);
-  margin: 0 auto;
 }
 
 img {
@@ -175,7 +180,7 @@ main #p-mobile {
 }
 
 .flavors .slider {
-  overflow:hidden;
+  overflow: hidden;
 	position: relative;
 
   height: 140px;
@@ -203,9 +208,10 @@ main #p-mobile {
 }
 
 .flavors .slide-track {
-  animation: ScrollFlavors 30s linear infinite backwards;
+  animation: ScrollFlavors 10s linear infinite backwards;
   display: flex;
-  width: calc(250px * 14);
+  width: var(--flavor-numb-wid);
+
 }
 
 .flavors .tooltip {
@@ -213,7 +219,7 @@ main #p-mobile {
   align-items: center;
 
   position: relative;
-  width: 160px;
+  width: var(--flavor-width);
   height: 150px;
 }
 
@@ -268,7 +274,7 @@ footer p {
 
 @keyframes ScrollFlavors {
   from { transform: translateX(0) }
-  to { transform: translateX(-220px) }
+  to { transform: translateX(-(var(--flavor-numb-wid))) }
 }
 
 @keyframes StretchLogo {
