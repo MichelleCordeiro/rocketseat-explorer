@@ -126,6 +126,10 @@ form button:hover {
   background: var(--bg-button-hover);
 }
 
+form button:focus-visible {
+    outline-color: rgb(181, 182, 183);
+}
+
 /* modal */
 .modal-wrapper {
   position: absolute;

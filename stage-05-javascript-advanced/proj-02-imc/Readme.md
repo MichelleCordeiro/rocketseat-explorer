@@ -10,11 +10,7 @@
 
 
 <p align="center">
-  <video src="https://user-images.githubusercontent.com/42891377/232172168-777e805f-0486-4b8c-83f1-15a9818892fd.mp4" width=500></video>
-
-
-
-
+  <video src="./assets/proj-02-imc.gif" width=500></video>
 </p>
 <br>
 
@@ -33,12 +29,14 @@ This challenge was developed using the following technologies:
 <h3> 👩‍💻 Learnings </h3>
 
  - form
+ - modal
  - clamp
  - variables
- - DOM manipulation
+ - DOM manipulation (queryselector, onclick, addEventListener, keydown, classlist, preventDefault)
  - object literals
  - functions (callback, anonymous, arrow)
- - modal
+ - ES6 modules
+ - clean code
  - refactoring
 
 <br>
