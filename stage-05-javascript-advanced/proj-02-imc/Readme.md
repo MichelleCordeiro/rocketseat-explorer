@@ -9,9 +9,9 @@
 <h1 align="center"> IMC calculator </h1>
 
 
-<p align="center">
-  <video src="./assets/proj-02-imc.gif" width=500></video>
-</p>
+<div align="center">
+  <video src="https://user-images.githubusercontent.com/42891377/232254087-98e6b7d9-e685-4944-8249-d20cb36e02ba.mp4"></video>
+</div>
 <br>
 
 <h3> 🚀 Technologies </h3>
@@ -32,7 +32,7 @@ This challenge was developed using the following technologies:
  - modal
  - clamp
  - variables
- - DOM manipulation (queryselector, onclick, addEventListener, keydown, classlist, preventDefault)
+ - DOM manipulation (queryselector, onclick, oninput, addEventListener, keydown, classlist, preventDefault)
  - object literals
  - functions (callback, anonymous, arrow)
  - ES6 modules
