@@ -6,6 +6,9 @@
 <br><br><br>
 
 <!--About session-->
+<h1 align="center"> Project Whack-a-mole Game </h1>
+
+
 <p align="center">
   <img alt="Desenho de jardim com buracos de toupeira" src="./assets/projeto-05-topeira.gif" width="700">
 </p>
@@ -22,7 +25,7 @@ This project was developed using the following technologies:
 </p>
 <br><br>
 
-<h3> 🏆 Challenge advanced - Jardim das toupeiras </h3>
+<h3> 🏆 Challenge advanced - Whack-a-mole game </h3>
 
 Develop project from figma layout. 
 You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-toupeiras-desafio-avancado/).

@@ -6,9 +6,12 @@
 <br><br><br>
 
 <!--About session-->
-<div align="center">
-  <img alt="Space Scream" src="https://user-images.githubusercontent.com/42891377/232259475-2c1be0a0-c95c-4bf1-aaa9-4b57dbb04082.mp4">
-</div>
+<h1 align="center"> Project Space Scream </h1>
+
+
+<p align="center">
+  <video alt="Space Scream" src="https://user-images.githubusercontent.com/42891377/232259475-2c1be0a0-c95c-4bf1-aaa9-4b57dbb04082.mp4">
+</p>
 <br><br>
 
 <h3> 🚀 Technologies </h3>
