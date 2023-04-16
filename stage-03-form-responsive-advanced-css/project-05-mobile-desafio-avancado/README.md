@@ -6,10 +6,9 @@
 <br><br><br>
 
 <!--About session-->
-<p align="center">
-  <!-- <img alt="Space Scream" src="https://i.postimg.cc/hjXcLqNw/projeto-05-desafio.png" width="500"> -->
-  <img alt="Space Scream" src="./assets/projeto-05-desafio-2.gif" width="700">
-</p>
+<div align="center">
+  <img alt="Video do Space Scream" src="https://user-images.githubusercontent.com/42891377/232261187-163b149b-9cb7-4a5d-a434-a3e6d43a11a4.mp4">
+</div>
 <br><br>
 
 <h3> 🚀 Technologies </h3>
@@ -34,8 +33,9 @@ You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explo
  - responsive layouts
  - flex layout
  - grid layout masonry
- - clamp() function
  - media queries
+ - clamp() function
+ - google fonts
  - var() function
  - keyframe animations
  - filters
@@ -56,8 +56,8 @@ Only SEO, accessibility and best practices were worked on. Below mobile and desk
 Many animations were used for studies and images were not treated (lazy loading)
 <br><br>
 
-<img src="https://i.postimg.cc/zvS373tJ/SEO-desktop.png" alt="Desktop Lighthouse test" width="520" >
-<img src="https://i.postimg.cc/ZKHCyBvH/SEO-mobile.png" alt="Mobile Lighthouse test" width="505" >
+<img src="https://i.postimg.cc/zvS373tJ/SEO-desktop.png" alt="Desktop Lighthouse test" width="580" >
+<img src="https://i.postimg.cc/ZKHCyBvH/SEO-mobile.png" alt="Mobile Lighthouse test" width="580" >
 
 
 

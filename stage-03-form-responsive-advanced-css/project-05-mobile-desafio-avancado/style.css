@@ -31,9 +31,13 @@
 
   --flavor-number: 12;
   --flavor-width: 160px;
+  --flavor-width-animation: -160px;
   --flavor-numb-wid: calc(
-                      var(--flavor-number) * var(--flavor-width)
-                    );
+    var(--flavor-number) * var(--flavor-width)
+  );
+  --flavor-numb-wid-animation: calc(
+    var(--flavor-number) * var(--flavor-width-animation)
+  );
 }
 
 body {
@@ -208,7 +212,7 @@ main #p-mobile {
 }
 
 .flavors .slide-track {
-  animation: ScrollFlavors 10s linear infinite backwards;
+  animation: ScrollFlavors 30s linear infinite backwards;
   display: flex;
   width: var(--flavor-numb-wid);
 
@@ -274,7 +278,7 @@ footer p {
 
 @keyframes ScrollFlavors {
   from { transform: translateX(0) }
-  to { transform: translateX(-(var(--flavor-numb-wid))) }
+  to { transform: translateX(var(--flavor-numb-wid-animation)) }
 }
 
 @keyframes StretchLogo {
@@ -298,12 +302,6 @@ footer p {
 }
 
 @media (min-width: 700px) {
-  @keyframes ScrollFlavors {
-    100% {
-      transform: translateX(calc(-100px * 18))
-    }
-  }
-
   main #p-mobile {
     padding-inline: 2.8rem;
   }
@@ -364,6 +362,7 @@ footer p {
   .flavors .slider::after {
     width: 90px;
   }
+
 }
 
 @media (min-width: 1100px) {

@@ -6,10 +6,9 @@
 <br><br><br>
 
 <!--About session-->
-<p align="center">
-  <!-- <img alt="Space Scream" src="https://i.postimg.cc/hjXcLqNw/projeto-05-desafio.png" width="500"> -->
-  <img alt="Space Scream" src="./projeto-0-desafio.gif" width="700">
-</p>
+<div align="center">
+  <img alt="Space Scream" src="https://user-images.githubusercontent.com/42891377/232259475-2c1be0a0-c95c-4bf1-aaa9-4b57dbb04082.mp4">
+</div>
 <br><br>
 
 <h3> 🚀 Technologies </h3>
@@ -31,13 +30,14 @@ Develop project from figma layout: see it online [here](https://MichelleCordeiro
 <h3> 👩‍💻 Learnings </h3>
 
  - responsive layouts
- - media queries
- - keyframe animations
- - clamp() function
- - var() function
- - filters
  - flex layout
  - grid layout
+ - media queries
+ - google fonts
+ - clamp() function
+ - var() function
+ - keyframe animations
+ - filters
  - slider
 
 <br>

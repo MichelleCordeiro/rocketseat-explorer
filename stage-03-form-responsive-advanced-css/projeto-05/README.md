@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <img alt="Projeto 5" src="./projeto-05.gif" width="900">
+  <img alt="Projeto 5" src="https://user-images.githubusercontent.com/42891377/232258333-6c532f0a-f3b5-49df-8981-de2c3872b383.mp4">
 </p>
 <br>
 
@@ -28,13 +28,15 @@ This project was developed using the following technologies:
 <h3> 👩‍💻 Learnings </h3>
 
  - responsive layouts
- - media queries
- - keyframe animations
- - clamp() function
- - var() function
- - filters
  - flex layout
  - grid masonry layout
+ - media queries
+ - clamp() function
+ - var() function
+ - google fonts
+ - keyframe animations
+ - filters
+
 
 <br>
 

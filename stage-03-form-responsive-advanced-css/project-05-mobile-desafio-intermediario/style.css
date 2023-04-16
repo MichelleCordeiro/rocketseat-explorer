@@ -10,7 +10,8 @@
   --ff-titles: 'Staatliches', cursive;
   --fs-title: clamp(3rem, 0.5rem + 10vw, 4rem);
   --fs-title-h2: clamp(2.5rem, 0.5rem + 4vw, 3rem);
-  --fs-p-tag: clamp(1.5rem, 0.3rem + 4vw, 1.8rem);
+  --fs-p: clamp(1.5rem, 0.3rem + 4vw, 2rem);
+  --fs-tag: clamp(1.5rem, 0.3rem + 4vw, 1.4rem);
 
   --hue: 233;
   --bg-body: hsl(var(--hue), 100%, 97%);
@@ -41,11 +42,11 @@ img {
 
 header {
   background: var(--bg-header);
-  height: clamp(25rem, 20rem + 20vw ,28rem);
+  height: clamp(25rem, 20rem + 20vw, 27rem);
 }
 
 header img {
-  width: clamp(1rem, 7rem + 30vw ,18.7rem);
+  width: clamp(1rem, 7rem + 30vw ,17rem);
   height: auto;
   margin-block: 3.2rem;
 }
@@ -76,7 +77,7 @@ main {
 p {
   color: var(--font-p);
   font-family: var(--ff-p);
-  font-size: var(--fs-p-tag);
+  font-size: var(--fs-p);
   font-weight: 400;
   line-height: 3rem;
 
@@ -111,7 +112,7 @@ p {
 
 .card h3 {
   color: var(--font-tags);
-  font-size: var(--fs-p-tag);
+  font-size: var(--fs-tag);
   line-height: 3.4rem;
   letter-spacing: 0.05em;
 
@@ -183,7 +184,7 @@ p {
 .flavors .slide-track {
   animation: scroll 30s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(160px * 12);
 }
 
 .flavors .tooltip {
@@ -245,7 +246,7 @@ p {
     transform: translateX(0)
   }
   100% {
-    transform: translateX(calc(-220px * 8))
+    transform: translateX(calc(-160px * 12))
     /* transform: translateX(-900px) */
   }
 }
@@ -277,7 +278,7 @@ p {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   #cards {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
