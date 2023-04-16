@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  video alt="Projeto 5" src="https://user-images.githubusercontent.com/42891377/232258333-6c532f0a-f3b5-49df-8981-de2c3872b383.mp4">
+  <video alt="Projeto 5" src="https://user-images.githubusercontent.com/42891377/232258333-6c532f0a-f3b5-49df-8981-de2c3872b383.mp4">
 </p>
 <br>
 
