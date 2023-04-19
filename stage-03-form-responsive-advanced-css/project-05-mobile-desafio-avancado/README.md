@@ -27,7 +27,7 @@ This project was developed using the following technologies:
 
 <h3> 🏆 Challenge advanced - Grid with Animations </h3>
 
-Develop project from figma layout. 
+Develop project from figma layout.
 You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-05-mobile-desafio-avancado/).
 <br><br>
 
@@ -54,16 +54,14 @@ You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explo
 
 <br>
 <h3> 🎯 SEO </h3>
-Only SEO, accessibility and best practices were worked on. Below mobile and desktop Lighthouse reports.
-<br>
-Many animations were used for studies and images were not treated (lazy loading)
+Only SEO, accessibility and best practices were worked on. Below Lighthouse and PageSpeed reports (desktop and mobile). <br>
+Many animations were used for studies and images were not treated (lazy loading). <br>
+You can verify a website by copying and pasting its URL into [PageSpeed Insights](https://pagespeed.web.dev/).
 <br><br>
 
-<img src="https://i.postimg.cc/zvS373tJ/SEO-desktop.png" alt="Desktop Lighthouse test" width="580" >
-<img src="https://i.postimg.cc/ZKHCyBvH/SEO-mobile.png" alt="Mobile Lighthouse test" width="580" >
-
-
-
+<p>
+<img src="https://i.postimg.cc/WtcZ4CNP/reports.png" alt="Lighthouse and àgespeed reports" width="850">
+</p>
 <br><br><br>
 
 <h3> 📝 License </h3>
