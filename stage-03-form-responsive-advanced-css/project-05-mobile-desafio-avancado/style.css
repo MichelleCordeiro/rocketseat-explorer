@@ -150,7 +150,7 @@ main #p-mobile {
   top: 1.6rem;
   right: 1.8rem;
 
-  transition: all 200ms;
+  transition: FadeInTop 200ms;
 }
 
 .card h2 span {
@@ -183,12 +183,15 @@ main #p-mobile {
   padding-bottom: 1rem;
 }
 
+/* MODIFICAÇÕES A PARTIR DAQUIIIIIIIIIIIIIIIIIIIIIIIIII */
 .flavors .slider {
   overflow: hidden;
 	position: relative;
 
   height: 140px;
   margin: 0 2rem;
+
+  display: flex;
 }
 
 .flavors .slider::before,
@@ -212,7 +215,8 @@ main #p-mobile {
 }
 
 .flavors .slide-track {
-  animation: ScrollFlavors 30s linear infinite backwards;
+  animation: ScrollFlavors 30s linear 0s infinite backwards;
+  animation-duration: 72s;
   display: flex;
   width: var(--flavor-numb-wid);
 
@@ -221,6 +225,7 @@ main #p-mobile {
 .flavors .tooltip {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
   position: relative;
   width: var(--flavor-width);
