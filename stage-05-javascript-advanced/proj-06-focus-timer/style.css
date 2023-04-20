@@ -29,6 +29,13 @@ main {
   align-self: end;
 }
 
+.no-select {
+  -webkit-user-select:none;  
+  -moz-user-select:none;     
+  -ms-user-select:none;      
+  user-select:none;  
+} 
+
 #timer {
   font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
   font-weight: 700;

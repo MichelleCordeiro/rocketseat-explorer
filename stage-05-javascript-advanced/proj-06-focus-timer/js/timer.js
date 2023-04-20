@@ -43,7 +43,7 @@ export default function Timer({
       if (isFinish) {
         resetControls()
         updateDisplay()
-        Sounds().kitchenTimer
+        Sounds().timeEnd()
         return
       }
 
