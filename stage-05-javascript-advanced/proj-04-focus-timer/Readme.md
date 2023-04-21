@@ -10,8 +10,7 @@
 
 
 <div align="center">
-  <!-- <video src="https://user-images.githubusercontent.com/42891377/232254087-98e6b7d9-e685-4944-8249-d20cb36e02ba.mp4"></video> -->
-  <img src="https://i.postimg.cc/xjNqfgfj/proj-05-focus-timer.png" width="500px"></img>
+  <video src="https://user-images.githubusercontent.com/42891377/233504005-1fe74d51-8388-4a9b-934b-d00a4c15adc8.mp4"></video>
 </div>
 <br>
 
