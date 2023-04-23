@@ -12,46 +12,47 @@ export default function() {
     '../scr/audio/Lareira.wav?raw=true'
   )
 
-  function pressTree() {
-    soundFloresta.play()
-    soundChuva.pause()
-    soundCafeteria.pause()
-    soundLareira.pause()
-  }
+  // function pressTree() {
+  //   soundFloresta.play()
+  //   soundFloresta.loop = true
+  // }
   
-  function pressCloud() {
-    soundFloresta.pause()
-    soundChuva.play()
-    soundCafeteria.pause()
-    soundLareira.pause()
-  }
+  // function pressCloud() {
+  //   soundChuva.play()
+  //   soundChuva.loop = true
+  // }
   
-  function pressShop() {
-    soundFloresta.pause()
-    soundChuva.pause()
-    soundCafeteria.play()
-    soundLareira.pause()
-  }
+  // function pressShop() {
+  //   soundCafeteria.play()
+  //   soundCafeteria.loop = true
+  // }
   
-  function pressFire() {
-    soundFloresta.pause()
-    soundChuva.pause()
-    soundCafeteria.pause()
-    soundLareira.play()
-  }
+  // function pressFire() {
+  //   soundLareira.play()
+  //   soundLareira.loop = true
+  // }
 
-  function unpress() {
-    soundFloresta.pause()
-    soundChuva.pause()
-    soundCafeteria.pause()
-    soundLareira.pause()
-  }
+  // function unpress() {
+  //   console.log('unpress foi ativado SONS DESLIGADOS');
+  //   soundFloresta.pause()
+  //   soundChuva.pause()
+  //   soundCafeteria.pause()
+  //   soundLareira.pause()
+  //   soundFloresta.loop = false
+  //   soundChuva.loop = false
+  //   soundCafeteria.loop = false
+  //   soundLareira.loop = false
+  // }
 
   return {
-    pressTree,
-    pressCloud,
-    pressShop,
-    pressFire,
-    unpress
+    // pressTree,
+    // pressCloud,
+    // pressShop,
+    // pressFire,
+    // unpress,
+    soundFloresta,
+    soundChuva,
+    soundCafeteria,
+    soundLareira
   }
 }

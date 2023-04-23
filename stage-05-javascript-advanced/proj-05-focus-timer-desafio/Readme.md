@@ -50,7 +50,7 @@ Develop project from [figma layout](https://www.figma.com/file/24VdMkJcafCXj6JeW
 
 <br>
 
-You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-05-focus-timer/).
+You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-05-focus-timer-desafio/).
 
 <br>
 

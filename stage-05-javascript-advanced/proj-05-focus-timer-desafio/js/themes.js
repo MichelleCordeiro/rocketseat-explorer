@@ -9,75 +9,63 @@ export default function Themes({
   btnFire
 }) {
 
-  // tree OK FALTA IMPEMENTAR OUTROS 3 BOTÕES
-  function tree() {
-    const btnTreePressed = btnTree.classList.contains('selected')
-
-    if (btnTreePressed) {
-      sound.unpress()
-      btnTree.style.backgroundColor = 'hsl(240, 9%, 89%)'
-      btnTree.classList.remove('selected')
+  function buttonTheme(btnPressed) {
+    const Buttons = {
+      tree: {
+        btnName: btnTree,
+        bgColor: 'hsl(97, 98%, 37%)',
+        btnSound: sound.soundFloresta
+      },
+      cloud: {
+        btnName: btnCloud,
+        bgColor: 'hsl(194, 97%, 31%)',
+        btnSound: sound.soundChuva
+      },
+      shop: {
+        btnName: btnShop,
+        bgColor: 'hsl(55, 94%, 42%)',
+        btnSound: sound.soundCafeteria
+      },
+      fire: {
+        btnName: btnFire,
+        bgColor: 'hsl(0, 90%, 42%)',
+        btnSound: sound.soundLareira
+      }
+    }
+    
+    let btnClassName = btnPressed.classList[0]  // classe do botão clicado
+    let btnBgColor = Buttons[btnClassName].bgColor // cor certa do botão clicado
+    let btnSoundPressed = Buttons[btnClassName].btnSound // som certo do botão clicado
+    
+    // pega todos os botões e elimina o clicado
+    const objKeys = Object.keys(Buttons)
+    const indexBtnPressed = objKeys.indexOf(btnClassName)
+    delete objKeys[indexBtnPressed]
+    
+    // verifica se o botão clicado já estava clicado
+    const btnAlredyPressed = btnPressed.classList.contains('selected')
+    if (btnAlredyPressed) {
+      btnPressed.classList.remove('selected')
+      btnPressed.style.backgroundColor = 'hsl(240, 9%, 89%)'
+      btnSoundPressed.pause()
     } else {
-      btnTree.classList.add('selected')
-      btnCloud.classList.remove('selected')
-      btnShop.classList.remove('selected')
-      btnFire.classList.remove('selected')
+      btnPressed.classList.add('selected')
+      btnPressed.style.backgroundColor = btnBgColor
+      btnSoundPressed.play()
 
-      btnTree.style.backgroundColor = 'hsl(97, 98%, 37%)'
-      btnCloud.style.backgroundColor = 'hsl(240, 9%, 89%)'
-      btnShop.style.backgroundColor = 'hsl(240, 9%, 89%)'
-      btnFire.style.backgroundColor = 'hsl(240, 9%, 89%)'
+      // garante q apenas 1 botão fique selecionado
+      for (let index in objKeys) {
+        const restBtn = Buttons[objKeys[index]].btnName
+        const restSound = Buttons[objKeys[index]].btnSound
 
-      sound.pressTree()
+        restBtn.classList.remove('selected')
+        restBtn.style.backgroundColor = 'hsl(240, 9%, 89%)'
+        restSound.pause()
+      }
     }
   }
 
-  function cloud() {
-    btnTree.classList.remove('selected')
-    btnCloud.classList.add('selected')
-    btnShop.classList.remove('selected')
-    btnFire.classList.remove('selected')
-
-    btnTree.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnCloud.style.backgroundColor = 'hsl(194, 97%, 31%)'
-    btnShop.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnFire.style.backgroundColor = 'hsl(240, 9%, 89%)'
-
-    sound.pressCloud()
-  }
-
-  function shop() {
-    btnTree.classList.remove('selected')
-    btnCloud.classList.remove('selected')
-    btnShop.classList.add('selected')
-    btnFire.classList.remove('selected')
-
-    btnTree.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnCloud.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnShop.style.backgroundColor = 'hsl(55, 94%, 42%)'
-    btnFire.style.backgroundColor = 'hsl(240, 9%, 89%)'
-
-    sound.pressShop()
-  }
-
-  function fire() {
-    btnTree.classList.remove('selected')
-    btnCloud.classList.remove('selected')
-    btnShop.classList.remove('selected')
-    btnFire.classList.add('selected')
-
-    btnTree.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnCloud.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnShop.style.backgroundColor = 'hsl(240, 9%, 89%)'
-    btnFire.style.backgroundColor = 'hsl(0, 90%, 42%)'
-
-    sound.pressFire()
-  }
-
   return {
-    tree,
-    cloud,
-    shop,
-    fire
+    buttonTheme
   }
 }

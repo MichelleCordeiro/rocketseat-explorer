@@ -11,26 +11,25 @@ import {
   btnFire
 } from './elements.js'
 
-export default function({  controls, themes, sound }) {
+export default function({  controls, themes }) {
   btnTree.addEventListener('click', () => {
-    themes.tree()
+    themes.buttonTheme(btnTree)
   })
 
   btnCloud.addEventListener('click', ()  => {
-    themes.cloud()
+    themes.buttonTheme(btnCloud)
   })
 
   btnShop.addEventListener('click', () => {
-    themes.shop()
+    themes.buttonTheme(btnShop)
   })
 
   btnFire.addEventListener('click', () => {
-    themes.fire()
+    themes.buttonTheme(btnFire)
   })
 
   
   btnPlay.addEventListener('click', function () {
-    timer.countDown()
   })
 
   btnStop.addEventListener('click', function () {

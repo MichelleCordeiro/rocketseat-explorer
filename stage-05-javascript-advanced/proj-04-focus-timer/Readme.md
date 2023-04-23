@@ -43,7 +43,8 @@ This challenge was developed using the following technologies:
  - refactoring
 
 <br>
-You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-06-focus-timer/).
+
+You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-04-focus-timer/).
 
 <br><br>
 
