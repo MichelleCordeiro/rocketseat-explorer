@@ -1,17 +1,37 @@
-import { btnPlay } from './elements.js'
+export default function Controls(
+  btnPlay,
+  btnPause,
+) {
 
-export default function Controls() {
-
-  function getMinutes() {
-    let newMinutes = prompt('Quantos minutos?');
-    if (!newMinutes) {
-      return false;
-    }
-
-    return newMinutes;
+  const newBtnPlay = document.querySelector('.play');
+  const newBtnPause = document.querySelector('.pause');
+  console.log("btnPlay: ", btnPlay);
+  console.log("newBtnPlay: ", newBtnPlay);
+  
+  function play() {
+    newBtnPlay.classList.add('hide');
+    // btnPlay.classList.add('hide')
+    newBtnPause.classList.remove('hide');
+    // btnPause.classList.remove('hide')
+  }
+  
+  function pause() {
+    newBtnPlay.classList.remove('hide');
+    // btnPlay.classList.remove('hide')
+    newBtnPause.classList.add('hide');
+    // btnPause.classList.add('hide')
+  }
+  
+  function reset() {
+    newBtnPlay.classList.remove('hide');
+    // btnPlay.classList.remove('hide')
+    newBtnPause.classList.add('hide');
+    // btnPause.classList.add('hide')
   }
 
   return {
-    getMinutes
-  };
+    play,
+    pause,
+    reset
+  }
 }

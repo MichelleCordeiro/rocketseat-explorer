@@ -10,10 +10,10 @@
   --fc-btn-selected: hsl(0, 0%, 100%);
   /* --bg-btn-notSelected: hsl(240, 9%, 89%); */
   --bg-btn-selected: hsl(194, 97%, 31%);
-  --bg-btn-selected-tree: hsl(97, 98%, 37%);
+  --bg-btn-selected-tree: hsl(97, 58%, 50%);
   --bg-btn-selected-cloud: hsl(194, 97%, 31%);
-  --bg-btn-selected-shop: hsl(55, 94%, 42%);
-  --bg-btn-selected-fire: hsl(0, 90%, 42%);
+  --bg-btn-selected-shop: hsl(55, 82%, 56%);
+  --bg-btn-selected-fire: hsl(0, 72%, 50%);
 
   font-size: 52.5%;
 }
@@ -58,8 +58,15 @@ main {
   line-height: 13rem;
 }
 
-#controls {
+.hide {
+  display: none;
+}
+
+#controls button {
   gap: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .container-sounds {
@@ -82,7 +89,7 @@ main {
   height: 5rem;
 }
 
-button path {
+.container-sounds button path {
   fill: var(--fc-btn-notSelected)
 }
 

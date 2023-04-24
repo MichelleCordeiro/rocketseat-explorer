@@ -30,6 +30,7 @@ This challenge was developed using the following technologies:
 <h3> 🏆 Challenge advanced - Timer with buttons to change themes </h3>
 
 Develop project from [figma layout](https://www.figma.com/file/24VdMkJcafCXj6JeW19DRJ/Stage-05---Focus-Timer-2.0?node-id=0%3A1&t=IfC65Xhz1PgkcLGq-1).
+
 <br>
 
 <h3> 👩‍💻 Learnings </h3>

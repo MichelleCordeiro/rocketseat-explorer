@@ -8,7 +8,7 @@ import {
   secondsDisplay,
 
   btnPlay,
-  btnStop,
+  btnPause,
   btnPlus,
   btnMinus,
 
@@ -16,20 +16,18 @@ import {
   btnCloud,
   btnShop,
   btnFire
-} from './elements.js';
+} from './elements.js'
 
 const controls = Controls({
   btnPlay,
-  btnStop,
-  btnPlus,
-  btnMinus
+  btnPause
 })
 
 const timer = Timer({
   minutesDisplay,
   secondsDisplay,
-  resetControls: controls.reset
-});
+  resetControls: controls.reset,
+})
 
 const themes = Themes({
   btnTree,

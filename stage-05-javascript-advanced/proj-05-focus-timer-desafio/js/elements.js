@@ -1,10 +1,11 @@
 const minutesDisplay = document.querySelector('#minutes')
 const secondsDisplay = document.querySelector('#seconds')
 
-const btnPlay = document.querySelector('#play')
-const btnStop = document.querySelector('#stop')
-const btnPlus = document.querySelector('#plus')
-const btnMinus = document.querySelector('#minus')
+const btnPlay = document.querySelector('.play')
+const btnPause = document.querySelector('.pause')
+const btnStop = document.querySelector('.stop')
+const btnPlus = document.querySelector('.plus')
+const btnMinus = document.querySelector('.minus')
 
 const btnTree = document.querySelector('.tree')
 const btnCloud = document.querySelector('.cloud')
@@ -16,6 +17,7 @@ export {
   secondsDisplay,
 
   btnPlay,
+  btnPause,
   btnStop,
   btnPlus,
   btnMinus,

@@ -33,12 +33,12 @@ export default function Themes({
       }
     }
     
-    let btnClassName = btnPressed.classList[0]  // classe do botão clicado
-    let btnBgColor = Buttons[btnClassName].bgColor // cor certa do botão clicado
-    let btnSoundPressed = Buttons[btnClassName].btnSound // som certo do botão clicado
+    const btnClassName = btnPressed.classList[0]  // classe do botão clicado
+    const btnBgColor = Buttons[btnClassName].bgColor // cor certa do botão clicado
+    const btnSoundPressed = Buttons[btnClassName].btnSound // som certo do botão clicado
     
     // pega todos os botões e elimina o clicado
-    const objKeys = Object.keys(Buttons)
+    let objKeys = Object.keys(Buttons)
     const indexBtnPressed = objKeys.indexOf(btnClassName)
     delete objKeys[indexBtnPressed]
     
