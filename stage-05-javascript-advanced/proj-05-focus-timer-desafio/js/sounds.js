@@ -11,6 +11,20 @@ export default function() {
   const soundLareira = new Audio(
     '../scr/audio/Lareira.wav?raw=true'
   )
+  const soundButtonPress = new Audio(
+    '../scr/audio/button-click.mp3?raw=true'
+  )
+  const soundTimer = new Audio(
+    '../scr/audio/alarm-timer.mp3?raw=true'
+  )
+
+  function pressButton() {
+    soundButtonPress.play()
+  }
+
+  function timeEnd() {
+    soundTimer.play()
+  }
 
   // function pressTree() {
   //   soundFloresta.play()
@@ -45,11 +59,8 @@ export default function() {
   // }
 
   return {
-    // pressTree,
-    // pressCloud,
-    // pressShop,
-    // pressFire,
-    // unpress,
+    pressButton,
+    timeEnd,
     soundFloresta,
     soundChuva,
     soundCafeteria,

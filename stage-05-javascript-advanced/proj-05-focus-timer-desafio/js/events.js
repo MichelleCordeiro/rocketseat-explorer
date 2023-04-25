@@ -10,29 +10,34 @@ import {
   btnFire
 } from './elements.js'
 
-export default function({ themes, controls, timer }) {  
+export default function({ themes, controls, timer, sound }) {  
 
   btnPlay.addEventListener('click', () => {
     controls.play()
     timer.countDown()
+    sound.pressButton()
   })
   
   btnPause.addEventListener('click', () => {
     controls.pause()
     timer.hold()
+    sound.pressButton()
   })
 
   btnStop.addEventListener('click', () => {
     controls.reset()
     timer.reset()
+    sound.pressButton()
   })
 
   btnPlus.addEventListener('click', () => {
     timer.plus()
+    sound.pressButton()
   })
 
   btnMinus.addEventListener('click', () => {
     timer.minus()
+    sound.pressButton()
   })
 
   btnTree.addEventListener('click', () => {
