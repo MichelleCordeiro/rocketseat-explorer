@@ -16,6 +16,15 @@ import {
   btnFire
 } from './elements.js'
 
+const themes = Themes({
+  btnTree,
+  btnCloud,
+  btnShop,
+  btnFire
+})
+
+const sound = Sounds()
+
 const controls = Controls({
   btnPlay,
   btnPause,
@@ -26,14 +35,5 @@ const timer = Timer({
   secondsDisplay,
   resetControls: controls.reset,
 })
-
-const themes = Themes({
-  btnTree,
-  btnCloud,
-  btnShop,
-  btnFire
-})
-
-const sound = Sounds()
 
 Events({ themes, sound, controls, timer })

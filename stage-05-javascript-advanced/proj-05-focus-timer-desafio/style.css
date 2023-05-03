@@ -18,6 +18,13 @@
   font-size: 52.5%;
 }
 
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
 main {
   width: 100vw;
   -webkit-user-select: none; /* Safari */
@@ -56,6 +63,7 @@ main {
   font-weight: 500;
   font-size:  10rem;
   line-height: 13rem;
+  filter: drop-shadow(4px 4px 8px #ffff);
 }
 
 .hide {
@@ -67,6 +75,8 @@ main {
   background: none;
   border: none;
   cursor: pointer;
+  filter: drop-shadow(1px 1px 10px #ffffff);
+
 }
 
 .container-sounds {
@@ -82,6 +92,10 @@ main {
   border-radius: 2.4rem;
   border: none;
   cursor: pointer;
+}
+
+.container-sounds button:hover {
+  transform: scale(1.1);
 }
 
 .container-sounds svg {
@@ -100,7 +114,7 @@ main {
   fill: var(--fc-btn-selected)
 }
 
-@media (min-width: 500px) and (max-width: 759px) {
+@media (max-width: 759px) {
   #timer h2 {
     font-size:  11rem;
     line-height: 14.7rem;
