@@ -2,6 +2,7 @@ import Controls from './controls.js'
 import Timer from './timer.js'
 import Themes from './themes.js'
 import Sounds from './sounds.js'
+import DarkMode from './darkMode.js'
 import Events from './events.js'
 import {
   minutesDisplay,
@@ -13,7 +14,10 @@ import {
   btnTree,
   btnCloud,
   btnShop,
-  btnFire
+  btnFire,
+
+  btnDarkMode,
+  btnLightMode
 } from './elements.js'
 
 const themes = Themes({
@@ -36,4 +40,9 @@ const timer = Timer({
   resetControls: controls.reset,
 })
 
-Events({ themes, sound, controls, timer })
+const darkMode = DarkMode({
+  btnDarkMode,
+  btnLightMode
+})
+
+Events({ themes, sound, controls, timer, darkMode })

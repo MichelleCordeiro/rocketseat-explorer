@@ -40,6 +40,29 @@ main {
   align-items: center;
   justify-content: center;
   gap: 7rem;
+
+  position: relative;
+}
+
+.dark-mode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3rem;
+  padding: 1rem;
+  background-color:var(--bg-body);
+  border-radius: 50%;
+  
+  border: none;
+  cursor: pointer;
+}
+
+.light:hover {
+  background-color: rgba(46, 35, 47, 0.05) !important;
+}
+
+.dark:hover {
+  background-color: rgba(255, 255, 255, 0.128) !important;
 }
 
 .container-timer,
@@ -63,20 +86,22 @@ main {
   font-weight: 500;
   font-size:  10rem;
   line-height: 13rem;
-  filter: drop-shadow(4px 4px 8px #ffff);
+  filter: drop-shadow(4px 4px 8px var(--bg-body));
 }
 
 .hide {
   display: none;
 }
 
-#controls button {
+#controls {
   gap: 1.5rem;
+}
+
+#controls button {
   background: none;
   border: none;
   cursor: pointer;
-  filter: drop-shadow(1px 1px 10px #ffffff);
-
+  filter: drop-shadow(1px 1px 10px var(--bg-body));
 }
 
 .container-sounds {
@@ -114,7 +139,7 @@ main {
   fill: var(--fc-btn-selected)
 }
 
-@media (max-width: 759px) {
+@media (min-width: 501px) and (max-width: 759px) {
   #timer h2 {
     font-size:  11rem;
     line-height: 14.7rem;
@@ -143,6 +168,10 @@ main {
   .container {
     flex-direction: row;
     gap: clamp(4rem, 0.1rem + 7vw, 19rem);
+  }
+
+  .dark-mode {
+    margin: 6rem;
   }
   
   #timer {

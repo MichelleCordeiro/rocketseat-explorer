@@ -39,13 +39,14 @@ export default function Themes({
         bgImg:
           'url(https://images.pexels.com/photos/752538/pexels-photo-752538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)'
       }
-    };
+    }
     
     const btnClassName = btnPressed.classList[0]  // classe do botão clicado
     const btnBgColor = Buttons[btnClassName].bgColor // cor certa do botão clicado
     const btnSoundPressed = Buttons[btnClassName].btnSound // som certo do botão clicado
     const btnBgImgPressed = Buttons[btnClassName].bgImg // bg certo do URL(botão clicado
     const btnAlredyPressed = btnPressed.classList.contains('selected')
+    const timerH2 = document.body.querySelector('#timer')
 
 
     function resetTheme(btnName, btnSound) {

@@ -7,10 +7,12 @@ import {
   btnTree,
   btnCloud,
   btnShop,
-  btnFire
+  btnFire,
+  btnDarkMode,
+  btnLightMode
 } from './elements.js'
 
-export default function({ themes, controls, timer, sound }) {  
+export default function({ themes, controls, timer, sound, darkMode }) {  
 
   btnPlay.addEventListener('click', () => {
     controls.play()
@@ -54,5 +56,13 @@ export default function({ themes, controls, timer, sound }) {
 
   btnFire.addEventListener('click', () => {
     themes.buttonTheme(btnFire)
+  })
+
+  btnDarkMode.addEventListener('click', () => {
+    darkMode.dark()
+  })
+
+  btnLightMode.addEventListener('click', () => {
+    darkMode.light()
   })
 }

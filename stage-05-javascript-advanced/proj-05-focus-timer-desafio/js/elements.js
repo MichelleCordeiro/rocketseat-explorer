@@ -12,6 +12,9 @@ const btnCloud = document.querySelector('.cloud')
 const btnShop = document.querySelector('.shop')
 const btnFire = document.querySelector('.fire')
 
+const btnDarkMode = document.querySelector('.moon')
+const btnLightMode = document.querySelector('.sun')
+
 export {
   minutesDisplay,
   secondsDisplay,
@@ -25,5 +28,8 @@ export {
   btnTree,
   btnCloud,
   btnShop,
-  btnFire
+  btnFire,
+
+  btnDarkMode,
+  btnLightMode
 }
