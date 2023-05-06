@@ -15,21 +15,27 @@ const btnFire = document.querySelector('.fire')
 const btnDarkMode = document.querySelector('.moon')
 const btnLightMode = document.querySelector('.sun')
 
+const volumeTree = document.querySelector('#slide-tree')
+const volumeCloud = document.querySelector('#slide-cloud')
+const volumeShop = document.querySelector('#slide-shop')
+const volumeFire = document.querySelector('#slide-fire')
+
 export {
   minutesDisplay,
   secondsDisplay,
-
   btnPlay,
   btnPause,
   btnStop,
   btnPlus,
   btnMinus,
-
   btnTree,
   btnCloud,
   btnShop,
   btnFire,
-
   btnDarkMode,
-  btnLightMode
+  btnLightMode,
+  volumeTree,
+  volumeCloud,
+  volumeShop,
+  volumeFire
 }

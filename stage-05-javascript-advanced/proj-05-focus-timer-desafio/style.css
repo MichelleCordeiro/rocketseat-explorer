@@ -9,11 +9,14 @@
   --fc-btn-notSelected: hsl(240, 6%, 21%);
   --fc-btn-selected: hsl(0, 0%, 100%);
   /* --bg-btn-notSelected: hsl(240, 9%, 89%); */
-  --bg-btn-selected: hsl(194, 97%, 31%);
   --bg-btn-selected-tree: hsl(97, 58%, 50%);
   --bg-btn-selected-cloud: hsl(194, 97%, 31%);
   --bg-btn-selected-shop: hsl(55, 82%, 56%);
   --bg-btn-selected-fire: hsl(0, 72%, 50%);
+
+  --circle-volume-bg: hsl(285, 70%, 60%);
+  --circle-volume-bg-hover: hsl(285, 44%, 28%);
+  --circle-volume-border: hsl(0, 1%, 26%);
 
   font-size: 52.5%;
 }
@@ -50,7 +53,7 @@ main {
   right: 0;
   margin: 3rem;
   padding: 1rem;
-  background-color:var(--bg-body);
+  background-color: hsla(0, 0%, 100%, 0);
   border-radius: 50%;
   
   border: none;
@@ -86,7 +89,7 @@ main {
   font-weight: 500;
   font-size:  10rem;
   line-height: 13rem;
-  filter: drop-shadow(4px 4px 8px var(--bg-body));
+  filter: drop-shadow(0.4rem 0.4rem 0.8rem var(--bg-body));
 }
 
 .hide {
@@ -101,7 +104,7 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  filter: drop-shadow(1px 1px 10px var(--bg-body));
+  filter: drop-shadow(0.1rem 0.1rem 1rem var(--bg-body));
 }
 
 .container-sounds {
@@ -131,6 +134,69 @@ main {
 .container-sounds button path {
   fill: var(--fc-btn-notSelected)
 }
+
+.slide-volume {
+  margin-block: 0 -2rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input {
+  width: 75%;
+  height: 0.5rem;
+  cursor: w-resize;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(2, 0, 0) 100%);
+  border-radius: 0.5rem;
+  z-index: 1;
+  opacity: 0.7;
+  margin-top: 1.5rem;
+}
+
+/* custom thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  background: var(--circle-volume-bg);
+  border: var(--circle-volume-border) 0.5rem solid;
+  cursor: grab;
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--circle-volume-bg-hover);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--circle-volume-bg);
+  border: var(--circle-volume-border) 0.5rem solid;
+  cursor: grab;
+  transition: background .15s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: var(--circle-volume-bg-hover);
+}
+
+/* remove border */
+input::-moz-focus-inner, input::-moz-focus-outer {
+  border: 0;
+}
+
+
+
+
 
 .selected {
   background: var(--bg-btn-selected)

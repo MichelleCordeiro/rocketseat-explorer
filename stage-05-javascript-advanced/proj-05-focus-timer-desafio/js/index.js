@@ -17,7 +17,12 @@ import {
   btnFire,
 
   btnDarkMode,
-  btnLightMode
+  btnLightMode,
+
+  volumeTree,
+  volumeCloud,
+  volumeShop,
+  volumeFire
 } from './elements.js'
 
 const themes = Themes({
@@ -31,7 +36,7 @@ const sound = Sounds()
 
 const controls = Controls({
   btnPlay,
-  btnPause,
+  btnPause
 })
 
 const timer = Timer({

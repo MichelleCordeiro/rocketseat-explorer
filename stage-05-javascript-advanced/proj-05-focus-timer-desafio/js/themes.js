@@ -48,7 +48,6 @@ export default function Themes({
     const btnAlredyPressed = btnPressed.classList.contains('selected')
     const timerH2 = document.body.querySelector('#timer')
 
-
     function resetTheme(btnName, btnSound) {
       btnName.classList.remove('selected')
       btnName.style.backgroundColor = 'hsl(240, 9%, 89%)'
@@ -69,6 +68,8 @@ export default function Themes({
       btnPressed.style.backgroundColor = btnBgColor;
       document.body.style.backgroundImage = btnBgImgPressed;
       btnSoundPressed.play()
+      // btnSoundPressed.volume = sound.setVolume
+
 
     // garante q apenas 1 botão fique selecionado
       for (let index in objKeys) {
