@@ -5,9 +5,9 @@ export default function Controls(
 
   const newBtnPlay = document.querySelector('.play')
   const newBtnPause = document.querySelector('.pause')
-  console.log("btnPlay: ", btnPlay)
-  console.log("btnPause: ", btnPause)
-  console.log("newBtnPlay: ", newBtnPlay)
+    console.log("btnPlay: ", btnPlay)
+    console.log("btnPause: ", btnPause)
+    console.log("newBtnPlay: ", newBtnPlay)
   
   function play() {
     newBtnPlay.classList.add('hide')

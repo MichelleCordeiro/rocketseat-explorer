@@ -6,45 +6,60 @@
 
 :root {
   --bg-body: hsl(0, 0%, 100%);
+  --bg-main: hsla(226, 6%, 42%, 0.54);
   --fc-btn-notSelected: hsl(240, 6%, 21%);
   --fc-btn-selected: hsl(0, 0%, 100%);
-  /* --bg-btn-notSelected: hsl(240, 9%, 89%); */
+  --bg-btn-notSelected: hsl(240, 9%, 89%);
   --bg-btn-selected-tree: hsl(97, 58%, 50%);
   --bg-btn-selected-cloud: hsl(194, 97%, 31%);
   --bg-btn-selected-shop: hsl(55, 82%, 56%);
   --bg-btn-selected-fire: hsl(0, 72%, 50%);
 
-  --circle-volume-bg: hsl(285, 70%, 60%);
-  --circle-volume-bg-hover: hsl(285, 44%, 28%);
+  --bg-dark-mode: hsla(295, 15%, 16%, 0);
+
+  --circle-volume-bg: hsl(285, 67%, 60%);
+  --circle-volume-bg-hover: hsl(35, 100%, 50%);
   --circle-volume-border: hsl(0, 1%, 26%);
 
   font-size: 52.5%;
 }
 
 body {
+  height: 100vh;
+  display: flex;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: 1;
 }
 
 main {
-  width: 100vw;
+  /* width: 100vw; */
+  width: fit-content;
+  margin: auto;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
 .container {
-  height: 100vh;
-
+  /* height: 100vh; */
+  height: fit-content;
+  
   display: flex;
   flex-direction: column;
+  align-content: center;
   align-items: center;
   justify-content: center;
-  gap: 7rem;
+  gap: 5rem;
+  padding-block: 4rem;
+  /* padding-inline: clamp(0.1rem, 0.1rem + 1vw, 1rem); */
+  margin-inline: 2rem;
 
   position: relative;
+  background-color: var(--bg-main);
+  border-radius: 2.4rem;
+
 }
 
 .dark-mode {
@@ -53,24 +68,26 @@ main {
   right: 0;
   margin: 3rem;
   padding: 1rem;
-  background-color: hsla(0, 0%, 100%, 0);
+  background-color: var(--bg-dark-mode);
   border-radius: 50%;
   
   border: none;
   cursor: pointer;
 }
 
-.light:hover {
-  background-color: rgba(46, 35, 47, 0.05) !important;
+.dark-mode dark,
+.dark-mode light {
+  background-color: var(--bg-dark-mode);
 }
 
-.dark:hover {
-  background-color: rgba(255, 255, 255, 0.128) !important;
+.dark-mode svg:hover {
+  transform: scale(1.1);
+  transition: all 400ms;
 }
 
 .container-timer,
 .container-sounds {
-  width: 32.1rem;
+  width: clamp(29rem, 1rem + 10vw, 32rem);
 }
 
 #timer,
@@ -89,7 +106,7 @@ main {
   font-weight: 500;
   font-size:  10rem;
   line-height: 13rem;
-  filter: drop-shadow(0.4rem 0.4rem 0.8rem var(--bg-body));
+  filter: drop-shadow(0.14rem 0.1rem 0.5rem var(--bg-btn-notSelected));
 }
 
 .hide {
@@ -104,7 +121,7 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  filter: drop-shadow(0.1rem 0.1rem 1rem var(--bg-body));
+  filter: drop-shadow(0.1rem 0.1rem 0.5rem var(--bg-btn-notSelected));
 }
 
 .container-sounds {
@@ -129,20 +146,28 @@ main {
 .container-sounds svg {
   width: 4rem;
   height: 5rem;
+  margin-top: -1rem;
 }
 
 .container-sounds button path {
   fill: var(--fc-btn-notSelected)
 }
 
+.card {
+  position: relative;
+}
+
 .slide-volume {
-  margin-block: 0 -2rem;
+  margin-left: 1.5rem;
 }
 
 input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  
+  position: absolute;
+  bottom: 2rem;
 }
 
 input {
@@ -151,7 +176,6 @@ input {
   cursor: w-resize;
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(2, 0, 0) 100%);
   border-radius: 0.5rem;
-  z-index: 1;
   opacity: 0.7;
   margin-top: 1.5rem;
 }
@@ -169,6 +193,9 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-transition: background .15s ease-in-out;
   transition: background .15s ease-in-out;
 }
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
 
 input[type="range"]::-webkit-slider-thumb:hover {
   background: var(--circle-volume-bg-hover);
@@ -184,6 +211,9 @@ input[type="range"]::-moz-range-thumb {
   cursor: grab;
   transition: background .15s ease-in-out;
 }
+input[type="range"]::-moz-range-thumb {
+  cursor: grabbing;
+}
 
 input[type="range"]::-moz-range-thumb:hover {
     background: var(--circle-volume-bg-hover);
@@ -194,10 +224,6 @@ input::-moz-focus-inner, input::-moz-focus-outer {
   border: 0;
 }
 
-
-
-
-
 .selected {
   background: var(--bg-btn-selected)
 }
@@ -206,6 +232,11 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 }
 
 @media (min-width: 501px) and (max-width: 759px) {
+.container-timer,
+.container-sounds {
+  width: 35rem;
+}
+
   #timer h2 {
     font-size:  11rem;
     line-height: 14.7rem;
@@ -233,7 +264,13 @@ input::-moz-focus-inner, input::-moz-focus-outer {
 @media (min-width: 760px) {
   .container {
     flex-direction: row;
-    gap: clamp(4rem, 0.1rem + 7vw, 19rem);
+    gap: clamp(3rem, 0.1rem + 3vw, 6rem);
+    padding-inline: clamp(2rem, 1rem + 1vw, 5rem);
+  }
+
+  .container-timer,
+  .container-sounds {
+    width: 35rem;
   }
 
   .dark-mode {
@@ -241,7 +278,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
   }
   
   #timer {
-    padding-bottom: 4.8rem;
+    padding-bottom: 2rem;
   }
 
   #timer h2 {

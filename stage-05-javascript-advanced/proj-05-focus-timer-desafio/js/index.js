@@ -16,13 +16,8 @@ import {
   btnShop,
   btnFire,
 
-  btnDarkMode,
-  btnLightMode,
-
-  volumeTree,
-  volumeCloud,
-  volumeShop,
-  volumeFire
+  btnDark,
+  btnLight
 } from './elements.js'
 
 const themes = Themes({
@@ -46,8 +41,8 @@ const timer = Timer({
 })
 
 const darkMode = DarkMode({
-  btnDarkMode,
-  btnLightMode
+  btnDark,
+  btnLight
 })
 
 Events({ themes, sound, controls, timer, darkMode })
