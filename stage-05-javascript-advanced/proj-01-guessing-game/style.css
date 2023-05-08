@@ -21,21 +21,22 @@ body {
 
 body, p, #inputNumber, button, h2, #btnReset {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #34355B;
 }
 
 main {
-  width: min(43rem, 90%);
-  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(30rem, 90%);
+  padding: 4rem 3rem;
   /* margin: 0 auto; */
   margin-top: -12rem;
   text-align: center;
 
   background: #FFFFFF;
-  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0.1rem 0.1rem 0.8rem hsla(203, 16%, 31%, 0.38));
   border-radius: .6rem;
+
 }
 
 .hide {
@@ -45,15 +46,17 @@ main {
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 2.9rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
   color: hsla(240, 27%, 28%, 1);
+  user-select: none;
 }
 
 p {
   opacity: 0.8;
   line-height: 150%;
-  padding-block: 1.6rem 4.8rem;
+  padding-block: 1rem 3rem;
+  user-select: none;
 }
 
 form {
@@ -63,14 +66,23 @@ form {
 
 #inputNumber, button, #btnReset {
   border: none;
-  padding: 1.6rem;
-  line-height: 2.1rem;
+  padding: 1rem 1.5rem;
+  line-height: 2rem;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 #inputNumber {
   width: 5rem;
   background: #DCE2E9;
+  border: #dcdcdc 1px solid;
   border-radius: 10px 0px 0px 10px;
+  padding-left: 1.7rem;
+}
+
+#inputNumber:focus-visible {
+  outline-color: #7879F1;
+  outline-style: inset;
+  outline-offset: -0.07rem;
 }
 
 button, #btnReset {
@@ -78,11 +90,13 @@ button, #btnReset {
   border-radius: 0px 10px 10px 0px;
   cursor: pointer;
   
-  font-weight: 700;
-  line-height: 2.1rem;
+  font-weight: 600;
+  line-height: 2rem;
   color: #FFFFFF;
 
   transition: background.3s;
+  user-select: none;
+  
 }
 
 button:hover,
@@ -94,12 +108,13 @@ button:hover,
 /* screen-2 */
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   line-height: 150%;
   
-  padding-bottom: 3.3rem;
+  padding-bottom: 3rem;
 }
 
 #btnReset {
   border-radius:10px;
 }
+

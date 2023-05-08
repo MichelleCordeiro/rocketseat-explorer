@@ -14,7 +14,7 @@ JavaScript project that implements a timer (Pomodoro-style) to increase producti
 
 <div align="center">
   <!-- <video src="d00a4c15adc8.mp4"></video> -->
-  <!-- <img src="https://i.postimg.cc/Yq2h8Hrj/proj-05-focus-timer.png" width="500"></img> -->
+  <img src="https://i.postimg.cc/PqN7p1Sj/proj-05-focus-timer-2.png" width="800"></img>
 </div>
 <br>
 
