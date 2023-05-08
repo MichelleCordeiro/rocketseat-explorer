@@ -13,8 +13,7 @@ JavaScript project that implements a timer (Pomodoro-style) to increase producti
 
 
 <div align="center">
-  <!-- <video src="d00a4c15adc8.mp4"></video> -->
-  <img src="https://i.postimg.cc/PqN7p1Sj/proj-05-focus-timer-2.png" width="800"></img>
+  <video src="https://user-images.githubusercontent.com/42891377/236725088-e183768f-736b-4c51-a116-62faa6a3467b.mp4"></video>
 </div>
 <br>
 
