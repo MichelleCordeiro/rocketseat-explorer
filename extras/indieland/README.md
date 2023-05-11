@@ -7,7 +7,7 @@
 
 <!--About session-->
 <p align="center">
-  <img alt="rocketpay" src="https://i.postimg.cc/zvzFs2cR/indieland.png" width="800">
+  <video src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/e9ac4bcc-5d51-4ea2-9ecc-8210e6a96447"></video>
 </p>
 <br><br>
 
@@ -25,9 +25,9 @@ This project was developed using the following technologies:
 
 <h3> 🏆 Project Extra </h3>
 
-Develop form from [figma layout](https://www.figma.com/file/ROfgCISxsJ8snNNRBxleAh/IndieLand-(Copy)?type=design&node-id=18%3A74&t=jorrhvs27dBD9kBz-1).
+Develop form from [figma layout](https://www.figma.com/file/ROfgCISxsJ8snNNRBxleAh/IndieLand?type=design&node-id=18%3A74&t=Jy0JMlhIMUaQ1CzA-1).
 
-You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/extra/indieland/).
+You can see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/extras/indieland/).
 <br><br>
 
 
