@@ -6,6 +6,8 @@
 <br><br><br>
 
 <!--About session-->
+<h1 align="center"> IndieLand </h1>
+
 <p align="center">
   <video src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/e9ac4bcc-5d51-4ea2-9ecc-8210e6a96447"></video>
 </p>
