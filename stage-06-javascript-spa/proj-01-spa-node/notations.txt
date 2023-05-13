@@ -1,0 +1,12 @@
+Como o live server do VS Code não trabalha bem com rotas, 
+então usamos o node
+
+> npm init -y
+> npm install lite-server
+
+package.json apaga o script>test e add o start
+  "scripts": {
+    "start": "lite-server"
+  },
+
+> npm start
