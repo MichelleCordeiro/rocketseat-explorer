@@ -1,0 +1,41 @@
+/* PAGE 404 */
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-style: 62.5%;
+}
+
+body {
+  width: 1005;
+  height: 1005;
+  background: black;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+#main404 {
+  display: flex;
+  text-align: start;
+  justify-content: center;
+  padding-inline: clamp(3rem, 0.1rem + 9vw, 10rem);
+  margin-top: clamp(3rem, 5rem + 20vh, 20rem);
+  color: hsl(240, 9%, 89%);
+  font-size: 3rem;
+}
+
+#h2-404 {
+  padding-top: 5rem;
+}
+
+#p-404 {
+  padding-top: 2rem;
+}
+
+#main404 img {
+  width: 15rem;
+}

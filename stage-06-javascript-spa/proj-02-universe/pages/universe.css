@@ -1,0 +1,46 @@
+/* PAGE UNIVERSE */
+
+#pageUniverse {
+  width: 100vw;
+  height: 100vh;
+  background: url(../scr/images/mountains-universe-2.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#mainUniverse {
+  color: var(--color-h1-h2-p);
+  max-width: 65rem;
+  padding-inline: clamp(3rem, 0.1rem + 9vw, 10rem);
+  margin-top: clamp(0.1rem, 0.1rem + 7vh, 7rem);
+
+  align-items: start;
+}
+
+#h2Universe {
+  font-size: var(--fs-h1-h2);
+  padding-bottom: 1.6rem;
+}
+
+#pUniverse {
+  font-size: var(--fs-p);
+  font-weight: 400;
+  line-height: 3rem;
+  
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+
+
+
+/* PAGE EXPLORER */
+
+#pageExplorer {
+  width: 100vw;
+  height: 100vh;
+  background: url(../scr/images/mountains-universe-3.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+

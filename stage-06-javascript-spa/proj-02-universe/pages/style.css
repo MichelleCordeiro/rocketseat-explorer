@@ -1,0 +1,132 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  
+  --color-nav: hsl(240, 7%, 78%);
+  --color-nav-hover-btn: hsl(0, 0%, 100%);
+  --bg-nav: hsla(0, 0%, 27%, 0.129);
+  
+  --color-h1-h2-p: hsl(240, 9%, 89%);
+  --color-btn-hover: hsl(194, 97%, 31%);
+  --bg-btn-hover: hsl(0, 0%, 27%);
+
+  /* --fs-nav: 2.1rem; */
+  --fs-nav: clamp(1.5rem, 0.1rem + 3vw, 2.1rem);
+  --fs-h1-h2: clamp(2rem, 0.1rem + 10vw, 4.8rem);
+  --fs-p: clamp(1.5rem, 0.1rem + 5vw, 1.8rem);
+  --fs-btn: 1.4rem;
+
+  --nav-heigh: 12.2rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-h1-h2-p);
+  font-weight: 400;
+}
+
+#pageHome {
+  width: 100vw;
+  height: 100vh;
+  background: url(../scr/images/mountains-universe-1.png) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+nav {
+  height: var(--nav-heigh);
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.62) 20%, rgba(38,38,38,0) 100%);
+  
+  /* border-bottom: 0.1rem solid rgba(54, 54, 54, 0.31); */
+  display: flex;
+  align-items: center;
+
+  padding-inline: clamp(2rem, 0.1rem + 6vw, 10rem);
+}
+
+nav ul {
+  display: flex;
+  gap: clamp(2rem, 0.1rem + 4vw, 3.2rem);
+  
+  list-style: none;
+
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--color-nav);
+  font-size: var(--fs-nav);
+  line-height: 2.2rem;
+}
+
+nav ul a:hover {
+  color: var(--color-nav-hover-btn);
+}
+
+nav img {
+  width: 3rem;
+  padding-right: clamp(1rem, 0.1rem + 5vw, 3rem);
+}
+
+main {
+  margin-top: clamp(3rem, 1rem + 20vh, 20rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-items: center; */
+  justify-content: center;
+}
+
+/* PAGE HOME */
+
+main h1 {
+  font-size: var(--fs-h1-h2);
+  color: var(--color-h1-h2-p);
+
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+main button {
+  background: none;
+  color: var(--color-nav-hover-btn);
+
+  font-size: var(--fs-btn);
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+
+  padding: 1.2rem 3.2rem;
+  border: 0.1rem solid var(--color-nav-hover-btn);
+  border-radius: 0.5rem;
+}
+
+main button:hover {
+  background: var(--color-nav-hover-btn);
+  color: var(--color-btn-hover);
+  padding: 1.2rem 3.2rem;
+  border: 0.1rem solid var(--color-nav-hover-btn);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 430px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 1rem;
+  }
+
+  nav img {
+    padding: 2rem;
+  }
+}
