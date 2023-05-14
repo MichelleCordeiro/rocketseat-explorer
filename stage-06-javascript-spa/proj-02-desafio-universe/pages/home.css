@@ -3,9 +3,12 @@
 .page {
   width: 100vw;
   height: 100vh;
-  background: url(../assets/mountains-universe-1.png) no-repeat;
+  background-image: url(../assets/mountains-universe-1.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+
+  transition: background-image .5s ease;
 }
 
 #mainHome {
@@ -20,7 +23,7 @@
   font-size: var(--fs-h1-h2);
   color: var(--color-h1-h2-p);
 
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
   padding: 0 0.5rem;
 }
 

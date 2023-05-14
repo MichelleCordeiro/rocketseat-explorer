@@ -21,7 +21,7 @@
   --fs-nav: clamp(1.5rem, 0.1rem + 3vw, 2.1rem);
   --fs-h1-h2: clamp(2rem, 0.1rem + 10vw, 4.8rem);
   --fs-p: clamp(1.5rem, 0.1rem + 5vw, 1.8rem);
-  --fs-btn: 1.4rem;
+  --fs-btn: clamp(1.1rem, 0.1rem + 3vw, 1.4rem);
 
   --nav-heigh: 12.2rem;
 }
@@ -30,6 +30,8 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--color-h1-h2-p);
   font-weight: 400;
+
+  user-select: none;
 }
 
 nav {

@@ -1,14 +1,17 @@
-/* PAGE EXPLORER */
+/* PAGE UNIVERSE */
 
 .page {
   width: 100vw;
   height: 100vh;
-  background: url(../assets//mountains-universe-3.png) no-repeat;
+  background-image: url(../assets/mountains-universe-2.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+
+  transition: background-image .5s ease;
 }
 
-#mainExplorer {
+#mainUniverse {
   color: var(--color-h1-h2-p);
   max-width: 65rem;
   padding-inline: clamp(3rem, 0.1rem + 9vw, 12rem);
@@ -17,12 +20,12 @@
   align-items: start;
 }
 
-#h2Explorer {
+#h2Universe {
   font-size: var(--fs-h1-h2);
   padding-bottom: 1.6rem;
 }
 
-#pExplorer {
+#pUniverse {
   font-size: var(--fs-p);
   font-weight: 400;
   line-height: 3rem;
