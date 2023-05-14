@@ -20,7 +20,7 @@ Router.add(404, '/pages/404.html')
 Router.handle();
 
 // 'on' funciona da mesma forma do addEventListener
-// p aplicar uma ação na navegação do browser (setas anterior e próxima pag)
+// onpopstate p aplicar uma ação na navegação do browser (setas anterior e próxima pag)
 window.onpopstate = () => Router.handle()
 window.route = () => Router.route()
 

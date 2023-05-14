@@ -1,9 +1,9 @@
 /* PAGE EXPLORER */
 
-#pageExplorer {
+.page {
   width: 100vw;
   height: 100vh;
-  background: url(../scr/images/mountains-universe-3.png) no-repeat;
+  background: url(../assets//mountains-universe-3.png) no-repeat;
   background-size: cover;
   background-position: bottom;
 }
@@ -11,7 +11,7 @@
 #mainExplorer {
   color: var(--color-h1-h2-p);
   max-width: 65rem;
-  padding-inline: clamp(3rem, 0.1rem + 9vw, 10rem);
+  padding-inline: clamp(3rem, 0.1rem + 9vw, 12rem);
   margin-top: clamp(0.1rem, 0.1rem + 7vh, 7rem);
 
   align-items: start;
