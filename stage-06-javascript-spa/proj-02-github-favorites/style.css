@@ -18,12 +18,15 @@ body {
   font-size: 1.6rem;
   color: var(--text-color);
   background-color: rgb(250, 254, 255);
+
+  user-select: none;
 }
 
 body * {
   font-family: var(--ff-primary);
 }
 
+/* Class Screem Read Only - não é exibido na tela, mas é lido na A11y */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -37,9 +40,9 @@ body * {
 }
 
 #app {
-  padding: 2rem;
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 header {
@@ -116,6 +119,14 @@ table tr:nth-child(odd) {
   background: #ddd;
 }
 
+table tr:last-child td:first-child {
+  border-bottom-right-radius: .4rem;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: .4rem;
+}
+
 table td {
   padding: 1.5rem;
   text-align: left;
@@ -126,7 +137,6 @@ td.user {
   align-items: center;
   gap: 1rem;
 }
-
 
 td.user img {
   width: 5rem;
@@ -144,9 +154,19 @@ td.user a p {
   font-weight: bold;
 }
 
-td .remove {
+td.user a span {
+  font-size: 1.2rem;
+}
+
+td.remove {
+  padding-left: 0;
+}
+
+td .remove-btn {
   background: none;
   border: none;
 
+  font-size: 1.8rem;
   color: red;
+  cursor: pointer;
 }
