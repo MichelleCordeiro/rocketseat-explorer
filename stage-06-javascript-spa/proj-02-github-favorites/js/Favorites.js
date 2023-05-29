@@ -1,32 +1,10 @@
-export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
-
-    return fetch(endpoint)
-    .then(data => data.json())
-    // .then(data => ({
-    //   login: data.login,
-    //   name: data.name,
-    //   public_repos: data.public_repos,
-    //   followers: data.followers
-    // }))
-    // desestruturado
-    .then(({ login, name, public_repos, followers }) => ({
-        login,
-        name,
-        public_repos,
-        followers
-    }))
-  }
-}
+import { GithubUser } from './GithubUser.js'
 
 // classe p manipulaçao dos dados
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
-
-    GithubUser.search('maykbrito').then(user => console.log(user))
   }
 
   load() {
@@ -40,6 +18,14 @@ export class Favorites {
 
   async add(username) {
     try {
+      // higher order function é uma função que recebe uma outra como argumento, ou uma função que retorna outra função
+      const userExists = this.entries.find(entry => entry.login === username)
+      // console.log(userExists)
+
+      if(userExists) {
+        throw new Error('Usuário já cadastrado!')
+      }
+      
       // GithubUser.search(username).then( user => { ... })
       const user = await GithubUser.search(username)
       
@@ -62,10 +48,12 @@ export class Favorites {
     // user do array !== do user clicado TRUE mantem
     // user do array !== do user clicado FALSE não retorna esse user (será 'deletado')
     const filteredEntries = this.entries
-      .filter(entry => 
-        // console.log(entry)
-        entry.login !== user.login
-      )
+      // higher order function
+      .filter(
+        entry =>
+          // console.log(entry)
+          entry.login !== user.login
+      );
 
     // console.log(filteredEntries)
     this.entries = filteredEntries
@@ -111,6 +99,7 @@ export class FavoritesView extends Favorites {
 
       row.querySelector('.user img').src = `https://github.com/${user.login}.png`
       row.querySelector('.user img').alt = `Imagem de ${user.name}`
+      row.querySelector('.user a').href = `https://github.com/${user.login}`
       row.querySelector('.user p').textContent = user.name
       row.querySelector('.user span').textContent = user.login
       row.querySelector('.repositories').textContent = user.public_repos

@@ -10,7 +10,7 @@
   --ff-primary: 'Poppins', sans-serif;
   --text-color: #303030;
 
-  --hue: 194;
+  --hue: 255;
   --primary-color: hsl(var(--hue), 100%, 63%);
 }
 
@@ -40,7 +40,7 @@ body * {
 }
 
 #app {
-  max-width: 550px;
+  max-width: 580px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -70,8 +70,14 @@ header h1 {
   padding: 0 .8rem;
 }
 
+input[type="input-search"] {
+    outline: var(--ff-primary);
+}
+
 .search button {
   background-color: var(--primary-color);
+  color: #eee;
+  font-size: 1.4rem;
   border-radius: 0 .4rem .4rem 0;
   height: 3.2rem;
   border: none;
@@ -81,14 +87,15 @@ header h1 {
 }
 
 .search button:hover {
-  filter: brightness(1.1)
+  filter: brightness(1.1);
+  font-weight: 700;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
 
-  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+  box-shadow: .5rem 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
 
 table * {
@@ -98,6 +105,7 @@ table * {
 
 table th {
   background: var(--primary-color);
+  color: #eee;
   text-align: left;
   font-weight: normal;
   padding: 1.5rem;
@@ -112,11 +120,11 @@ table th:last-child {
 }
 
 table tr:nth-child(even) {
-  background: #eee;
+  background: #eeeeee;
 }
 
 table tr:nth-child(odd) {
-  background: #ddd;
+  background: #d8d9e3;
 }
 
 table tr:last-child td:first-child {
@@ -166,7 +174,13 @@ td .remove-btn {
   background: none;
   border: none;
 
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: red;
   cursor: pointer;
+}
+
+td .remove-btn:hover {
+  font-weight: 700;
+  transform: scale(1.2);
+  transition: all 700ms;
 }
