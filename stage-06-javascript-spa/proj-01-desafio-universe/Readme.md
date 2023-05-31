@@ -36,6 +36,7 @@ This challenge was developed using the following technologies/tools:
   <code><img height="35" alt="css logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
   <code><img height="35" alt="javascript logo" src="https://i0.wp.com/pt.mundobabushka.com/wp-content/uploads/sites/5/2016/03/js-logo.png?fit=500%2C500&ssl=1"></code>
   <code><img height="35" alt="nodejs logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
+  <code><img height="33" alt="vercel logo" src="https://i.postimg.cc/NFdZqCDD/vercel.png"/></code>
   <code><img height="33" alt="vs code logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png"></code>
   <code><img height="33" alt="figma logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/></code>
 </p>
@@ -46,6 +47,8 @@ This challenge was developed using the following technologies/tools:
 This aplication is a page was created based on the SPA (Single Page Application), where the content is updated on the same page instead of loading a new page.
 
 Develop project from [figma layout](https://www.figma.com/file/zwfKN27tp5IvU1o7UGxcuV/%5BDesafios-Explorer%5D-SPA-Universe?type=design&node-id=0%3A1&t=n7ZHwx3Nh4CXMR40-1).
+
+You can see it [here.](https://desafio-universe.vercel.app/)
 
 </p>
 

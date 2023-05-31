@@ -3,7 +3,7 @@
     "lite-server": "^2.6.1"
   },
   "name": "proj-02-universe",
-  "description": "<!--Banner session-->\r <p>\r   <img src=\"https://i.postimg.cc/gkShTXDv/rocketseat.png\" alt=\"Logo RocketSeat\" width=\"180\" align=\"left\">\r   <img src=\"https://i.postimg.cc/5tpZqB3N/explorer-logo.png\" alt=\"Logo Explorer\" width=\"150\" align=\"right\">\r </p>\r <br><br><br>",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
