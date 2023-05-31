@@ -24,6 +24,7 @@ The project features the following functionalities:
 - The Universe page
 - Exploration page
 - 404 page
+- Mouse moviment animation 
 
 <br>
 

@@ -23,9 +23,15 @@ body {
   text-align: start;
   justify-content: center;
   padding-inline: clamp(3rem, 0.1rem + 9vw, 10rem);
-  margin-top: clamp(3rem, 5rem + 20vh, 20rem);
+  margin-top: clamp(2rem, 5rem + 20vh, 20rem);
   color: hsl(240, 9%, 89%);
   font-size: 3rem;
+}
+
+.text {
+  display: flex;
+    justify-content: end;
+    flex-direction: column;
 }
 
 #h2-404 {
@@ -36,6 +42,32 @@ body {
   padding-top: 2rem;
 }
 
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
 #main404 img {
   width: 15rem;
+}
+
+.ovni .ovni-img {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  #main404 {
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    margin: 5rem auto;
+  }
+  .images {
+    margin: 0 auto;
+  }
+  #h2-404 {
+    padding-top: 2rem;
+  }
 }

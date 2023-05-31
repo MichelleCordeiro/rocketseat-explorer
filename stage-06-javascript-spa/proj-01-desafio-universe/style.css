@@ -67,6 +67,22 @@ nav img {
   padding-right: clamp(1rem, 0.1rem + 5vw, 3rem);
 }
 
+.ovni {
+  margin: 0 auto;
+
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1000px);
+  z-index: 200;
+}
+
+.ovni .ovni-img {
+  width: 16rem;
+  position: absolute;
+  bottom: -40%;
+  left: 30%;  
+}
+
 @media (max-width: 430px) {
   nav {
     display: flex;
@@ -78,5 +94,11 @@ nav img {
 
   nav img {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .ovni .ovni-img {
+    display: none;
   }
 }
