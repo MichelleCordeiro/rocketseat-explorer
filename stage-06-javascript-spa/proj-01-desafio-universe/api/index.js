@@ -1,4 +1,4 @@
-import { Router } from'./router.js'
+import { Router } from './router.js'
 
 const router = new Router()
 
@@ -11,5 +11,3 @@ router.handle()
 
 window.onpopstate = () => router.handle()
 window.route = () => router.route()
-
-module.exports = app
