@@ -1,0 +1,101 @@
+
+table tbody {
+  width: 813px;
+  height: 620px;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  padding-left: 0.1rem;
+}
+
+/* scroolbar */
+table tbody::-webkit-scrollbar {
+  width: 1.8rem;
+}
+
+table tbody::-webkit-scrollbar-track {
+  background: var(--bg-body);
+  border-bottom-right-radius: 1.2rem;
+}
+
+table tbody::-webkit-scrollbar-thumb {
+  background-color: var(--bg-button);
+  border: 0.6rem solid var(--bg-body);
+  border-radius: 1.2rem;
+}
+
+/* bg alternado nas linhas */
+tbody tr:nth-child(even) {
+  background: var(--bg-body);
+  border-bottom: solid 0.1rem var(--border-table) !important;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--bg-table-row-odd);
+  border-bottom: solid 0.1rem var(--bg-table-header) !important;
+}
+
+/* "remove" bordas do final da tabela e mantem radius */
+tbody tr:last-child td:first-child {
+  border-bottom: 0.2rem solid rgba(0, 128, 0, 0);
+  border-bottom-left-radius: 1.2rem !important;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom: 0.2rem solid rgba(0, 128, 0, 0);
+  border-bottom-right-radius: 1.2rem !important;
+}
+
+tbody tr td .user {
+  display: flex;
+  gap: 1.6rem;
+  justify-items: center;
+}
+
+.user a {
+  display: flex;
+  gap: 1.6rem;
+  text-decoration: none;
+}
+
+.user a .container-img {
+  width: 5.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user a img {
+  width: 5.6rem;
+  border-radius: 50%;
+  transition: all 300ms;
+}
+
+.user a img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+.user a .container-user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-self: center;
+}
+
+.user a p,
+.user a span {
+  color: var(--fc-body);
+  letter-spacing: 0rem;
+}
+
+.user a p:hover,
+.user a span:hover {
+  color: var(--bg-user-hover);
+}
+
+.user a span {
+  font-size: var(--fs-user-span);
+}

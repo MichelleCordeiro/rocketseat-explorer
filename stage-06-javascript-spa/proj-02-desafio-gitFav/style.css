@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secundary: 'Roboto Mono', monospace;
+  --fs-search: 1.4rem;
+  --fs-search-btn: 1.2rem;
+  --fs-table: 1.4rem;
+  --fs-user-span: 1.2rem;
+
+  --bg-body: #000000;
+  --bg-search: #06181C;
+  --bg-button: #065E7C;
+  --bg-table-header: #092D38;
+  --bg-table-row-odd: #06161B;
+  --bg-table-row-odd: #06181C;
+  --fc-btn: #FFF;
+  --fc-body: #E1E1E6;
+  --bg-user-hover: #0ea2d3;
+  --fc-search: #7C7C8A;
+  --fc-empty-page: #4E5455;
+  --fc-red: #F75A68;
+  --border-table: #31545a;
+}
+
+body {
+  color: var(--fc-body);
+  background: var(--bg-body);
+}
+
+body * {
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Class Screem Read Only - não é exibido na tela, mas é lido na A11y */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.page {
+  /* max-width: 1000px; */
+  max-width: 815px;
+  max-height: 970px;
+
+  margin: 0 auto;
+  padding-block: 8rem;
+}
+
+header {
+  width: 815px;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  margin-bottom: 4rem;
+}
+
+#logo {
+  width: 12rem;
+}
+
+#search {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 0.8rem;
+}
+
+#input-search {
+  background: var(--bg-search);
+  color: var(--fc-search);
+  font-size: var(--fs-search);
+  font-weight: 400;
+  border-radius: 0.5rem;
+  border: none;
+
+  width: 35rem;
+  padding: 1.2rem;
+}
+
+#btn-fav {
+  background: var(--bg-button);
+  padding: 1.2rem 2.8rem;
+  border-radius: 0.5rem;
+  border: none;
+
+  font-size: var(--fs-fav-btn);
+  line-height: 2.2rem;
+  letter-spacing: 0.05rem;
+  color: var(--fc-btn);
+  text-transform: uppercase;
+
+  display: flex;
+  align-self: center;
+  gap: 0.8rem;
+    
+  cursor: pointer;
+}
+
+#btn-fav:hover {
+  color: var(--bg-button);
+  background: var(--fc-btn);
+}
+
+#btn-fav:hover svg path {
+  fill: var(--bg-table-header);
+}
+
+/* simula borda c radius na tabela */
+#border-table {
+  width: 815px;
+  height: 680px;
+  /* height: 100%; */
+
+  background: var(--bg-button);
+  padding: 0.1rem;
+  border-radius: 1.2rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead {
+  display: flex;
+  text-align: left;
+}
+
+table thead tr {
+  width: 100%;
+}
+
+table thead tr th,
+table td {
+  display: inline-flex;
+}
+
+table tr th:nth-child(1) {
+  min-width: 48%;
+  padding-left: 4rem;
+}
+
+table tr td:nth-child(1) {
+  min-width: 50%;
+  padding: 2.4rem 0 2.4rem 4rem ;
+}
+
+table tr th,
+table td {
+  min-width: 16%;
+}
+
+table tr th:last-child {
+  min-width: 3%;
+}
+
+table tr td:last-child {
+  min-width: 4%;
+}
+
+thead th {
+  /* background: var(--bg-table-header); */
+  padding-block: 1.6rem;
+  
+  font-size: var(--fs-table);
+}
+
+/* bordas do cabeçalho */
+thead th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+thead th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+
+table tbody {
+  width: 813px;
+  height: 620px;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  letter-spacing: 0.05rem;
+  padding-left: 0.1rem;
+}
+
+/* scroolbar */
+table tbody::-webkit-scrollbar {
+  width: 1.8rem;
+}
+
+table tbody::-webkit-scrollbar-track {
+  background: var(--bg-body);
+  border-bottom-right-radius: 1.2rem;
+}
+
+table tbody::-webkit-scrollbar-thumb {
+  background-color: var(--bg-button);
+  border: 0.6rem solid var(--bg-body);
+  border-radius: 1.2rem;
+}
+
+/* bg alternado nas linhas */
+tbody tr:nth-child(even) {
+  background: var(--bg-body);
+  border-bottom: solid 0.1rem var(--border-table) !important;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--bg-table-row-odd);
+  border-bottom: solid 0.1rem var(--bg-table-header) !important;
+}
+
+/* "remove" bordas do final da tabela e mantem radius */
+tbody tr:last-child td:first-child {
+  border-bottom: 0.2rem solid rgba(0, 128, 0, 0);
+  border-bottom-left-radius: 1.2rem !important;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom: 0.2rem solid rgba(0, 128, 0, 0);
+  border-bottom-right-radius: 1.2rem !important;
+}
+
+tbody tr td .user {
+  display: flex;
+  gap: 1.6rem;
+  justify-items: center;
+}
+
+.user a {
+  display: flex;
+  gap: 1.6rem;
+  text-decoration: none;
+}
+
+.user a .container-img {
+  width: 5.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user a img {
+  width: 5.6rem;
+  border-radius: 50%;
+  transition: all 300ms;
+}
+
+.user a img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+.user a .container-user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-self: center;
+}
+
+.user a {
+  color: var(--fc-body);
+  letter-spacing: 0rem;
+}
+
+.user a p:hover,
+.user a span:hover {
+  color: var(--bg-user-hover);
+}
+
+.user a span {
+  font-size: var(--fs-user-span);
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--fc-red);
+
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  opacity: 0.8;
+}
