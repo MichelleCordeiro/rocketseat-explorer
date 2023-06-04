@@ -72,7 +72,7 @@ header {
 }
 
 #logo {
-  width: 12rem;
+  width: 15rem;
 }
 
 #search {
@@ -125,7 +125,7 @@ header {
 /* simula borda c radius na tabela */
 #border-table {
   width: 815px;
-  height: 680px;
+  /* height: 680px; */
   /* height: 100%; */
 
   background: var(--bg-button);
@@ -193,7 +193,7 @@ thead th:last-child {
 
 table tbody {
   width: 813px;
-  height: 620px;
+  max-height: 620px;
   overflow: auto;
 
   display: flex;
