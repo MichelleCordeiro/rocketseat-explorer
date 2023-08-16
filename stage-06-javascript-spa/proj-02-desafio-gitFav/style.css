@@ -13,19 +13,19 @@
   --fs-table: 1.4rem;
   --fs-user-span: 1.2rem;
 
-  --bg-body: #000000;
-  --bg-search: #06181C;
-  --bg-button: #065E7C;
-  --bg-table-header: #092D38;
-  --bg-table-row-odd: #06161B;
-  --bg-table-row-odd: #06181C;
+  --bg-body: #09080d;
+  --bg-search: #201d34;
+  --bg-button: #6b57eb;
+  /* --bg-table-header: #092D38; */
+  --bg-table-row-odd: #201d34;
   --fc-btn: #FFF;
   --fc-body: #E1E1E6;
   --bg-user-hover: #0ea2d3;
-  --fc-search: #7C7C8A;
+  --fc-search: #bdbdee;
+  --fc-search-placeholder: #a7a7a7;
   --fc-empty-page: #4E5455;
   --fc-red: #F75A68;
-  --border-table: #31545a;
+  --border-table: #334370;
 }
 
 body {
@@ -72,7 +72,9 @@ header {
 }
 
 #logo {
-  width: 15rem;
+  width: 13rem;
+  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0,0.5)); */
+  filter: drop-shadow(2px 2px 2px rgba(212, 205, 245, 0.564));
 }
 
 #search {
@@ -92,6 +94,14 @@ header {
 
   width: 35rem;
   padding: 1.2rem;
+}
+
+#input-search:placeholder-shown {
+  color: var(--fc-search);
+}
+
+#input-search::placeholder {
+  color: var(--fc-search-placeholder);
 }
 
 #btn-fav {
@@ -119,7 +129,7 @@ header {
 }
 
 #btn-fav:hover svg path {
-  fill: var(--bg-table-header);
+  fill: var(--bg-button);
 }
 
 /* simula borda c radius na tabela */
@@ -175,7 +185,6 @@ table tr td:last-child {
 }
 
 thead th {
-  /* background: var(--bg-table-header); */
   padding-block: 1.6rem;
   
   font-size: var(--fs-table);
@@ -227,7 +236,7 @@ tbody tr:nth-child(even) {
 
 tbody tr:nth-child(odd) {
   background: var(--bg-table-row-odd);
-  border-bottom: solid 0.1rem var(--bg-table-header) !important;
+  border-bottom: solid 0.1rem var(--fc-empty-page);
 }
 
 /* "remove" bordas do final da tabela e mantem radius */
@@ -302,4 +311,96 @@ tbody tr td .user {
 
 .remove-btn:hover {
   opacity: 0.8;
+}
+
+
+ /* SVG Artista https://svgartista.net */
+svg .svg-elem-1 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 0.5s;
+          transition: fill 0.7s ease-in 0.5s;
+}
+
+svg.active .svg-elem-1 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-2 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 0.7s;
+          transition: fill 0.7s ease-in 0.7s;
+}
+
+svg.active .svg-elem-2 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-3 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 0.9s;
+          transition: fill 0.7s ease-in 0.9s;
+}
+
+svg.active .svg-elem-3 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-4 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 1.1s;
+          transition: fill 0.7s ease-in 1.1s;
+}
+
+svg.active .svg-elem-4 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-5 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 1.3s;
+          transition: fill 0.7s ease-in 1.3s;
+}
+
+svg.active .svg-elem-5 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-6 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 1.5s;
+          transition: fill 0.7s ease-in 1.5s;
+}
+
+svg.active .svg-elem-6 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-7 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 1.7000000000000002s;
+          transition: fill 0.7s ease-in 1.7000000000000002s;
+}
+
+svg.active .svg-elem-7 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-8 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 1.9000000000000001s;
+          transition: fill 0.7s ease-in 1.9000000000000001s;
+}
+
+svg.active .svg-elem-8 {
+  fill: rgb(107, 87, 235);
+}
+
+svg .svg-elem-9 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s ease-in 2.1s;
+          transition: fill 0.7s ease-in 2.1s;
+}
+
+svg.active .svg-elem-9 {
+  fill: rgb(107, 87, 235);
 }

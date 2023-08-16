@@ -1,6 +1,6 @@
 import { GithubUser } from './GithubUser.js'
 
-// classe p manipulaçao dos dados
+// classe p estruturação e  manipulaçao dos dados
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
@@ -33,6 +33,8 @@ export class Favorites {
         throw new Error('Usuário não encontrado!')
       }
 
+      // principio da imutabilidade
+      // cria outro array c o novo user e traz espalhando os users q ja tinha no anterior
       this.entries = [user, ...this.entries]
       this.update()
       this.save()
@@ -62,7 +64,7 @@ export class Favorites {
   }
 }
 
-// classe manipulação do HTML
+// classe manipulação do HTML - visualização e eventos
 // 'extends' herança (FavoritesView herda de Favorites)  
 export class FavoritesView extends Favorites {
   constructor(root) {
