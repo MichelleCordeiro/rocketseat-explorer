@@ -10,8 +10,8 @@
   --ff-secundary: 'Roboto Mono', monospace;
   --fs-search: 1.4rem;
   --fs-search-btn: 1.2rem;
-  --fs-table: 1.4rem;
-  --fs-user-span: 1.2rem;
+  --fs-table: 1.6rem;
+  --fs-drink-span: 1.2rem;
 
   --bg-body: #09080d;
   --bg-search: #201d34;
@@ -20,7 +20,7 @@
   --bg-table-row-odd: #201d34;
   --fc-btn: #FFF;
   --fc-body: #E1E1E6;
-  --bg-user-hover: #0ea2d3;
+  --bg-drink-hover: #0ea2d3;
   --fc-search: #bdbdee;
   --fc-search-placeholder: #a7a7a7;
   --fc-empty-page: #4E5455;
@@ -71,10 +71,18 @@ header {
   margin-bottom: 4rem;
 }
 
+#logos {
+  display: flex;
+  gap: 1rem;
+}
+
 #logo {
+  width: 2.2rem;
+  padding-bottom: .5rem;
+}
+
+#logoName {
   width: 13rem;
-  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0,0.5)); */
-  filter: drop-shadow(2px 2px 2px rgba(212, 205, 245, 0.564));
 }
 
 #search {
@@ -110,7 +118,7 @@ header {
   border-radius: 0.5rem;
   border: none;
 
-  font-size: var(--fs-fav-btn);
+  font-size: var(--fs-search-btn);
   line-height: 2.2rem;
   letter-spacing: 0.05rem;
   color: var(--fc-btn);
@@ -162,18 +170,26 @@ table td {
 }
 
 table tr th:nth-child(1) {
-  min-width: 48%;
+  width: 54%;
   padding-left: 4rem;
 }
 
 table tr td:nth-child(1) {
-  min-width: 50%;
+  width: 54%;
   padding: 2.4rem 0 2.4rem 4rem ;
+}
+
+table tr th:nth-child(4) {
+  max-width: 5%;
+}
+
+table tr td:nth-child(4) {
+  max-width: 5%;
 }
 
 table tr th,
 table td {
-  min-width: 16%;
+  min-width: 20%;
 }
 
 table tr th:last-child {
@@ -250,62 +266,71 @@ tbody tr:last-child td:last-child {
   border-bottom-right-radius: 1.2rem !important;
 }
 
-tbody tr td .user {
+tbody tr td .drink {
   display: flex;
   gap: 1.6rem;
   justify-items: center;
 }
 
-.user a {
+.drink a {
   display: flex;
   gap: 1.6rem;
   text-decoration: none;
 }
 
-.user a .container-img {
+.drink a .container-img {
   width: 5.6rem;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.user a img {
+.drink a img {
   width: 5.6rem;
   border-radius: 50%;
   transition: all 300ms;
 }
 
-.user a img:hover {
+.drink a img:hover {
   transform: scale(1.2);
   transition: all 300ms;
 }
 
-.user a .container-user {
+.drink a .container-drink {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   align-self: center;
 }
 
-.user a {
+.drink a {
   color: var(--fc-body);
   letter-spacing: 0rem;
 }
 
-.user a p:hover,
-.user a span:hover {
-  color: var(--bg-user-hover);
+.drink a p:hover,
+.drink a span:hover {
+  color: var(--bg-drink-hover);
 }
 
-.user a span {
-  font-size: var(--fs-user-span);
+.drink a span {
+  font-size: var(--fs-drink-span);
+  padding-right: 1rem;
+  line-height: 1.7rem;
+}
+
+.category, .served_in {
+  font-size: var(--fs-search);
 }
 
 .remove-btn {
+  width: 2.5rem;
+  height: 2.5rem;
   background: none;
   border: none;
-  color: var(--fc-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-transform: capitalize;
   cursor: pointer;
 }
 
