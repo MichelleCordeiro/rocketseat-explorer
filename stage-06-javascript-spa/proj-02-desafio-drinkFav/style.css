@@ -16,8 +16,10 @@
   --bg-body: #09080d;
   --bg-search: #201d34;
   --bg-button: #6b57eb;
-  /* --bg-table-header: #092D38; */
-  --bg-table-row-odd: #201d34;
+  --bg-button-hover: #768afe;
+  /* --bg-button-hover: radial-gradient(circle, rgba(107,87,235,1) 41%, rgba(118,138,254,1) 100%); */
+  --bg-table: #171421;
+  --bg-table-row-odd: #302d43;
   --fc-btn: #FFF;
   --fc-body: #E1E1E6;
   --bg-drink-hover: #0ea2d3;
@@ -56,9 +58,10 @@ body * {
   /* max-width: 1000px; */
   max-width: 815px;
   max-height: 970px;
-
+  
   margin: 0 auto;
-  padding-block: 8rem;
+  padding-inline: 4rem;
+  margin-block: 7rem;
 }
 
 header {
@@ -82,7 +85,7 @@ header {
 }
 
 #logoName {
-  width: 13rem;
+  width: 15rem;
 }
 
 #search {
@@ -127,27 +130,32 @@ header {
   display: flex;
   align-self: center;
   gap: 0.8rem;
-    
+  
   cursor: pointer;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
 }
 
 #btn-fav:hover {
-  color: var(--bg-button);
-  background: var(--fc-btn);
+  color: var(--fc-btn);
+  background: var(--bg-button-hover);
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
 }
 
 #btn-fav:hover svg path {
-  fill: var(--bg-button);
+  fill: var(--fc-btn);
 }
 
 /* simula borda c radius na tabela */
 #border-table {
   width: 815px;
-  /* height: 680px; */
+  /* max-height: 722px; */
   /* height: 100%; */
 
   background: var(--bg-button);
   padding: 0.1rem;
+  padding-bottom: 1rem;
   border-radius: 1.2rem;
 }
 
@@ -218,7 +226,7 @@ thead th:last-child {
 
 table tbody {
   width: 813px;
-  max-height: 620px;
+  max-height: 767px;
   overflow: auto;
 
   display: flex;
@@ -244,9 +252,9 @@ table tbody::-webkit-scrollbar-thumb {
   border-radius: 1.2rem;
 }
 
-/* bg alternado nas linhas */
+/* bg alternado nas linhas da tabela*/
 tbody tr:nth-child(even) {
-  background: var(--bg-body);
+  background: var(--bg-table);
   border-bottom: solid 0.1rem var(--border-table) !important;
 }
 
@@ -275,6 +283,7 @@ tbody tr td .drink {
 .drink a {
   display: flex;
   gap: 1.6rem;
+  color: var(--bg-button-hover);
   text-decoration: none;
 }
 
@@ -309,7 +318,7 @@ tbody tr td .drink {
 
 .drink a p:hover,
 .drink a span:hover {
-  color: var(--bg-drink-hover);
+  color: var(--bg-button-hover);
 }
 
 .drink a span {

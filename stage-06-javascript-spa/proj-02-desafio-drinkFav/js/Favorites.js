@@ -15,43 +15,49 @@ export class Favorites {
 
   save() {
     localStorage.setItem('@drinks-favorites:', JSON.stringify(this.entries))
-    console.log('this.entries SAVE: ', this.entries);
   }
 
   async add(drinkname) {
+    drinkname = drinkname.charAt(0).toUpperCase() + drinkname.slice(1)
+
     try {
-      // const drinkExists = this.entries.find(entry => entry.name === drinkname);
+      const drinkExists = this.entries.find(entry => {
+        let drinkHas = entry.name
+
+        // lógica diferente pq é trazido da API o primeiro resultado contendo a palavra buscada, e não a palvra exata
+        if (drinkHas === drinkname || drinkHas.includes(drinkname)) {
+          return true
+        }
+        return false
+      })
+
+      console.log('drinkname ADD: ', drinkname);
       // console.log('entry.name ADD: ', entry.name);
-      // console.log('this.entries ADD----: ', this.entries);
-      // console.log('drinkExists: ', drinkExists);      
+      console.log('this.entries ADD EXISTE ----: ', this.entries);
+      console.log('drinkExists ----: ', drinkExists);
       
-      // if (drinkExists) {
-      //   throw new Error('Drink já cadastrado!');
-      // }
-        
-      // const apidrinks = await APIDrink.search(drinkname);
-      // const drinksearch = apidrinks.drinks[0];
+      if (drinkExists) {
+        throw new Error('Drink já cadastrado!');
+      }
+
       const drinksearch = await APIDrink.search(drinkname);
-  
 
       if (drinksearch === undefined) {
         throw new Error('Drink não encontrado!');
       }
 
       this.entries = [drinksearch, ...this.entries]
-      this.update()
-      this.save()
+      this.update();
+      this.save();
+      console.log('this.entries ADD NÃO EXISTE apos SAVE----: ', this.entries);
 
     } catch (error) {
       alert(error.message)
     }
   }s
 
-  delete(drinkname) {
-    const filteredEntries = this.entries.filter(x => x.name !== drinkname.name);
-      console.log('this.entries ADD----: ', this.entries);
-    console.log('x.name ADD: ', x.name);
-
+  delete(drink) {
+    const filteredEntries = this.entries.filter(entry => entry.name !== drink.name);
     // filter só retorna se for true, retornará users diferentes ao clicado p excluir
 
     this.entries = filteredEntries;
@@ -96,7 +102,7 @@ export class FavoritesView extends Favorites {
         const isOK = confirm('Tem certeza que deseja remover esse drink?');
 
         if (isOK) {
-          this.delete(row);
+          this.delete(drink);
         }
       };
 
