@@ -9,8 +9,12 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-modal.css">
 
   <script src="./js/main.js" type="module" defer></script>
+  <script src="./js/modal.js" type="module" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
 </head>
 
 <body>
@@ -35,6 +39,8 @@
       </div>
     </header>
 
+    <h1 class="notdisplay">Drink Favoritos</h1>
+
     <div id="border-table">
       <table>
         <thead>
@@ -49,7 +55,7 @@
         <tbody>
           <tr>
             <td class="drink">
-              <a href="#" target="_blank">
+              <a type="button" id="openModal" data-toggle="modal" data-target="#myModal">
                 <div class="container-img">
                   <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Foto de um Morito">
                 </div>
@@ -67,9 +73,34 @@
               </button>
             </td>
           </tr>
-          
         </tbody>
       </table>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Mojito</h2>
+          <span class="close" data-dismiss="modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="ingredients">
+            <h3>Ingredientes</h3>
+            <img src="https://www.thecocktaildb.com/images/ingredients/Light%20rum-Medium.png" alt="Ingrediente 1">
+            <img src="https://www.thecocktaildb.com/images/ingredients/Lime-Medium.png" alt="Ingrediente 2">
+            <img src="https://www.thecocktaildb.com/images/ingredients/Sugar-Medium.png" alt="Ingrediente 3">
+            <img src="https://www.thecocktaildb.com/images/ingredients/Mint-Medium.png" alt="Ingrediente 4">
+            <img src="https://www.thecocktaildb.com/images/ingredients/Soda%20water-Medium.png" alt="Ingrediente 5">
+          </div>
+          <div class="instructions">
+            <h3>Preparo</h3>
+            <p>Shake all ingredients (except ginger ale) with ice and strain into a collins glass over ice cubes. Fill with ginger ale, stir, and serve. Shake all ingredients (except ginger ale) with ice and strain into a collins glass over ice cubes. Fill with ginger ale, stir, and serve.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <span>Beba com moderação. E se beber não programe.</span>
+        </div>
+      </div>
     </div>
   </div>
 </body>

@@ -8,25 +8,22 @@
   font-size: 62.5%;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secundary: 'Roboto Mono', monospace;
-  --fs-search: 1.4rem;
-  --fs-search-btn: 1.2rem;
-  --fs-table: 1.6rem;
-  --fs-drink-span: 1.2rem;
+  --fs-body: 1.6rem;
+  --fs-thead: 2rem;
+  --fs-search-btn: 1.4rem;
+  --fs-drink-p: 1.8rem;
 
   --bg-body: #09080d;
   --bg-search: #201d34;
-  --bg-button: #6b57eb;
+  --bg-primary: #6b57eb;
   --bg-button-hover: #768afe;
-  /* --bg-button-hover: radial-gradient(circle, rgba(107,87,235,1) 41%, rgba(118,138,254,1) 100%); */
   --bg-table: #171421;
   --bg-table-row-odd: #302d43;
   --fc-btn: #FFF;
   --fc-body: #E1E1E6;
-  --bg-drink-hover: #0ea2d3;
   --fc-search: #bdbdee;
   --fc-search-placeholder: #a7a7a7;
   --fc-empty-page: #4E5455;
-  --fc-red: #F75A68;
   --border-table: #334370;
 }
 
@@ -54,14 +51,18 @@ body * {
   border-width: 0;
 }
 
+.notdisplay {
+  display: none;
+}
+
 #app {
   /* max-width: 1000px; */
-  max-width: 815px;
+  max-width: 900px;
   max-height: 970px;
   
   margin: 0 auto;
   padding-inline: 4rem;
-  margin-block: 7rem;
+  margin-block: 5.5rem;
 }
 
 header {
@@ -98,7 +99,6 @@ header {
 #input-search {
   background: var(--bg-search);
   color: var(--fc-search);
-  font-size: var(--fs-search);
   font-weight: 400;
   border-radius: 0.5rem;
   border: none;
@@ -116,7 +116,7 @@ header {
 }
 
 #btn-fav {
-  background: var(--bg-button);
+  background: var(--bg-primary);
   padding: 1.2rem 2.8rem;
   border-radius: 0.5rem;
   border: none;
@@ -153,7 +153,7 @@ header {
   /* max-height: 722px; */
   /* height: 100%; */
 
-  background: var(--bg-button);
+  background: var(--bg-primary);
   padding: 0.1rem;
   padding-bottom: 1rem;
   border-radius: 1.2rem;
@@ -175,54 +175,39 @@ table thead tr {
 table thead tr th,
 table td {
   display: inline-flex;
-}
-
-table tr th:nth-child(1) {
-  width: 54%;
-  padding-left: 4rem;
-}
-
-table tr td:nth-child(1) {
-  width: 54%;
-  padding: 2.4rem 0 2.4rem 4rem ;
-}
-
-table tr th:nth-child(4) {
-  max-width: 5%;
-}
-
-table tr td:nth-child(4) {
-  max-width: 5%;
-}
-
-table tr th,
-table td {
   min-width: 20%;
 }
 
-table tr th:last-child {
-  min-width: 3%;
-}
-
-table tr td:last-child {
-  min-width: 4%;
-}
-
-thead th {
+table thead tr th {
+  font-size: var(--fs-thead);
   padding-block: 1.6rem;
-  
-  font-size: var(--fs-table);
 }
 
 /* bordas do cabeçalho */
 thead th:first-child {
+  width: 52%;
+  padding-left: 3rem;
+
   border-top-left-radius: 1.2rem;
 }
 
 thead th:last-child {
+  min-width: 3%;
   border-top-right-radius: 1.2rem;
 }
 
+table td {
+  font-weight: 300;
+}
+
+table td:nth-child(1) {
+  padding: 2.4rem 0 2.4rem 3rem ;
+  width: 52%;
+}
+
+table td:nth-child(4) {
+  min-width: 4%;
+}
 
 table tbody {
   width: 813px;
@@ -247,7 +232,7 @@ table tbody::-webkit-scrollbar-track {
 }
 
 table tbody::-webkit-scrollbar-thumb {
-  background-color: var(--bg-button);
+  background-color: var(--bg-primary);
   border: 0.6rem solid var(--bg-body);
   border-radius: 1.2rem;
 }
@@ -276,14 +261,15 @@ tbody tr:last-child td:last-child {
 
 tbody tr td .drink {
   display: flex;
-  gap: 1.6rem;
   justify-items: center;
 }
 
 .drink a {
   display: flex;
   gap: 1.6rem;
-  color: var(--bg-button-hover);
+
+  color: var(--fc-body);
+  letter-spacing: 0rem;
   text-decoration: none;
 }
 
@@ -311,9 +297,10 @@ tbody tr td .drink {
   align-self: center;
 }
 
-.drink a {
-  color: var(--fc-body);
-  letter-spacing: 0rem;
+
+.drink a p {
+  font-size: var(--fs-drink-p);
+  padding-bottom: 0.8rem;
 }
 
 .drink a p:hover,
@@ -322,13 +309,9 @@ tbody tr td .drink {
 }
 
 .drink a span {
-  font-size: var(--fs-drink-span);
+  font-weight: 300;
   padding-right: 1rem;
-  line-height: 1.7rem;
-}
-
-.category, .served_in {
-  font-size: var(--fs-search);
+  line-height: 2.2rem;
 }
 
 .remove-btn {
@@ -349,7 +332,7 @@ tbody tr td .drink {
 
 
  /* SVG Artista https://svgartista.net */
-svg .svg-elem-1 {
+/* svg .svg-elem-1 {
   fill: transparent;
   -webkit-transition: fill 0.7s ease-in 0.5s;
           transition: fill 0.7s ease-in 0.5s;
@@ -437,4 +420,4 @@ svg .svg-elem-9 {
 
 svg.active .svg-elem-9 {
   fill: rgb(107, 87, 235);
-}
+} */

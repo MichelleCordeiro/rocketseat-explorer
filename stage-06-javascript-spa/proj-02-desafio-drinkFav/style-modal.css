@@ -1,0 +1,124 @@
+:root {
+  font-size: 62.5%;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secundary: 'Roboto Mono', monospace;
+  --fs-p: 1.6rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.8rem;
+  --fs-footer: 1.4rem;
+
+  --bg-back: #00000080;
+  --bg-primary: #6b57eb;
+  --bg-button-hover: #9dacff;
+  --bg-modal: #171421;
+  --fc-body: #E1E1E6;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 1.5rem;
+  border-bottom: solid 0.1rem var(--bg-button-hover) ;
+  line-height: 3.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 10rem;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background: var(--bg-back);
+}
+
+.modal-content {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  padding: 0;
+  color: var(--fc-body);
+
+  background: var(--bg-modal);
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(100, 100, 100, 0.2),0 0.6rem 2rem 0 rgba(100, 100, 100, 0.5);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 3rem;
+
+  background: var(--bg-primary);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.close {
+  float: right;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--bg-button-hover);
+  text-decoration: none;
+  transform: scale(1.2) rotate(360deg);
+  transition: 2s;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 4rem 3rem 6rem;
+  font-size: var(--fs-p);
+}
+
+.ingredients img {
+  width: 8rem;
+}
+
+.ingredients img:first-of-type {
+  width: 12rem;
+}
+
+.instructions p {
+  font-size: var(--fs-p);
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+
+.modal-footer {
+  padding: 1rem 3rem;
+  background: var(--bg-primary);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.modal-footer span {
+  font-size: var(--fs-footer);
+}

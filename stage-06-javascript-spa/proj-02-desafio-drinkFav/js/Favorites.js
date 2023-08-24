@@ -1,4 +1,5 @@
 import { APIDrink } from './APIDrink.js';
+import './modal.js'
 
 // manipulação dos dados
 export class Favorites {
@@ -133,7 +134,7 @@ export class FavoritesView extends Favorites {
 
     tr.innerHTML = `
       <td class="drink">
-        <a href="#" target="_blank">
+        <a type="button" id="openModal" data-toggle="modal" data-target="#myModal">
           <div class="container-img">
             <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Foto de um Morito">
           </div>
