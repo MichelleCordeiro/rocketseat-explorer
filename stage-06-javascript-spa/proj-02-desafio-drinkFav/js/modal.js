@@ -5,7 +5,13 @@ export class Modal {
     let span = document.getElementsByClassName(".close")[0];
     console.log(span)
 
-    clickDrink.onclick = () => {
+    clickDrink.onclick = (e, item) => {
+      let elementId = e.target.rowIndex
+      console.log('elementId::::: ', elementId);
+      console.log("item.closest('tr').rowIndex::::: ", item.closest('tr').rowIndex);
+
+      alert(elementId)
+      
       modal.display.property = "block"
     }
 

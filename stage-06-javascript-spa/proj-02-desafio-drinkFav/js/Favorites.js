@@ -1,17 +1,16 @@
-import { APIDrink } from './APIDrink.js';
+import { APIDrink } from './APIDrink.js'
 import './modal.js'
 
 // manipulação dos dados
 export class Favorites {
   constructor(root) {
-    this.root = document.querySelector(root);
-    this.load();
-    APIDrink.search('Mojito').then(item => console.log('APIDrink: ', item));
-    // APIDrink.search('Mojito').then(item => console.log('APIDrink: ', item.drinks[0]));
+    this.root = document.querySelector(root)
+    this.load()
+    // APIDrink.search('Mojito').then(item => console.log('APIDrink: ', item))
   }
 
   load() {
-    this.entries = JSON.parse(localStorage.getItem('@drinks-favorites:')) || [];
+    this.entries = JSON.parse(localStorage.getItem('@drinks-favorites:')) || []
   }
 
   save() {
@@ -32,25 +31,19 @@ export class Favorites {
         return false
       })
 
-      console.log('drinkname ADD: ', drinkname);
-      // console.log('entry.name ADD: ', entry.name);
-      console.log('this.entries ADD EXISTE ----: ', this.entries);
-      console.log('drinkExists ----: ', drinkExists);
-      
       if (drinkExists) {
-        throw new Error('Drink já cadastrado!');
+        throw new Error('Drink já cadastrado!')
       }
 
-      const drinksearch = await APIDrink.search(drinkname);
+      const drinksearch = await APIDrink.search(drinkname)
 
       if (drinksearch === undefined) {
-        throw new Error('Drink não encontrado!');
+        throw new Error('Drink não encontrado!')
       }
 
       this.entries = [drinksearch, ...this.entries]
-      this.update();
-      this.save();
-      console.log('this.entries ADD NÃO EXISTE apos SAVE----: ', this.entries);
+      this.update()
+      this.save()
 
     } catch (error) {
       alert(error.message)
@@ -58,71 +51,83 @@ export class Favorites {
   }s
 
   delete(drink) {
-    const filteredEntries = this.entries.filter(entry => entry.name !== drink.name);
+    const filteredEntries = this.entries.filter(entry => entry.name !== drink.name)
     // filter só retorna se for true, retornará users diferentes ao clicado p excluir
 
-    this.entries = filteredEntries;
-    this.update();
-    this.save();
+    this.entries = filteredEntries
+    this.update()
+    this.save()
   }
 }
 
 // exibição dos dados
 export class FavoritesView extends Favorites {
   constructor(root) {
-    super(root);
+    super(root)
 
-    this.tbody = this.root.querySelector('table tbody');
+    this.tbody = this.root.querySelector('table tbody')
 
-    this.update();
+    this.update()
     this.onadd()
   }
 
+  noFavs() {
+    const emptyDrinks = document.querySelector('#noDrinks')
+
+    if (this.entries.length > 0) {
+      emptyDrinks.style.display = 'none'
+    } else {
+      emptyDrinks.style.display = 'grid'
+    }
+  }
+
   update() {
-    this.removeTrs();
+    this.removeTrs()
     const clearInput = document.querySelector('#input-search')
     clearInput.value = ''
     
-    this.entries.forEach(drink => {
-      const row = this.createRow();
-      
-      const ingredients = [drink.ingredient1, drink.ingredient2, drink.ingredient3, drink.ingredient4, drink.ingredient5];
-      let ingredientsPresents = ingredients.filter(ing => ing !== null)
-      ingredientsPresents = ingredientsPresents.join(' + ');
+    this.noFavs()
 
-      row.querySelector('.drink img').src = drink.image;
-      row.querySelector('.drink img').alt = `Imagem de ${drink.name}`;
-      row.querySelector('.drink a').href = `https://github.com/${drink.name}`;
-      row.querySelector('.drink a').href = `#`;
-      row.querySelector('.drink .container-drink p').textContent = drink.name;
-      row.querySelector('.drink .container-drink span').textContent = ingredientsPresents;
-      row.querySelector('.category').textContent = drink.category;
-      row.querySelector('.served_in').textContent = drink.served_in;
+    this.entries.forEach(drink => {
+      const row = this.createRow()
+      
+      const ingredients = [drink.ingredient1, drink.ingredient2, drink.ingredient3, drink.ingredient4, drink.ingredient5]
+      let ingredientsPresents = ingredients.filter(ing => ing !== null)
+      ingredientsPresents = ingredientsPresents.join(' + ')
+
+      row.querySelector('.drink img').src = drink.image
+      row.querySelector('.drink img').alt = `Imagem de ${drink.name}`
+      row.querySelector('.drink a').href = `https://github.com/${drink.name}`
+      row.querySelector('.drink a').href = `#`
+      row.querySelector('.drink .container-drink p').textContent = drink.name
+      row.querySelector('.drink .container-drink span').textContent = ingredientsPresents
+      row.querySelector('.category').textContent = drink.category
+      row.querySelector('.served_in').textContent = drink.served_in
 
       row.querySelector('.remove-btn').onclick = () => {
-        const isOK = confirm('Tem certeza que deseja remover esse drink?');
+        const isOK = confirm('Tem certeza que deseja remover esse drink?')
 
         if (isOK) {
-          this.delete(drink);
+          this.delete(drink)
         }
-      };
+      }
 
-      this.tbody.append(row);
-    });
+      this.tbody.append(row)
+    })
   }
 
   onadd() {
     const addButton = this.root.querySelector('#btn-fav')
-    const inputSearch = this.root.querySelector('#input-search');
+    const inputSearch = this.root.querySelector('#input-search')
 
     addButton.onclick = () => {
-      const { value } = inputSearch;
+      const { value } = inputSearch
       this.add(value)
     }
 
     inputSearch.addEventListener("keypress", (event) => {
       if (event.key === "Enter") {
-        const { value } = inputSearch;
+        const { value } = inputSearch
         this.add(value)
       }
     })
@@ -130,7 +135,7 @@ export class FavoritesView extends Favorites {
 
   createRow() {
     // precisa criar o tr pela dom
-    const tr = document.createElement('tr');
+    const tr = document.createElement('tr')
 
     tr.innerHTML = `
       <td class="drink">
@@ -151,14 +156,14 @@ export class FavoritesView extends Favorites {
           <img src="./assets/not_drink.svg" alt="Desenho proibido drink" width="20" height="20">
         </button>
       </td>
-    `;
+    `
 
-    return tr;
+    return tr
   }
 
   removeTrs() {
     this.tbody.querySelectorAll('tr').forEach(tr => {
-      tr.remove();
-    });
+      tr.remove()
+    })
   }
 }
