@@ -9,7 +9,7 @@
 <h1 align="center"> Drink Favorites</h1>
 
 <div align="center">
-  <video src="./assets/DrinkFav.mov"></video>
+  <video src="[./asset/DrinkFavm](https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/e6f7c9b3-2534-4640-8ed9-05bd1b65adaa)"></video>
 </div>
 <br><br>
 
@@ -25,6 +25,16 @@ This challenge was developed using the following technologies/tools:
 </p>
 <br>
 
+<h3> 🏆 Challenge advanced </h3>
+<p>
+  JavaScript project to save favorite drinks in a table via localStorage. The drinks data came from a Beverage API as JSON. Extra implementations, different layout and API, modal, animations and responsive layout.
+</p>
+
+You can access this project [here](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa/proj-02-desafio-drinkFav).
+You can test it [here/deploy](https://drinkfav-desafio.vercel.app/)
+
+<br>
+
 <h3> 👩‍💻 Learnings </h3>
 
  - table
@@ -36,12 +46,11 @@ This challenge was developed using the following technologies/tools:
  - localStorage
  - static method
  - try/catch/throw
- - modal
- - api drinks - https://www.thecocktaildb.com/api.php
- - json
+ - modal (extra)
+ - api drinks - https://www.thecocktaildb.com/api.php (extra)
+ - json (extra)
+ - responsive layout (extra)
 
-You can see the project online [here.](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa/proj-02-desafio-drinkFav)
-Deploy [here]
 <br>
 
 <h3> 📝 License </h3>
