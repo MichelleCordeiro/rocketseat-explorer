@@ -1,6 +1,6 @@
 export class APIDrink {
   static search(drinkname) {
-    const endpoint = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkname}`
+    const endpoint = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkname}`;
 
     return fetch(endpoint)
       .then(data => data.json())

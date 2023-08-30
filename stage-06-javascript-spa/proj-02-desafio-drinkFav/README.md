@@ -9,8 +9,7 @@
 <h1 align="center"> Drink Favorites</h1>
 
 <div align="center">
-  <!-- <video src=""></video> -->
-  <img alt="github Favorites print" src="https://i.postimg.cc/brW8Ckn8/drinksfav.png" width="700">
+  <video src="./assets/DrinkFav.mov"></video>
 </div>
 <br><br>
 
@@ -38,10 +37,11 @@ This challenge was developed using the following technologies/tools:
  - static method
  - try/catch/throw
  - modal
- - api fecth
+ - api drinks - https://www.thecocktaildb.com/api.php
  - json
 
 You can see the project online [here.](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa/proj-02-desafio-drinkFav)
+Deploy [here]
 <br>
 
 <h3> 📝 License </h3>

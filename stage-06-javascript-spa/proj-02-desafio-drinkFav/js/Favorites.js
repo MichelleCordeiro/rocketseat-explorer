@@ -1,62 +1,62 @@
-import { APIDrink } from './APIDrink.js'
+import { APIDrink } from './APIDrink.js';
 // import './modal.js'
 
 // manipulação dos dados
 export class Favorites {
   constructor(root) {
-    this.root = document.querySelector(root)
-    this.load()
+    this.root = document.querySelector(root);
+    this.load();
     // APIDrink.search('Mojito').then(item => console.log('APIDrink: ', item))
   }
 
   load() {
-    this.entries = JSON.parse(localStorage.getItem('@drinks-favorites:')) || []
+    this.entries = JSON.parse(localStorage.getItem('@drinks-favorites:')) || [];
   }
 
   save() {
-    localStorage.setItem('@drinks-favorites:', JSON.stringify(this.entries))
+    localStorage.setItem('@drinks-favorites:', JSON.stringify(this.entries));
   }
 
   async add(drinkname) {
-    drinkname = drinkname.charAt(0).toUpperCase() + drinkname.slice(1)
+    drinkname = drinkname.charAt(0).toUpperCase() + drinkname.slice(1);
 
     try {
       const drinkExists = this.entries.find(entry => {
-        let drinkHas = entry.name
+        let drinkHas = entry.name;
 
         // lógica diferente pq é trazido da API o primeiro resultado contendo a palavra buscada, e não a palvra exata
         if (drinkHas === drinkname || drinkHas.includes(drinkname)) {
-          return true
+          return true;
         }
-        return false
-      })
+        return false;
+      });
 
       if (drinkExists) {
-        throw new Error('Drink já cadastrado!')
+        throw new Error('Drink já cadastrado!');
       }
 
-      const drinksearch = await APIDrink.search(drinkname)
+      const drinksearch = await APIDrink.search(drinkname);
 
       if (drinksearch === undefined) {
-        throw new Error('Drink não encontrado!')
+        throw new Error('Drink não encontrado!');
       }
 
-      this.entries = [drinksearch, ...this.entries]
-      this.update()
-      this.save()
+      this.entries = [drinksearch, ...this.entries];
+      this.update();
+      this.save();
 
     } catch (error) {
-      alert(error.message)
+      alert(error.message);
     }
   }
 
   delete(drink) {
-    const filteredEntries = this.entries.filter(entry => entry.name !== drink.name)
+    const filteredEntries = this.entries.filter(entry => entry.name !== drink.name);
     // filter só retorna se for true, retornará users diferentes ao clicado p excluir
 
-    this.entries = filteredEntries
-    this.update()
-    this.save()
+    this.entries = filteredEntries;
+    this.update();
+    this.save();
   }
 }
 
@@ -82,7 +82,8 @@ export class FavoritesView extends Favorites {
 
   updateModal() {
     const ingredSize = document.querySelectorAll('.container-images div');
-    if(ingredSize.length != 0) {
+
+    if (ingredSize.length != 0) {
       document.querySelectorAll('.container-images div').forEach(image => {
         image.remove();
       });
@@ -96,10 +97,10 @@ export class FavoritesView extends Favorites {
 
     const ingredientsString = drinkRow.querySelector('.ingredients').innerHTML;
     const ingredients = ingredientsString.split(' + ');
-      
+
     ingredients.forEach(ingred => {
       // this.createIngredientModal()
-      
+
       const img = document.createElement('div');
       img.innerHTML = `
         <img 
@@ -108,9 +109,9 @@ export class FavoritesView extends Favorites {
           alt="Imagem de ${ingred}"
         >
       `;
-      
+
       document.querySelector('.container-images').appendChild(img);
-    })
+    });
   }
 
   update() {
@@ -180,38 +181,26 @@ export class FavoritesView extends Favorites {
     tr.innerHTML = `
       <td class="drink">
         <a type="button" id="openModal" data-toggle="modal" data-target="#myModal">
-        <div class="container-img">
-        <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Foto de um Morito">
+          <div class="container-img">
+            <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Foto de um Morito">
           </div>
           <div class="container-drink">
-          <p>Mojito</p>
-          <span class="ingredients">Light run, juice of 1 lime</span>
-          <span class="instructions notdisplay">Shake all ingredients (except ginger ale) with ice and strain into a collins glass over ice cubes.</span>
+            <p>Mojito</p>
+            <span class="ingredients">Light run, juice of 1 lime</span>
+            <span class="instructions notdisplay">Shake all ingredients (except ginger ale) with ice and strain into a collins glass over ice cubes.</span>
           </div>
-          </a>
-          </td>
+        </a>
+        </td>
       <td class="category">33</td>
       <td class="served_in">333</td>
       <td class="remove">
         <button class="remove-btn">
-        <img src="./assets/not_drink.svg" alt="Desenho proibido drink" width="20" height="20">
+          <img src="./assets/not_drink.svg" alt="Desenho proibido drink" width="20" height="20">
         </button>
       </td>
     `;
 
     return tr;
-  }
-
-  createIngredientModal() {
-    const image = document.createElement('img');
-    image.innerHTML = `
-      <img 
-        src="https://www.thecocktaildb.com/images/ingredients/Light%20rum-Medium.png" 
-        alt="Ingrediente 1"
-      >
-    `;
-
-    return image;
   }
 
   removeTrs() {

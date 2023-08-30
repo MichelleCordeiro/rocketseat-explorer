@@ -40,7 +40,7 @@ h3 {
 
 .modal-content {
   position: relative;
-  width: 60%;
+  max-width: 50%;
   margin: auto;
   padding: 0;
   color: var(--fc-body);
@@ -140,4 +140,39 @@ h3 {
 
 .modal-footer span {
   font-size: var(--fs-footer);
+}
+
+@media  (max-width: 600px) {
+  .modal-content {
+    max-width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal-ingred .container-images {
+    max-height: 550px;
+    overflow-y: scroll;
+    justify-content: center;
+  }
+
+  .modal-body {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+
+@media  (max-width: 400px) {
+  .modal-ingred .container-images {
+    max-height: 430px;
+  }
+
+  .modal-footer {
+    display: none;
+  }
 }
