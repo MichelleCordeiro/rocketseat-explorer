@@ -10,6 +10,7 @@ export class APIDrink {
         name: data.strDrink,
         category: data.strCategory,
         served_in: data.strGlass,
+        instruction: data.strInstructions,
         ingredient1: data.strIngredient1,
         ingredient2: data.strIngredient2,
         ingredient3: data.strIngredient3,

@@ -98,15 +98,34 @@ h3 {
   font-size: var(--fs-p);
 }
 
-.ingredients img {
-  width: 8rem;
+.modal-ingred .container-images {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.ingredients img:first-of-type {
+.container-images img {
+  width: 8rem;
+  padding-block: 2rem;
+  transform: scale(1);
+  transition: all 400ms;
+}
+
+.container-images:hover img {
+  opacity: 0.5;
+}
+
+.container-images .modal-img:hover {
+  transform: scale(1.5);
+  opacity: 1;
+  transition: all 400ms;
+  z-index: 999;
+}
+
+.modal-ingred img:first-of-type {
   width: 12rem;
 }
 
-.instructions p {
+.modal-instruct p {
   font-size: var(--fs-p);
   font-weight: 300;
   line-height: 2.2rem;

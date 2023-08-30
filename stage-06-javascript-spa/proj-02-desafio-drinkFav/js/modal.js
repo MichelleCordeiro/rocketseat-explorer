@@ -1,28 +1,26 @@
 export class Modal {
-  static createModal() {
-    let modal = document.querySelector("#myModal");
-    let clickDrink = document.querySelector("#openModal");
-    let span = document.getElementsByClassName(".close")[0];
-    console.log(span)
+  displayModal() {
+    const modal = document.querySelector('#myModal');
+    const span = document.getElementsByClassName('.close')[0];
+    let drinkClicked = document.querySelector('#openModal');
 
-    clickDrink.onclick = (e, item) => {
-      let elementId = e.target.rowIndex
-      console.log('elementId::::: ', elementId);
-      console.log("item.closest('tr').rowIndex::::: ", item.closest('tr').rowIndex);
-
-      alert(elementId)
-      
-      modal.display.property = "block"
-    }
+    drinkClicked.onclick = (e, item) => {
+      modal.display.property = 'block';
+    };
 
     span.onclick = () => {
-      modal.display.property = 'none';
-    }
+      console.log('entrou no click X ');
 
-    window.onclick = (event) =>  {
+      modal.display.property = 'none';
+      this.removeIngredients();
+    };
+
+    window.onclick = event => {
+      console.log('entrou no click fora');
       if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
+        this.removeIngredients();
       }
-    }
+    };
   }
 }

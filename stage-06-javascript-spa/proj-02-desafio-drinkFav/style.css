@@ -8,11 +8,10 @@
   font-size: 62.5%;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secundary: 'Roboto Mono', monospace;
-  --fs-body: 1.6rem;
-  --fs-thead: 2rem;
   --fs-search-btn: 1.4rem;
+  --fs-thead: 2rem;
   --fs-drink-p: 1.8rem;
-  --fs-nodrinks: 2.5rem;
+  --fs-drink-span: 1.6rem;
 
   --bg-body: #09080d;
   --bg-search: #201d34;
@@ -302,6 +301,7 @@ tbody tr td .drink {
 .drink a span {
   font-weight: 300;
   padding-right: 1rem;
+  font-size: var(--fs-drink-span);
   line-height: 2.2rem;
 }
 
@@ -342,7 +342,7 @@ tbody tr td .drink {
 
 #noDrinks h3 {
   font-size: var(--fs-thead);
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.5rem;
   text-align: center;
   padding-bottom: 6rem;
   border: none;
