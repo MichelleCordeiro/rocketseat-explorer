@@ -31,7 +31,7 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: 1;
-  padding-top: 10rem;
+  padding-top: 12rem;
   left: 0;
   top: 0;
   overflow: auto;
@@ -40,7 +40,7 @@ h3 {
 
 .modal-content {
   position: relative;
-  max-width: 50%;
+  max-width: 55%;
   margin: auto;
   padding: 0;
   color: var(--fc-body);
@@ -93,7 +93,7 @@ h3 {
 .modal-body {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 3rem;
   padding: 4rem 3rem 6rem;
   font-size: var(--fs-p);
 }
@@ -142,7 +142,7 @@ h3 {
   font-size: var(--fs-footer);
 }
 
-@media  (max-width: 600px) {
+@media  (max-width: 800px) {
   .modal-content {
     max-width: 70%;
     height: fit-content;
@@ -154,9 +154,8 @@ h3 {
   .modal-ingred .container-images {
     max-height: 550px;
     overflow-y: scroll;
-    justify-content: center;
   }
-
+  
   .modal-body {
     height: 100%;
 
@@ -167,12 +166,42 @@ h3 {
 }
 
 
-@media  (max-width: 400px) {
-  .modal-ingred .container-images {
-    max-height: 430px;
-  }
+@media  (max-width: 620px) {
+.modal {
+  padding-top: 10rem;
+}
 
-  .modal-footer {
-    display: none;
+  .modal-content {
+    max-width: 75%;
+    max-height: 770px;
+  }
+  
+  .modal-body {
+    gap: 1.5rem;
+    padding: 3rem;
+  }
+  
+  .modal-ingred .container-images {
+    max-height: 380px;
+    justify-content: center;
+  }
+}
+
+
+
+@media  (max-width: 450px) {
+  .modal-content {
+    max-width: 75%;
+    max-height: 750px;
+  }
+  
+  .modal-body {
+    gap: 1.5rem;
+    padding: 3rem;
+  }
+  
+  .modal-ingred .container-images {
+    max-height: 320px;
+    justify-content: center;
   }
 }

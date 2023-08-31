@@ -35,11 +35,7 @@ export class Favorites {
         throw new Error('Drink já cadastrado!');
       }
 
-      const drinksearch = await APIDrink.search(drinkname);
-
-      if (drinksearch === undefined) {
-        throw new Error('Drink não encontrado!');
-      }
+      let drinksearch = await APIDrink.search(drinkname)
 
       this.entries = [drinksearch, ...this.entries];
       this.update();

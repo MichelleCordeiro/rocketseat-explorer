@@ -4,7 +4,16 @@ export class APIDrink {
 
     return fetch(endpoint)
       .then(data => data.json())
-      .then(data => data.drinks[0])
+      .then(data => {
+        console.log("data:::: ", data)
+        
+        if(!data.drinks || data.drinks.length === 0) {
+          throw new Error('Drink não encontrado!');
+        }
+
+        return data.drinks[0]
+      })
+
       .then(data => ({
         image: data.strDrinkThumb,
         name: data.strDrink,

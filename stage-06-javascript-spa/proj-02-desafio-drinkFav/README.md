@@ -39,17 +39,26 @@ You can test it [here/deploy](https://drinkfav-desafio.vercel.app/)
 
  - table
  - sr-only ally
- - routers
- - asynchronous
+ - asynch/await 
  - promises
- - classes/oop
+ - class/poo
+ - inheritance
+ - immutability
  - localStorage
  - static method
  - try/catch/throw
+ - DOM manipulation
  - modal (extra)
- - api drinks - https://www.thecocktaildb.com/api.php (extra)
- - json (extra)
+ - API consume https://www.thecocktaildb.com/api.php (extra)
+ - json manipulation (extra)
  - responsive layout (extra)
+
+<br>
+<h2> 🔮 Future implementations: </h2>
+
+- [ ] tooltip on ingredients images showing their name
+- [ ] modal or dropdown with the drinks found in the search
+- [ ] searches by category, glass style and ingredient
 
 <br>
 
