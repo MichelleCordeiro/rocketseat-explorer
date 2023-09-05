@@ -5,8 +5,6 @@ export class APIDrink {
     return fetch(endpoint)
       .then(data => data.json())
       .then(data => {
-        console.log("data:::: ", data)
-        
         if(!data.drinks || data.drinks.length === 0) {
           throw new Error('Drink não encontrado!');
         }

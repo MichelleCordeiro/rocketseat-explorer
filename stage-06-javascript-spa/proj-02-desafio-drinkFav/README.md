@@ -9,7 +9,7 @@
 <h1 align="center"> Drink Favorites</h1>
 
 <div align="center">
-  <video src="[./asset/DrinkFavm](https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/e6f7c9b3-2534-4640-8ed9-05bd1b65adaa)"></video>
+  <video src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/e6f7c9b3-2534-4640-8ed9-05bd1b65adaa"></video>
 </div>
 <br><br>
 
