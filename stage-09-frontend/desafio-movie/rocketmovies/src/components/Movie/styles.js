@@ -32,6 +32,5 @@ export const Container = styled.button`
   > footer {
     width: 100%;
     display: flex;
-    /* gap: 2.4rem; */
   }
-`
+`;

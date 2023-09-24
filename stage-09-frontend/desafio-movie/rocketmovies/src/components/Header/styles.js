@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: 100%;
   height: 11.6rem;
   padding-block: 2.4rem;
-  padding-inline: clamp(3rem, 1rem + 10vw, 12.3rem);
 
   display: flex;
   align-items: center;
