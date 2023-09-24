@@ -16,4 +16,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Profile />
     </ThemeProvider>
   </React.StrictMode>
-)
+);

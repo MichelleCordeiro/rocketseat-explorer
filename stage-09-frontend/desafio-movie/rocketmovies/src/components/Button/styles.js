@@ -12,6 +12,9 @@ export const Container = styled.button`
 
   padding: 0 1.6rem;
   margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:disabled {
     opacity: 0.5;
