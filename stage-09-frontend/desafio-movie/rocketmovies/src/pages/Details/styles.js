@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
+  max-width: 111.3rem;
   height: 100vh;
+  margin: 0 auto;
 
   display: grid;
   grid-template-areas:
@@ -10,8 +11,7 @@ export const Container = styled.div`
     'linkVoltar'
     'content';
   grid-template-rows: 11.6rem min-content auto;
-  padding-inline: clamp(3rem, 1rem + 6vw, 12.3rem);
-  padding-bottom: 6rem;
+  padding: 0 3rem 6rem 3rem;
 
   > .linkVoltar {
     grid-area: linkVoltar;
@@ -33,7 +33,7 @@ export const Content = styled.div`
   overflow-y: auto;
 
   > .tags {
-    margin-block: 4rem;
+    padding-block: 4rem;
   }
 
   > p {
@@ -52,47 +52,43 @@ export const Content = styled.div`
     background: ${({ theme }) => theme.COLORS.PINK};
     border-radius: 0.8rem;
   }
-`;
+`
 
 export const SectionTitle = styled.div`
   display: flex;
+  flex-direction: row;
   gap: 1rem;
+  align-items: center;
 
   > section {
     width: fit-content;
-    margin: 0;
-    margin-bottom: 2.4rem;
+    padding-block: 0 2.4rem;
 
-    > h2 {
-      margin: 0;
+    > h1 {
       padding: 0 2rem 0 0;
+      margin: 0;
     }
   }
 
   > svg {
     color: ${({ theme }) => theme.COLORS.PINK};
-
-    align-self: center;
-    margin-bottom: 2.4rem;
+    margin-block: 0 2.4rem;
   }
 
   > div {
     display: flex;
     align-items: center;
-    margin-right: 8px;
-
-    :first-child {
-      margin-right: 8px;
-    }
 
     > img {
       width: 1.6rem;
       height: 1.6rem;
       border-radius: 50%;
+      margin-right: 0.8rem;
     }
 
     > svg {
       color: ${({ theme }) => theme.COLORS.PINK};
+      margin-inline: 0.8rem;
     }
   }
 `

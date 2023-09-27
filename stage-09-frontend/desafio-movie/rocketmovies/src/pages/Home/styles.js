@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
-  height: 95vh;
+  max-width: 111.3rem;
+  height: 100vh;
+  margin: 0 auto;
 
   display: grid;
   grid-template-areas:
@@ -10,7 +11,7 @@ export const Container = styled.div`
     'sectionTitle'
     'content';
   grid-template-rows: 11.6rem auto;
-  padding-inline: clamp(3rem, 1rem + 6vw, 12.3rem);
+  padding: 0 3rem 4rem 3rem;
 `
 
 export const SectionTitle = styled.div`

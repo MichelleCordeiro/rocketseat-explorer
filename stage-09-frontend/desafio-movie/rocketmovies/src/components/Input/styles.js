@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800_input};
+  background-color: ${({ theme }) => theme.COLORS.BG_800_input};
   color: ${({ theme }) => theme.COLORS.GRAY_200_input};
 
   border-radius: 1rem;
@@ -28,4 +28,4 @@ export const Container = styled.div`
   > svg {
     margin-left: 1.6rem;
   }
-`
+`;

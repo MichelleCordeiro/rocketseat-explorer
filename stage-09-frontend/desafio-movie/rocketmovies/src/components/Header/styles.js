@@ -12,7 +12,7 @@ export const Container = styled.div`
   justify-content: space-between;
   gap: clamp(2rem, 0.5rem + 10vw, 6.4rem);
 
-  background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  background: ${({ theme }) => theme.COLORS.BG_900};
   border-bottom: 1px solid #3e3b47;
 `;
 

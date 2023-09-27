@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const Container = styled.button`
   width: 100%;
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_home_profile};
+  background-color: ${({ theme }) => theme.COLORS.BG_home_profile};
 
   text-align: left;
   border: none;

@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 100%;
     height: 14.4rem;
 
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_home_profile};
+    background-color: ${({ theme }) => theme.COLORS.BG_home_profile};
     
     > a {
       display: flex;
@@ -75,6 +75,6 @@ export const Avatar = styled.div`
   }
 
   svg {
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_800_input};
+    color: ${({ theme }) => theme.COLORS.BG_800_input};
   }
 `

@@ -17,7 +17,7 @@ export function Details() {
 
       <Content>
         <SectionTitle>
-          <Section title='Interestellar'></Section>
+          <Section title='Interestellar' />
 
           <FiStar />
           <FiStar />
@@ -40,8 +40,8 @@ export function Details() {
 
         <div className='tags'>
           <Tag className='tag' title='Ficção Científica' />
-          <Tag title='Drama' />
-          <Tag title='Família' />
+          <Tag className='tag' title='Drama' />
+          <Tag className='tag' title='Família' />
         </div>
 
         <p>
