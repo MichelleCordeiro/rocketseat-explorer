@@ -1,4 +1,6 @@
 import { FiArrowLeft, FiStar, FiClock } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
 import { Tag } from '../../components/Tag'
@@ -10,10 +12,10 @@ export function Details() {
     <Container>
       <Header />
 
-      <a className='linkVoltar' href='/'>
+      <Link to='/' className='linkVoltar'>
         <FiArrowLeft />
         Voltar
-      </a>
+      </Link>
 
       <Content>
         <SectionTitle>

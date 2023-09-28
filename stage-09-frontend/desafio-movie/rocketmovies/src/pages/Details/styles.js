@@ -38,7 +38,7 @@ export const Content = styled.div`
 
   > p {
     text-align: justify;
-    padding-right: 1.6rem;
+    padding-right: 1rem;
   }
 
   &::-webkit-scrollbar {

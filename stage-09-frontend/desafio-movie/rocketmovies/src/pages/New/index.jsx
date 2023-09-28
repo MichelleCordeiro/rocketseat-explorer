@@ -1,4 +1,6 @@
 import { FiArrowLeft } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
 import { Input } from '../../components/Input'
@@ -13,10 +15,10 @@ export function New() {
     <Container>
       <Header />
 
-      <a className='linkVoltar' href='/'>
+      <Link to='/' className='linkVoltar'>
         <FiArrowLeft />
         Voltar
-      </a>
+      </Link>
 
       <main>
         <Form>

@@ -1,5 +1,7 @@
 import { styled } from 'styled-components'
 
+import { Link } from 'react-router-dom'
+
 export const Container = styled.div`
   grid-area: header;
 
@@ -14,7 +16,7 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme.COLORS.BG_900};
   border-bottom: 1px solid #3e3b47;
-`;
+`
 
 export const Brand = styled.div`
   > h1 {
@@ -24,7 +26,7 @@ export const Brand = styled.div`
   }
 `
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: end;
@@ -34,12 +36,9 @@ export const Profile = styled.div`
     width: max-content;
     display: flex;
     flex-direction: column;
+    color: ${({ theme }) => theme.COLORS.WHITE_100_h1_input_active};
 
     margin-right: 1rem;
-
-    > a {
-      color: ${({ theme }) => theme.COLORS.GRAY_200_input};
-    }
   }
 
   > img {
@@ -47,6 +46,10 @@ export const Profile = styled.div`
     height: 6.4rem;
 
     border-radius: 50%;
-    border: 1px solid #948F99
+    border: 1px solid #948f99;
   }
+`;
+
+export const Logout = styled(Link)`
+    color: ${({ theme }) => theme.COLORS.GRAY_200_input};
 `

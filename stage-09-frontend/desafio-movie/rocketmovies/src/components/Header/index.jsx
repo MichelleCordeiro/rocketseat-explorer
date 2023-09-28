@@ -1,6 +1,6 @@
 import { Input } from '../Input'
 
-import { Container, Brand, Profile } from './styles'
+import { Container, Brand, Profile, Logout } from './styles';
 
 export function Header() {
   return (
@@ -11,13 +11,15 @@ export function Header() {
 
       <Input placeholder='Pesquisar pelo título' type='text' />
 
-      <Profile>
+      <Profile to='/profile'>
         <div className="infos">
           <strong>
             Michelle Cordeiro
           </strong>
 
-          <a href="/">sair</a>
+          <Logout>
+            Sair
+          </Logout>
         </div>
 
         <img src="http://github.com/michellecordeiro.png" alt="" />

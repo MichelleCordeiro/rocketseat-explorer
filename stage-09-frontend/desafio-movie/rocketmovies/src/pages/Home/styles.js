@@ -1,4 +1,5 @@
 import { styled } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   max-width: 111.3rem;
@@ -11,7 +12,7 @@ export const Container = styled.div`
     'sectionTitle'
     'content';
   grid-template-rows: 11.6rem auto;
-  padding: 0 3rem 4rem 3rem;
+  padding: 0 3rem 3rem 3rem ;
 `
 
 export const SectionTitle = styled.div`
@@ -19,22 +20,29 @@ export const SectionTitle = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   > Section h2 {
     margin-bottom: 0;
   }
+`
 
-  > button {
-    width: 25.7rem;
-    margin-top: 0;
-    gap: 0.8rem;
-  }
+export const NewMovie = styled(Link)`
+  background-color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.BG_900};
+  border-radius: 1rem;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem 3.2rem;
+  margin-right: 0.3rem;
 `
 
 export const Content = styled.div`
   grid-area: content;
-  padding-right: 1.2rem;
-
   overflow-y: auto;
 
   :last-child {

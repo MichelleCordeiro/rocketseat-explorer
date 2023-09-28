@@ -11,7 +11,11 @@
 
 <div align="center">
   <!-- <video src=""></video> -->
-  <img alt="RocketNotes" src="https://i.postimg.cc/FKtbJTkT/rocket-Movies.png" width="800">
+  <img alt="RocketNotes" src="https://i.postimg.cc/j53cVh5N/rocket-Movies1.png" width="800">
+<br><br>
+  <img alt="RocketNotes" src="https://i.postimg.cc/DwQcfh07/rocket-Movies2.png" width="800">
+<br><br>
+  <img alt="RocketNotes" src="https://i.postimg.cc/Pf8VGBW5/rocket-Movies3.png" width="800">
 </div>
 <br><br><br>
 
@@ -30,6 +34,22 @@ This challenge was developed using the following technologies/tools:
   <code><img height="33" alt="figma logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/></code>
 </p>
 <br>
+
+<h3> 🎯 Features </h3>
+
+ - Login
+ - Register
+ - User profile
+ - Add movie
+ - All movies
+ - Movie details
+ <!-- - Update profile -->
+ <!-- - Movie filter -->
+ <!-- - Delete movie -->
+ <!-- - Logout -->
+
+<br>
+
 
 <h3> 👩‍💻 Learnings </h3>
 

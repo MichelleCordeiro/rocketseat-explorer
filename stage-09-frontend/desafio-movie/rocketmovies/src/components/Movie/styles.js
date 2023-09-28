@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 
 export const Container = styled.button`
-  width: 100%;
+  width: 99%;
   background-color: ${({ theme }) => theme.COLORS.BG_home_profile};
 
   text-align: left;
@@ -33,4 +33,4 @@ export const Container = styled.button`
     width: 100%;
     display: flex;
   }
-`;
+`

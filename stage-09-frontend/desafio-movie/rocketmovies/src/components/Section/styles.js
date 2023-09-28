@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  width: 100%;
   padding-block: 5.1rem 4.5rem;
 
   > h1 {
