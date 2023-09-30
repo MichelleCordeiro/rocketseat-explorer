@@ -1,14 +1,17 @@
-const { Router } = require('express');
+const { Router } = require('express')
 
-const NotesController = require('../controllers/NotesController');
+const NotesController = require('../controllers/NotesController')
+const ensureAuthenticated = require('../middlewares/ensureAuthenticated')
 
-const notesRoutes = Router();
+const notesRoutes = Router()
 
-const notesController = new NotesController();
+const notesController = new NotesController()
+notesRoutes.use(ensureAuthenticated)
 
-notesRoutes.get('/', notesController.index); // ñ precisa do user_id, tá passando por query
-notesRoutes.post('/:user_id', notesController.create);
-notesRoutes.get('/:id', notesController.show);
-notesRoutes.delete('/:id', notesController.delete);
+notesRoutes.get('/', notesController.index) // tava passando por query e agora pelo user.id
+//notesRoutes.post('/:user_id', notesController.create)
+notesRoutes.post('/', notesController.create)
+notesRoutes.get('/:id', notesController.show)
+notesRoutes.delete('/:id', notesController.delete)
 
-module.exports = notesRoutes;
+module.exports = notesRoutes
