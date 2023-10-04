@@ -4,7 +4,7 @@ import { api } from '../services/api'
 export const AuthContext = createContext({})
 
 function AuthProvider({ children }) {
-  const [data, setData ] = useState({})
+  const [data, setData] = useState({})
   
   async function signIn({ email, password }) {
     try {
@@ -12,7 +12,7 @@ function AuthProvider({ children }) {
       const { user, token } = response.data
 
       api.defaults.headers.authorization = `Bearer ${token}`
-      setData[{ user, token }]
+      setData({ user, token })
       
     } catch (error) {
       if (error.response) {
