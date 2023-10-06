@@ -21,7 +21,7 @@ class DiskUpload {
       alert(error.message)
     }
 
-    await fs.promises.unlink(file)
+    await fs.promises.unlink(filePath)
   }
 }
 

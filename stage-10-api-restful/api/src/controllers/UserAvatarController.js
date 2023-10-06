@@ -17,6 +17,7 @@ class UserAvatarController {
       }
 
       if (user.avatar) {
+        console.log('deletou img antiga no backend')
         await diskStorage.deleteFile(user.avatar)
       }
 
