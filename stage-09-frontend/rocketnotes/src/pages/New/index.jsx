@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Header } from '../../components/Header'
@@ -10,6 +11,30 @@ import { Button } from '../../components/Button'
 import { Container, Form } from './styles'
 
 export function New() {
+  const [links, setLinks] = useState([]) // guarda todos os links existente
+  const [newLink, setNewLink] = useState('') // guarda novo link q vai se adicionado
+
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState('')
+
+  function handleAddLink() {
+    setLinks(prevState => [...prevState, newLink])
+    setNewLink('') // após adicionar o novo link reseta o estado p o proximo novo link
+  }
+
+  function handleRemoveLink(deleted) {
+    setLinks(prevState => prevState.filter(link => link !== deleted))
+  }
+
+  function handleAddTag() {
+    setTags(prevState => [...prevState, newTag])
+    setNewTag('')
+  }
+
+  function handleRemoveTag(deleted) {
+    setTags(prevState => prevState.filter(tag => tag !== deleted))
+  }
+
   return (
     <Container>
       <Header />
@@ -26,14 +51,45 @@ export function New() {
           <Textarea placeholder='Observações' />
 
           <Section title='Links úteis'>
-            <NoteItem value='https://rocketseat.com.br' />
-            <NoteItem isNew placeholder='Novo link' />
+            {/* exibe os links existentes na tela */}
+            {links.map((link, index) => (
+              <NoteItem
+                key={String(index)}
+                value={link}
+                // usa arrow function pq precisa passar um parametro, no handleAddLink chama a função direto
+                onClick={() => handleRemoveLink(link)}
+              />
+            ))}
+
+            {/* adiciona links novos */}
+            <NoteItem
+              isNew
+              placeholder='Novo link'
+              value={newLink}
+              onChange={e => setNewLink(e.target.value)}
+              onClick={handleAddLink}
+            />
           </Section>
 
           <Section title='Marcadores'>
             <div className='tags'>
-              <NoteItem value='React' />
-              <NoteItem isNew placeholder='Nova tag' />
+              {
+                tags.map((tag, index) => (
+                  <NoteItem 
+                    key={String(index)}
+                    value={tag}
+                    onClick={( ) => handleRemoveTag(tag)}
+                  />
+                ))
+              }
+
+              <NoteItem
+                isNew
+                placeholder='Nova tag'
+                value={newTag}
+                onChange={e => setNewTag(e.target.value)}
+                onClick={handleAddTag}
+              />
             </div>
           </Section>
 
@@ -41,5 +97,5 @@ export function New() {
         </Form>
       </main>
     </Container>
-  );
+  )
 }
