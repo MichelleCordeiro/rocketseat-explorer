@@ -12,10 +12,16 @@ import { Note } from '../../components/Note'
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles'
 
 export function Home() {
+  const [search, setSearch] = useState('')
   const [tags, setTags] = useState([])
   const [tagsSelected, setTagsSelected] = useState([])
+  const [notes, setNotes] = useState([])
 
   function handleTagsSelected(tagName) {
+    if (tagName === 'Todos') {
+      return setTagsSelected([])
+    }
+    
     const alreadySelected = tagsSelected.includes(tagName)
       
     setTagsSelected(prevState => [...prevState, tagName])
@@ -37,6 +43,14 @@ export function Home() {
     }
     fetchTags()
   }, [])
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}&tags=${tagsSelected}`)
+      setNotes(response.data)
+    }
+    fetchNotes()
+  }, [tagsSelected, search])
 
   return (
     <Container>
@@ -68,20 +82,19 @@ export function Home() {
       </Menu>
 
       <Search>
-        <Input placeholder='Pesquisar pelo título' />
+        <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} />
       </Search>
 
       <Content>
         <Section title='Minhas notas'>
-          <Note
-            data={{
-              title: 'React',
-              tags: [
-                { id: '1', name: 'react' },
-                { id: '2', name: 'react native' }
-              ]
-            }}
-          />
+          {
+            notes.map(note => (
+              <Note
+                key={String(note.id)}
+                data={note}
+              />
+            ))
+          }
         </Section>
       </Content>
 
