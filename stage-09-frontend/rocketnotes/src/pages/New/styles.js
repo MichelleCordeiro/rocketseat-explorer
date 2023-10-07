@@ -35,8 +35,8 @@ export const Form = styled.form`
     justify-content: space-between;
     margin-bottom: 3.6rem;
 
-    a {
-      font-size: 2.0rem;
+    button {
+      font-size: 2rem;
       color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
   }
