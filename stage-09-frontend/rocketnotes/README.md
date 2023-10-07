@@ -31,25 +31,32 @@ This challenge was developed using the following technologies/tools:
 </p>
 <br>
 
+<h3> 🎯 Features </h3>
+
+ - Login
+ - Logout
+ - Register
+ - User profile
+ - Update profile
+ - Add and delete note
+ - Add and delete links
+ - Add and delete tags
+ - Show all notes
+ - Filter notes
+ - Note details
+
+<br>
+
 <h3> 👩‍💻 Learnings </h3>
 
- - routers
- - route, query and body params
- - controllers
- - http codes
- - middlewares
- - error handling - try...catch
+ - ES6
+ - theme and global style
+ - styled components
+ - react icons
  - map and filter
- - SQL
- - knex - sql query builder
- - migrations
- - primary key and foreign key
- - operador like
- - where and whereIn filters
- - Inner Join
+ - react routes
 
-<br><br>
-
+<br>
 
 <h3> 🧮 Visitors Count </h3>
 <img width="200" align="center" src="https://profile-counter.glitch.me/MichelleCordeiro/count.svg" />
