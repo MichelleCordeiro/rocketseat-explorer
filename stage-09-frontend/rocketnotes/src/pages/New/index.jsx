@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import { useNavigate } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 import { Textarea } from '../../components/Textarea'
@@ -8,31 +10,64 @@ import { NoteItem } from '../../components/NoteItem'
 import { Section } from '../../components/Section'
 import { Button } from '../../components/Button'
 
+import { api } from '../../services/api'
+
 import { Container, Form } from './styles'
 
 export function New() {
-  const [links, setLinks] = useState([]); // guarda todos os links existente
-  const [newLink, setNewLink] = useState(''); // guarda novo link q vai se adicionado
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  
+  const [links, setLinks] = useState([]) // guarda todos os links existente
+  const [newLink, setNewLink] = useState('') // guarda novo link q vai se adicionado
 
-  const [tags, setTags] = useState([]);
-  const [newTag, setNewTag] = useState('');
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState('')
 
+  const navigate = useNavigate()
+  
   function handleAddLink() {
-    setLinks(prevState => [...prevState, newLink]);
-    setNewLink(''); // após adicionar o novo link reseta o estado p o proximo novo link
+    setLinks(prevState => [...prevState, newLink])
+    setNewLink('') // após adicionar o novo link reseta o estado p o proximo novo link
   }
 
   function handleRemoveLink(deleted) {
-    setLinks(prevState => prevState.filter(link => link !== deleted));
+    setLinks(prevState => prevState.filter(link => link !== deleted))
   }
 
   function handleAddTag() {
-    setTags(prevState => [...prevState, newTag]);
-    setNewTag('');
+    setTags(prevState => [...prevState, newTag])
+    setNewTag('')
   }
 
   function handleRemoveTag(deleted) {
-    setTags(prevState => prevState.filter(tag => tag !== deleted));
+    setTags(prevState => prevState.filter(tag => tag !== deleted))
+  }
+
+  async function handleNewNote() {
+    if (!title) {
+      return alert('Digite o título da nota.')
+    }
+
+    if (newLink) {
+      return alert('Você digitou um link, mas não clicou para adicioná-lo. Clique para adicionar ou deixe o campo vazio.')
+    }
+
+    if (newTag) {
+      return alert(
+        'Você digitou uma tag, mas não clicou para adicioná-la. Clique para adicionar ou deixe o campo vazio.'
+      )
+    }
+
+    await api.post('/notes', {
+      title,
+      description,
+      links,
+      tags
+    })
+
+    alert('Nota criada com sucesso!')
+    navigate('/')
   }
 
   return (
@@ -46,9 +81,15 @@ export function New() {
             <Link to='/'>voltar</Link>
           </header>
 
-          <Input placeholder='Título' />
+          <Input 
+            placeholder='Título' 
+            onChange={e => setTitle(e.target.value)} 
+          />
 
-          <Textarea placeholder='Observações' />
+          <Textarea 
+            placeholder='Observações' 
+            onChange={e => setDescription(e.target.value)} 
+          />
 
           <Section title='Links úteis'>
             {/* exibe os links existentes na tela */}
@@ -73,15 +114,13 @@ export function New() {
 
           <Section title='Marcadores'>
             <div className='tags'>
-              {
-                tags.map((tag, index) => (
-                  <NoteItem 
-                    key={String(index)} 
-                    value={tag} 
-                    onClick={() => handleRemoveTag(tag)} 
-                  />
-                ))
-              }
+              {tags.map((tag, index) => (
+                <NoteItem 
+                  key={String(index)} 
+                  value={tag} 
+                  onClick={() => handleRemoveTag(tag)} 
+                />
+              ))}
 
               <NoteItem
                 isNew
@@ -93,7 +132,10 @@ export function New() {
             </div>
           </Section>
 
-          <Button title='Salvar' />
+          <Button 
+            title='Salvar' 
+            onClick={handleNewNote} 
+          />
         </Form>
       </main>
     </Container>
