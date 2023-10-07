@@ -12,10 +12,10 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 6.4rem 0;
   }
-`;
+`
 
 export const Links = styled.ul`
   list-style: none;
