@@ -38,18 +38,18 @@ This challenge was developed using the following technologies/tools:
 <h3> 🎯 Features </h3>
 
  - Login
+ - Logout
  - Register
  - User profile
- - Add movie
- - All movies
+ - Update profile
+ - Add and delete movie
+ - Add and delete tags
+ - Show all movies
+ - Filter by tags
+ - Search movie
  - Movie details
- <!-- - Update profile -->
- <!-- - Movie filter -->
- <!-- - Delete movie -->
- <!-- - Logout -->
 
 <br>
-
 
 <h3> 👩‍💻 Learnings </h3>
 
@@ -71,12 +71,11 @@ Develop project from [figma layout](https://www.figma.com/file/bTBmX9xHLfrqWdxuv
 <!-- You can see it [here.](https://desafio-universe.vercel.app/) -->
 
 </p>
-
 <br>
 
 
 <h3> 🧮 Visitors Count </h3>
-<img width="200" align="center" src="https://profile-counter.glitch.me/MichelleCordeiro/count.svg" />
+<img width="190" align="center" src="https://profile-counter.glitch.me/MichelleCordeiro/count.svg" />
 
 <br><br>
 
