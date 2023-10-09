@@ -12,7 +12,7 @@ function AuthProvider({ children }) {
       const { user, token } = response.data
 
       api.defaults.headers.authorization = `Bearer ${token}`
-      setData[{ user, token }]
+      setData({ user, token })
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message)
