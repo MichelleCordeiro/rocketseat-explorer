@@ -7,16 +7,18 @@ export const Container = styled.div`
   margin: 0 auto;
 
   display: grid;
+  grid-template-rows: 11.6rem 13rem auto;
+
   grid-template-areas:
     'header'
     'sectionTitle'
     'content';
-  grid-template-rows: 11.6rem auto;
-  padding: 0 3rem 3rem 3rem ;
+  padding: 0 3rem 6rem 3rem;
 `
 
 export const SectionTitle = styled.div`
   grid-area: sectionTitle;
+  height: fit-content;
 
   display: flex;
   align-items: center;
