@@ -15,16 +15,15 @@ export function Header() {
       <Input placeholder='Pesquisar pelo título' type='text' />
 
       <Profile to='/profile'>
-        <div className='infos'>
-          <strong>Michelle Cordeiro</strong>
-
-          <Logout onClick={signOut}>
-            Sair
-          </Logout>
-        </div>
+        <strong>Michelle Cordeiro</strong>
 
         <img src='http://github.com/michellecordeiro.png' alt='' />
       </Profile>
+
+      <Logout onClick={signOut}>
+        Sair
+      </Logout>
+
     </Container>
   )
 }
