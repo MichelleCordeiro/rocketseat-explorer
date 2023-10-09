@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import { FiPlus } from 'react-icons/fi'
 
 import { Header }from '../../components/Header'
@@ -13,6 +15,12 @@ import { Container, SectionTitle, NewMovie, Content } from './styles'
 export function Home() {
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState('')
+
+  const navigate = useNavigate()
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`)
+  }
 
   useEffect(() => {
     async function fetcMoviehNotes() {
@@ -42,7 +50,11 @@ export function Home() {
 
       <Content>
         {notes.map(note => (
-          <Movie key={String(note.id)} data={note} />
+          <Movie 
+            key={String(note.id)} 
+            data={note} 
+            onClick={() => handleDetails(note.id)}
+          />
         ))}
       </Content>
     </Container>
