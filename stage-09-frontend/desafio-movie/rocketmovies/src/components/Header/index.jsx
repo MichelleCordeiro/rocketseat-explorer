@@ -1,8 +1,11 @@
-import { Input } from '../Input'
+import { useAuth } from '../../hooks/auth'
 
-import { Container, Brand, Profile, Logout } from './styles';
+import { Input } from '../Input'
+import { Container, Brand, Profile, Logout } from './styles'
 
 export function Header() {
+  const { signOut } = useAuth()
+
   return (
     <Container>
       <Brand>
@@ -12,17 +15,15 @@ export function Header() {
       <Input placeholder='Pesquisar pelo título' type='text' />
 
       <Profile to='/profile'>
-        <div className="infos">
-          <strong>
-            Michelle Cordeiro
-          </strong>
+        <div className='infos'>
+          <strong>Michelle Cordeiro</strong>
 
-          <Logout>
+          <Logout onClick={signOut}>
             Sair
           </Logout>
         </div>
 
-        <img src="http://github.com/michellecordeiro.png" alt="" />
+        <img src='http://github.com/michellecordeiro.png' alt='' />
       </Profile>
     </Container>
   )
