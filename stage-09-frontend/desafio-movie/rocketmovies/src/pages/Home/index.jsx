@@ -3,6 +3,7 @@ import { FiPlus } from 'react-icons/fi'
 
 import { Header }from '../../components/Header'
 import { Section }  from '../../components/Section'
+import { Input } from '../../components/Input'
 import { Movie } from '../../components/Movie'
 
 import { api } from '../../services/api'
@@ -14,16 +15,21 @@ export function Home() {
   const [search, setSearch] = useState('')
 
   useEffect(() => {
-    async function fetchNotes() {
+    async function fetcMoviehNotes() {
       const response = await api.get(`/notes?title=${search}`)
       setNotes(response.data)
     }
-    fetchNotes()
+    fetcMoviehNotes()
   }, [search])
   
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input
+          placeholder='Pesquisar pelo título'
+          onChange={e => setSearch(e.target.value)}
+        />
+      </Header>
 
       <SectionTitle>
         <Section title='Meus filmes' />
@@ -35,14 +41,9 @@ export function Home() {
       </SectionTitle>
 
       <Content>
-        {
-          notes.map(note => (
-            <Movie
-              key={String(note.id)}
-              data={note}
-            />
-          ))
-        }
+        {notes.map(note => (
+          <Movie key={String(note.id)} data={note} />
+        ))}
       </Content>
     </Container>
   )

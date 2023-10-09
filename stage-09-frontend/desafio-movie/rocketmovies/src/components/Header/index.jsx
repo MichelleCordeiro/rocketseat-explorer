@@ -2,11 +2,10 @@ import { useAuth } from '../../hooks/auth'
 
 import { api } from '../../services/api'
 
-import { Input } from '../Input'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
-import { Container, Brand, Profile, Logout } from './styles'
+import { Container, Brand, Search, Profile, Logout } from './styles'
 
-export function Header() {
+export function Header({ children }) {
   const { signOut, user } = useAuth()
 
   const avatarUrl = user.avatar
@@ -19,7 +18,12 @@ export function Header() {
         <h1>RocketMovies</h1>
       </Brand>
 
-      <Input placeholder='Pesquisar pelo título' type='text' />
+      {/* <Input 
+        placeholder='Pesquisar pelo título' 
+        type='text' 
+        onChange={e => setSearch(e.target.value)}
+      /> */}
+      <Search>{children}</Search>
 
       <Profile to='/profile'>
         <strong>{user.name}</strong>
@@ -27,10 +31,7 @@ export function Header() {
         <img src={avatarUrl} alt={user.name} />
       </Profile>
 
-      <Logout onClick={signOut}>
-        Sair
-      </Logout>
-
+      <Logout onClick={signOut}>Sair</Logout>
     </Container>
-  )
+  );
 }
