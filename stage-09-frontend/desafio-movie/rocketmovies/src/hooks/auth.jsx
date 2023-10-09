@@ -28,10 +28,27 @@ function AuthProvider({ children }) {
   }
 
   function signOut() {
-    localStorage.removeItem('@rocketnotes:token')
-    localStorage.removeItem('@rocketnotes:user')
+    localStorage.removeItem('@rocketmovies:token')
+    localStorage.removeItem('@rocketmovies:user')
 
     setData({})
+  }
+
+  async function updateProfile({ user }) {
+    try {
+      await api.put('/users', user)
+      localStorage.setItem('@rocketmovies:user', JSON.stringify(user))
+
+      setData({ user, token: data.token })
+      alert('Perfil atualizado!')
+
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message)
+      } else {
+        alert('Não foi possível atualizar o perfil.')
+      }
+    }
   }
 
   useEffect(() => {
@@ -53,7 +70,8 @@ function AuthProvider({ children }) {
       value={{
         signIn,
         user: data.user,
-        signOut
+        signOut,
+        updateProfile
       }}
     >
       {children}
