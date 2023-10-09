@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { FiArrowLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
@@ -11,6 +12,17 @@ import { MovieItem } from '../../components/MovieItem'
 import { Container, Form } from './styles'
 
 export function New() {
+  const [tags, setTags] = useState([])
+  const [newTag, setNewTag] = useState('')
+
+  function handleAddTag() {
+    setTags(prevState => [...prevState, newTag])
+    setNewTag('')
+  }
+
+  function handleRemoveTag(deleted) {
+    setTags(prevState => prevState.filter(tag => tag !== deleted))
+  }
   return (
     <Container>
       <Header />
@@ -32,9 +44,22 @@ export function New() {
 
           <h3>Marcadores</h3>
           <div className='tags'>
-            <MovieItem value='Drama' />
-            <MovieItem value='Ficção Científica' />
-            <MovieItem isNew placeholder='Novo marcardor' />
+            {
+              tags.map((tag, index) => (
+                <MovieItem 
+                    key={String(index)}
+                    value={tag}
+                    onClick={( ) => handleRemoveTag(tag)}
+                  />
+              ))
+            }
+            <MovieItem
+              isNew
+              placeholder='Nova tag'
+              value={newTag}
+              onChange={e => setNewTag(e.target.value)}
+              onClick={handleAddTag}
+            />
           </div>
 
           <div className='btns'>
