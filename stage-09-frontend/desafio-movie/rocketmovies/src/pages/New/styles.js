@@ -31,9 +31,9 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    overflow-y: auto;
     padding-right: 1.6rem;
     margin-bottom: 4rem;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -48,11 +48,27 @@ export const Container = styled.div`
       border-radius: 0.8rem;
     }
   }
-`;
+`
 
 export const Form = styled.form`
   > section {
     padding-block: 0 4rem;
+  }
+
+  > textarea {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      padding-left: 10.8rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      max-height: 9.6rem;
+      background: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 0.8rem;
+    }
   }
 
   > h3 {
@@ -99,4 +115,4 @@ export const Form = styled.form`
       }
     }
   }
-`;
+`
