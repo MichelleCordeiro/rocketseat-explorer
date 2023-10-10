@@ -19,15 +19,6 @@ export const Container = styled.button`
     margin-bottom: 0.8rem;
   }
 
-  > .stars {
-    display: flex;
-    gap: 0.3rem;
-  }
-
-  > svg {
-    color: ${({ theme }) => theme.COLORS.PINK};
-  }
-
   > p {
     margin-block: 1.6rem 2rem;
     color: ${({ theme }) => theme.COLORS.GRAY_300_home_p};

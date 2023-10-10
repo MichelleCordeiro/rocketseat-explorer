@@ -19,14 +19,16 @@ export const Container = styled.div`
     align-items: center;
     justify-self: start;
     gap: 0.8rem;
-    padding-block: 4rem 2.4rem;
+    margin-top: 5rem;
     color: ${({ theme }) => theme.COLORS.PINK};
+    background: none;
+    border: none;
 
     > svg {
       color: ${({ theme }) => theme.COLORS.PINK};
     }
   }
-`;
+`
 
 export const Content = styled.div`
   grid-area: content;
@@ -37,6 +39,7 @@ export const Content = styled.div`
   }
 
   > p {
+    line-height: 2.5rem;
     text-align: justify;
     padding-right: 1rem;
   }
@@ -60,19 +63,19 @@ export const SectionTitle = styled.div`
   gap: 1rem;
   align-items: center;
 
-  > section {
+  > h1 {
     width: fit-content;
-    padding-block: 0 2.4rem;
+    font-size: 3.6rem;
 
-    > h1 {
-      padding: 0 2rem 0 0;
-      margin: 0;
-    }
+    padding: 3.4rem 1rem 3.4rem 0;
+
+    margin: 0;
   }
 
   > svg {
+    width: 2rem;
+    height: 2rem;
     color: ${({ theme }) => theme.COLORS.PINK};
-    margin-block: 0 2.4rem;
   }
 
   > div {

@@ -1,17 +1,15 @@
-import { FiStar } from 'react-icons/fi'
 import { Tag } from '../Tag'
+import { Stars } from '../Stars'
 
 import { Container } from './styles'
 
-export function Movie({ data, ...rest }) {
-  const rating = data.rating
-  const starOff = [...Array(rating.length).fill(5)]
-  
+export function Movie({ data, ...rest }) {  
   return (
     <Container {...rest}>
       <h1>{data.title}</h1>
 
-      {data.rating && (
+      <Stars rating={data.rating} />
+      {/* {data.rating && (
         <div className='stars'>
           {[...Array(data.rating)].map((star, index) => (
             <FiStar key={index} fill='#FF859B' stroke='#FF859B' />
@@ -20,7 +18,7 @@ export function Movie({ data, ...rest }) {
             <FiStar key={index} stroke='#FF859B' />
             ))}
         </div>
-      )}
+      )} */}
 
       <p>{data.description}</p>
 
@@ -32,5 +30,5 @@ export function Movie({ data, ...rest }) {
         </footer>
       )}
     </Container>
-  );
+  )
 }

@@ -6,16 +6,16 @@
 <br><br><br>
 
 <!--About session-->
-<h1 align="center"> RocketNotes - Frontend</h1>
+<h1 align="center"> RocketMovies - Frontend</h1>
 <br>
 
 <div align="center">
   <!-- <video src=""></video> -->
-  <img alt="RocketNotes" src="https://i.postimg.cc/j53cVh5N/rocket-Movies1.png" width="800">
+  <img alt="RocketMovies" src="https://i.postimg.cc/j53cVh5N/rocket-Movies1.png" width="800">
 <br><br>
-  <img alt="RocketNotes" src="https://i.postimg.cc/DwQcfh07/rocket-Movies2.png" width="800">
+  <img alt="RocketMovies" src="https://i.postimg.cc/DwQcfh07/rocket-Movies2.png" width="800">
 <br><br>
-  <img alt="RocketNotes" src="https://i.postimg.cc/Pf8VGBW5/rocket-Movies3.png" width="800">
+  <img alt="RocketMovies" src="https://i.postimg.cc/Pf8VGBW5/rocket-Movies3.png" width="800">
 </div>
 <br><br><br>
 

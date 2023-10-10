@@ -12,7 +12,7 @@ import { api } from '../../services/api'
 
 import { Container, SectionTitle, NewMovie, Content } from './styles'
 
-export function Home() {
+export function Home({ children }) {
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState('')
 
@@ -23,11 +23,11 @@ export function Home() {
   }
 
   useEffect(() => {
-    async function fetcMoviehNotes() {
+    async function fetchMovieNotes() {
       const response = await api.get(`/notes?title=${search}`)
       setNotes(response.data)
     }
-    fetcMoviehNotes()
+    fetchMovieNotes()
   }, [search])
   
   return (
@@ -49,13 +49,15 @@ export function Home() {
       </SectionTitle>
 
       <Content>
-        {notes.map(note => (
-          <Movie 
-            key={String(note.id)} 
-            data={note} 
-            onClick={() => handleDetails(note.id)}
-          />
-        ))}
+        {
+          notes.map(note => (
+            <Movie 
+              key={String(note.id)} 
+              data={note} 
+              onClick={() => handleDetails(note.id)}
+            />
+          ))
+        }
       </Content>
     </Container>
   )
