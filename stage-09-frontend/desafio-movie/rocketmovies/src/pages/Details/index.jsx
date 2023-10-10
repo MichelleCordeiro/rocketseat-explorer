@@ -15,26 +15,44 @@ import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 import { Container, Content, SectionTitle } from './styles'
 
 export function Details() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(null);
 
-  const { user } = useAuth()
-  const params = useParams()
-  const navigate = useNavigate()
+  const { user } = useAuth();
+  const params = useParams();
+  const navigate = useNavigate();
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceholder
+    : avatarPlaceholder;
 
   function handleBack() {
-    navigate('/')
+    navigate('/');
   }
 
+  async function handleRemove() {
+    const confirm = window.confirm('Deseja realmente apagar o filme?');
+
+    if (confirm) {
+      try {
+        await api.delete(`/notes/${params.id}`);
+        handleBack();
+      } catch (error) {
+        if (error.response) {
+          alert(error.response.data.message);
+        } else {
+          alert('Não foi possível excluir o filme.');
+          console.log('Erro ao excluir o filme:', error);
+        }
+      }
+    }
+  }
+  
   useEffect(() => {
     async function fetchMovieNote() {
       const response = await api.get(`/notes/${params.id}`)
       setData(response.data)
     }
-
+    
     fetchMovieNote()
   }, [])
 
@@ -44,10 +62,16 @@ export function Details() {
         {/* <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} /> */}
       </Header>
 
-      <button className='linkVoltar' onClick={handleBack}>
-        <FiArrowLeft />
-        Voltar
-      </button>
+      <div className='btns'>
+        <button className='btn' onClick={handleBack}>
+          <FiArrowLeft />
+          Voltar
+        </button>
+
+        <button className='btn' onClick={handleRemove}>
+          Excluir esse filme
+        </button>
+      </div>
 
       {data && (
         <Content>
@@ -72,11 +96,7 @@ export function Details() {
           {data.tags && (
             <div className='tags'>
               {data.tags.map(tag => (
-                <Tag 
-                  key={String(tag.id)} 
-                  className='tag' 
-                  title={tag.name} 
-                />
+                <Tag key={String(tag.id)} className='tag' title={tag.name} />
               ))}
             </div>
           )}
@@ -85,5 +105,5 @@ export function Details() {
         </Content>
       )}
     </Container>
-  )
+  );
 }

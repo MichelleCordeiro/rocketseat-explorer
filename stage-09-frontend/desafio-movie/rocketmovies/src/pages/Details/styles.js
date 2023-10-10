@@ -8,24 +8,26 @@ export const Container = styled.div`
   display: grid;
   grid-template-areas:
     'header'
-    'linkVoltar'
+    'btns'
     'content';
   grid-template-rows: 11.6rem min-content auto;
   padding: 0 3rem 6rem 3rem;
 
-  > .linkVoltar {
-    grid-area: linkVoltar;
+  > .btns {
+    grid-area: btns;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-self: start;
-    gap: 0.8rem;
     margin-top: 5rem;
-    color: ${({ theme }) => theme.COLORS.PINK};
-    background: none;
-    border: none;
 
-    > svg {
+    > .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
       color: ${({ theme }) => theme.COLORS.PINK};
+      background: none;
+      border: none;
     }
   }
 `
@@ -49,7 +51,7 @@ export const Content = styled.div`
   }
   &::-webkit-scrollbar-track {
     background: transparent;
-    padding-left: 10.8rem;
+    margin: 11rem 10.8rem 0 0;
   }
   &::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.COLORS.PINK};

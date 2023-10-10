@@ -35,33 +35,60 @@ export function New() {
   }
 
   async function handleNewNote() {
-    if (!title) {
-      return alert('Digite o título do filme')
-    }
+    const isRatingValid = rating >= 0 && rating <= 5
 
-    if (!rating) {
-      rating = 0
-    }
-    
-    if (newTag) {
-      return alert(
-        'Você digitou uma tag, mas não clicou para adicioná-la. Clique para adicionar ou deixe o campo vazio.'
-      )
-    }
+    try {
+      if (!title) {
+        return alert('Digite o título do filme')
+      }
 
-    if (tags.length < 1) {
-      return alert('Adicione pelo menos uma tag')
+      if (!rating) {
+        rating = 0
+      } else if (!isRatingValid) {
+        return alert('A nota do filme deve ser de 0 a 5')
+      }
+
+      if (newTag) {
+        return alert(
+          'Você digitou uma tag, mas não clicou para adicioná-la. Clique para adicionar ou deixe o campo vazio.'
+        )
+      }
+
+      if (tags.length < 1) {
+        return alert('Adicione pelo menos uma tag')
+      }
+
+      await api.post('/notes', {
+        title,
+        rating,
+        description,
+        tags
+      })
+
+      alert('Filme adicionado com sucesso!')
+      navigate('/')
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message)
+      } else {
+        alert('Não foi possível adicionar o filme.')
+        console.log('Erro ao adicionar o filme:', error)
+      }
     }
+  }
 
-    await api.post('/notes', {
-      title,
-      rating,
-      description,
-      tags
-    })
-
-    alert('Filme adicionado com sucesso!')
+  function handleBack() {
     navigate('/')
+  }
+
+  async function handleClearMovie() {
+    const clearConfirm = confirm(
+      'Deseja mesmo descartar as informações? Todas as informações serão perdidas.'
+    )
+
+    if(clearConfirm) {
+      handleBack()
+    }
   }
 
   return (
@@ -78,25 +105,30 @@ export function New() {
           <Section title='Novo filme'></Section>
 
           <div>
-            <Input placeholder='Título' type='text' onChange={e => setTitle(e.target.value)} />
+            <Input 
+              placeholder='Título' 
+              onChange={e => setTitle(e.target.value)} 
+            />
 
             <Input
               placeholder='Sua nota (de 0 a 5)'
-              type='text'
               onChange={e => setRating(e.target.value)}
             />
           </div>
 
           <Textarea
             placeholder='Observações'
-            type='text'
             onChange={e => setDescription(e.target.value)}
           />
 
           <h3>Marcadores</h3>
           <div className='tags'>
             {tags.map((tag, index) => (
-              <MovieItem key={String(index)} value={tag} onClick={() => handleRemoveTag(tag)} />
+              <MovieItem 
+                key={String(index)} 
+                value={tag} 
+                onClick={() => handleRemoveTag(tag)} 
+              />
             ))}
             <MovieItem
               isNew
@@ -109,10 +141,10 @@ export function New() {
 
           <div className='btns'>
             <Button title='Excluir filme' />
-            <Button title='Salvar alterações' onClick={handleNewNote} />
+            <Button title='Salvar alterações' onClick={handleClearMovie} />
           </div>
         </Form>
       </main>
     </Container>
-  );
+  )
 }
