@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { FiArrowLeft } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
 
 import { useNavigate } from 'react-router-dom'
 
@@ -24,6 +23,10 @@ export function New() {
   const [newTag, setNewTag] = useState('')
 
   const navigate = useNavigate()
+
+  function handleBack() {
+    navigate(-1)
+  }
 
   function handleAddTag() {
     setTags(prevState => [...prevState, newTag])
@@ -66,7 +69,7 @@ export function New() {
       })
 
       alert('Filme adicionado com sucesso!')
-      navigate('/')
+      handleBack()
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message)
@@ -75,10 +78,6 @@ export function New() {
         console.log('Erro ao adicionar o filme:', error)
       }
     }
-  }
-
-  function handleBack() {
-    navigate('/')
   }
 
   async function handleClearMovie() {
@@ -95,40 +94,27 @@ export function New() {
     <Container>
       <Header />
 
-      <Link to='/' className='linkVoltar'>
+      <button className='btnVoltar' onClick={handleBack}>
         <FiArrowLeft />
         Voltar
-      </Link>
+      </button>
 
       <main>
         <Form>
           <Section title='Novo filme'></Section>
 
           <div>
-            <Input 
-              placeholder='Título' 
-              onChange={e => setTitle(e.target.value)} 
-            />
+            <Input placeholder='Título' onChange={e => setTitle(e.target.value)} />
 
-            <Input
-              placeholder='Sua nota (de 0 a 5)'
-              onChange={e => setRating(e.target.value)}
-            />
+            <Input placeholder='Sua nota (de 0 a 5)' onChange={e => setRating(e.target.value)} />
           </div>
 
-          <Textarea
-            placeholder='Observações'
-            onChange={e => setDescription(e.target.value)}
-          />
+          <Textarea placeholder='Observações' onChange={e => setDescription(e.target.value)} />
 
           <h3>Marcadores</h3>
           <div className='tags'>
             {tags.map((tag, index) => (
-              <MovieItem 
-                key={String(index)} 
-                value={tag} 
-                onClick={() => handleRemoveTag(tag)} 
-              />
+              <MovieItem key={String(index)} value={tag} onClick={() => handleRemoveTag(tag)} />
             ))}
             <MovieItem
               isNew
@@ -140,11 +126,11 @@ export function New() {
           </div>
 
           <div className='btns'>
-            <Button title='Excluir filme' />
-            <Button title='Salvar alterações' onClick={handleClearMovie} />
+            <Button title='Excluir filme' onClick={handleClearMovie} />
+            <Button title='Salvar alterações' onClick={handleNewNote} />
           </div>
         </Form>
       </main>
     </Container>
-  )
+  );
 }

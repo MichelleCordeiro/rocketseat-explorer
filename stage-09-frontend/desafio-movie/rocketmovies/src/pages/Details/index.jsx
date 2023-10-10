@@ -26,7 +26,7 @@ export function Details() {
     : avatarPlaceholder;
 
   function handleBack() {
-    navigate('/');
+    navigate(-1)
   }
 
   async function handleRemove() {

@@ -9,18 +9,20 @@ export const Container = styled.div`
   grid-template-rows: 11.6rem auto;
   grid-template-areas:
     'header'
-    'linkVoltar'
+    'btnVoltar'
     'content';
   padding-inline: 3rem;
 
-  > .linkVoltar {
-    grid-area: linkVoltar;
+  > .btnVoltar {
+    grid-area: btnVoltar;
     display: flex;
     align-items: center;
     justify-self: start;
     gap: 0.8rem;
-    padding-block: 4rem 2.4rem;
+    margin-block: 4rem 2.4rem;
     color: ${({ theme }) => theme.COLORS.PINK};
+    background: none;
+    border: none;
 
     > svg {
       color: ${({ theme }) => theme.COLORS.PINK};

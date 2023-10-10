@@ -9,13 +9,15 @@ export const Container = styled.div`
 
     background-color: ${({ theme }) => theme.COLORS.BG_home_profile};
     
-    > a {
+    > button {
       display: flex;
       align-items: center;
       gap: 1rem;
       
       padding: 6.4rem 14.6rem 6rem;
       color: ${({ theme }) => theme.COLORS.PINK};
+      background: none;
+      border: none;
     }
   }
 `
