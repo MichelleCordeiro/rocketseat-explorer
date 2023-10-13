@@ -6,5 +6,5 @@ export function Tag({ title, icon: Icon, ...rest }) {
       {title}
       {Icon && <Icon size={24} />}
     </Container>
-  );
+  )
 }

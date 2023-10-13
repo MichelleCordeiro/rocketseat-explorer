@@ -23,11 +23,11 @@ export function Movie({ data, ...rest }) {
       <p>{data.description}</p>
 
       {data.tags && (
-        <footer>
+        <div>
           {data.tags.map(tag => (
             <Tag key={tag.id} title={tag.name} />
           ))}
-        </footer>
+        </div>
       )}
     </Container>
   )

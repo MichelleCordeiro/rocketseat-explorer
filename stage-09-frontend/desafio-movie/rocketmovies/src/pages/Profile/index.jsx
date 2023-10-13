@@ -62,17 +62,17 @@ export function Profile() {
         </button>
       </header>
 
+      <Avatar>
+        <img src={avatar} alt='Foto do usuário' />
+
+        <label htmlFor='avatar'>
+          <FiCamera />
+
+          <input id='avatar' type='file' onChange={handleChangeAvatar} />
+        </label>
+      </Avatar>
+
       <Form>
-        <Avatar>
-          <img src={avatar} alt='Foto do usuário' />
-
-          <label htmlFor='avatar'>
-            <FiCamera />
-
-            <input id='avatar' type='file' onChange={handleChangeAvatar} />
-          </label>
-        </Avatar>
-
         <Input
           placeholder='Nome'
           type='text'
@@ -106,5 +106,5 @@ export function Profile() {
         <Button title='Salvar' onClick={handleUpdate} />
       </Form>
     </Container>
-  );
+  )
 }

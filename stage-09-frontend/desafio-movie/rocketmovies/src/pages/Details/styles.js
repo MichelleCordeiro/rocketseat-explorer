@@ -18,7 +18,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5rem;
+    margin-block: 4rem 2rem;
 
     > .btn {
       display: flex;
@@ -30,6 +30,46 @@ export const Container = styled.div`
       border: none;
     }
   }
+
+  @media (max-width: 750px) {
+    grid-template-rows: 11.6rem fit-content auto;
+
+    > .btns {
+      margin-top: 9rem;
+    }
+  }
+
+  @media (max-width: 470px) {
+    > .btns {
+      margin-top: 6rem;
+    }
+
+    > .divContent {
+      > .divSectionTitle {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        > h1 {
+          padding-bottom: 0rem;
+        }
+
+        > div {
+          > .stars {
+            padding-bottom: 3rem;
+          }
+
+          > svg {
+            margin-left: 0;
+          }
+        }
+      }
+
+      > .tags {
+        padding-block: 2rem 4rem;
+      }
+    }
+  }
 `
 
 export const Content = styled.div`
@@ -37,7 +77,10 @@ export const Content = styled.div`
   overflow-y: auto;
 
   > .tags {
+    display: inline-flex;
     padding-block: 4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   > p {
@@ -67,10 +110,9 @@ export const SectionTitle = styled.div`
 
   > h1 {
     width: fit-content;
-    font-size: 3.6rem;
+    font-size: clamp(1.8rem, 3vw + 1rem, 3.6rem);
 
-    padding: 3.4rem 1rem 3.4rem 0;
-
+    padding: 1.4rem 1rem 3.4rem 0;
     margin: 0;
   }
 

@@ -92,7 +92,9 @@ export function New() {
 
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} />
+      </Header>
 
       <button className='btnVoltar' onClick={handleBack}>
         <FiArrowLeft />
@@ -132,5 +134,5 @@ export function New() {
         </Form>
       </main>
     </Container>
-  );
+  )
 }

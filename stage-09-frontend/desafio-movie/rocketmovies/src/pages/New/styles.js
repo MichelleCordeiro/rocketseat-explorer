@@ -48,11 +48,39 @@ export const Container = styled.div`
       border-radius: 0.8rem;
     }
   }
+
+  @media (max-width: 750px) {
+    grid-template-rows: 11.6rem auto;
+
+    > .btnVoltar {
+      margin-top: 9rem;
+    }
+  }
+
+  @media (max-width: 470px) {
+    > .btnVoltar {
+      margin-top: 6rem;
+    }
+
+    > main > form {
+      > .tags {
+        justify-content: center;
+
+        > div input {
+          width: 100%;
+        }
+      }
+
+      > .btns {
+        gap: 1rem;
+      }
+    }
+  }
 `
 
 export const Form = styled.form`
   > section {
-    padding-block: 0 4rem;
+    padding-block: 0 1rem;
   }
 
   > textarea {
@@ -72,10 +100,11 @@ export const Form = styled.form`
   }
 
   > h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 1.8rem + 0.2vw, 2rem);
     font-weight: 400;
     color: ${({ theme }) => theme.COLORS.GRAY_300_home_p};
-    padding-block: 4rem 2.4rem;
+    padding-top: 4rem;
+    padding-bottom: clamp(1rem, 0.7165rem + 1.4177vw, 2.4rem);
   }
 
   > .tags {
@@ -89,10 +118,16 @@ export const Form = styled.form`
     background: ${({ theme }) => theme.COLORS.BLACK};
 
     margin: 0;
-    padding: 1.6rem;
+    padding-inline: 1.6rem;
+    padding-top: clamp(1rem, 0.88rem + 0.6vw, 1.6rem);
+    padding-bottom: clamp(0rem, 0.27rem + 1vw, 1.6rem);
 
     > div {
       width: fit-content;
+
+      > input {
+        font-size: clamp(1.4rem, 1.3rem + 0.2vw, 1.6rem);
+      }
     }
   }
 
@@ -107,7 +142,8 @@ export const Form = styled.form`
 
     > button {
       color: ${({ theme }) => theme.COLORS.BG_600_header_line};
-      margin-top: 4rem;
+      margin-top: clamp(1rem, 0.4rem + 3vw, 4rem);
+      font-size: clamp(1.4rem, 1.3rem + 0.2vw, 1.6rem);
 
       &:first-child {
         background: ${({ theme }) => theme.COLORS.BLACK};

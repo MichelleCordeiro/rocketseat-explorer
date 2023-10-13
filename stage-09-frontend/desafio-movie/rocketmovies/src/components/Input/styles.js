@@ -13,8 +13,7 @@ export const Container = styled.div`
 
   > input {
     width: 100%;
-    height: 5.6rem;
-    padding: 1.2rem;
+    padding: 1.6rem 1.2rem;
 
     color: ${({ theme }) => theme.COLORS.WHITE_100_h1_input_active};
     background: transparent;
@@ -28,4 +27,4 @@ export const Container = styled.div`
   > svg {
     margin-left: 1.6rem;
   }
-`;
+`

@@ -5,6 +5,14 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: stretch;
+
+  @media (max-width: 430px) {
+    > form {
+      > h1, h2, p {
+        text-align: center;
+      }
+    }
+  }
 `
 
 export const Form = styled.form`
@@ -12,16 +20,18 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
 
-  padding: 0 13.6rem;
+  padding-block: 0;
+  padding-inline: clamp(4rem, 9vw + 1rem, 13.6rem);
 
   > h1 {
-    font-size: 4.8rem;
+    font-size: clamp(3rem, 1.9rem + 2.4vw, 4.8rem);
     color: ${({ theme }) => theme.COLORS.PINK};
   }
 
   > h2 {
     font-size: 2.4rem;
-    margin: 4.8rem 0;
+    margin: 4.8rem auto;
+    margin-bottom: clamp(3rem, 2.6354rem + 1.8228vw, 4.8rem);
   }
 
   > p {

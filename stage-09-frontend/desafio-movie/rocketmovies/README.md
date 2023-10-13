@@ -45,7 +45,6 @@ This challenge was developed using the following technologies/tools:
  - Add and delete movie
  - Add and delete tags
  - Show all movies
- - Filter by tags
  - Search movie
  - Movie details
 

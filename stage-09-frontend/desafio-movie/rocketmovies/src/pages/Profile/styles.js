@@ -1,31 +1,82 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
-
   > header {
     width: 100%;
-    height: 14.4rem;
+    height: clamp(11rem, 21vw + 8rem, 14.4rem);
 
     background-color: ${({ theme }) => theme.COLORS.BG_home_profile};
-    
+
     > button {
       display: flex;
       align-items: center;
       gap: 1rem;
-      
-      padding: 6.4rem 14.6rem 6rem;
+
+      padding-top: clamp(3.5rem, 2.5rem + 2.0253vw, 6rem);
+      padding-bottom: 6rem;
+      padding-left: clamp(1rem, -1.7544rem + 13.7722vw, 14.6rem);
+
       color: ${({ theme }) => theme.COLORS.PINK};
       background: none;
       border: none;
     }
   }
+
+  @media (max-width: 380px) {
+    > form {
+      margin-inline: 3rem;
+    }
+  }
+`
+
+export const Avatar = styled.div`
+  width: clamp(12rem, 10vw + 8rem, 18.6rem);
+  height: clamp(12rem, 10vw + 8rem, 18.6rem);
+
+  margin: auto;
+  bottom: clamp(6rem, 0.429rem + 9.524vw, 9rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  > img {
+    width: clamp(12rem, 10vw + 8rem, 18.6rem);
+    height: clamp(12rem, 10vw + 8rem, 18.6rem);
+
+    border-radius: 50%;
+  }
+
+  > label {
+    width: clamp(4rem, 4vw + 1rem, 4.8rem);
+    height: clamp(4rem, 4vw + 1rem, 4.8rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    bottom: clamp(0rem, 0.1vw + 0.1rem, 1rem);
+    right: clamp(0rem, 1vw + 0.1rem, 1rem);
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 50%;
+    cursor: pointer;
+
+    > input {
+      display: none;
+    }
+  }
+
+  svg {
+    color: ${({ theme }) => theme.COLORS.BG_800_input};
+  }
 `
 
 export const Form = styled.form`
   max-width: 34rem;
-  margin: 0 auto 3rem;
-  gap: 0.8rem;
+  margin: auto;
+  margin-bottom: 3rem;
 
   :nth-of-type(3) {
     margin-bottom: 2.4rem;
@@ -35,48 +86,5 @@ export const Form = styled.form`
     width: 18.6rem;
     height: 18.6rem;
     border-radius: 50%;
-  }
-`
-
-export const Avatar = styled.div`
-  width: 18.6rem;
-  height: 18.6rem;
-  margin: -9rem auto 6.4rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
-
-  > img {
-    width: 18.6rem;
-    height: 18.6rem;
-    border-radius: 50%;
-  }
-
-  > label {
-    width: 4.8rem;
-    height: 4.8rem;
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    border-radius: 50%;
-
-    input {
-      display: none;
-    }
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-
-    bottom: 7px;
-    right: 7px;
-
-    cursor: pointer;
-  }
-
-  svg {
-    color: ${({ theme }) => theme.COLORS.BG_800_input};
   }
 `

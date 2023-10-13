@@ -15,33 +15,33 @@ import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 import { Container, Content, SectionTitle } from './styles'
 
 export function Details() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null)
 
-  const { user } = useAuth();
-  const params = useParams();
-  const navigate = useNavigate();
+  const { user } = useAuth()
+  const params = useParams()
+  const navigate = useNavigate()
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
-    : avatarPlaceholder;
+    : avatarPlaceholder
 
   function handleBack() {
     navigate(-1)
   }
 
   async function handleRemove() {
-    const confirm = window.confirm('Deseja realmente apagar o filme?');
+    const confirm = window.confirm('Deseja realmente apagar o filme?')
 
     if (confirm) {
       try {
-        await api.delete(`/notes/${params.id}`);
-        handleBack();
+        await api.delete(`/notes/${params.id}`)
+        handleBack()
       } catch (error) {
         if (error.response) {
-          alert(error.response.data.message);
+          alert(error.response.data.message)
         } else {
-          alert('Não foi possível excluir o filme.');
-          console.log('Erro ao excluir o filme:', error);
+          alert('Não foi possível excluir o filme.')
+          console.log('Erro ao excluir o filme:', error)
         }
       }
     }
@@ -59,7 +59,7 @@ export function Details() {
   return (
     <Container>
       <Header>
-        {/* <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} /> */}
+        <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} />
       </Header>
 
       <div className='btns'>
@@ -74,14 +74,14 @@ export function Details() {
       </div>
 
       {data && (
-        <Content>
-          <SectionTitle>
+        <Content className='divContent'>
+          <SectionTitle className='divSectionTitle'>
             <h1 className='movieTitle'>{data.title}</h1>
 
             <Stars rating={data.rating} />
           </SectionTitle>
 
-          <SectionTitle>
+          <SectionTitle className='divSectionTitle'>
             <div>
               <img src={avatarUrl} alt={user.name} />
               Por {user.name}
@@ -105,5 +105,5 @@ export function Details() {
         </Content>
       )}
     </Container>
-  );
+  )
 }

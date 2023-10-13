@@ -25,8 +25,10 @@ export const Container = styled.button`
     font-weight: 400;
   }
 
-  > footer {
+  > div {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 `

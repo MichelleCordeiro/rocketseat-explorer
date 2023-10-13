@@ -22,6 +22,23 @@ export function Home({ children }) {
     navigate(`/details/${id}`)
   }
 
+  function noMovies() {
+    const emptyMovies = document.querySelector('.empty')
+    const hasMovies = document.querySelector('.divContent')
+
+    if (notes.length > 0) {
+      emptyMovies.style.display = 'none'
+      hasMovies.style.display = 'grid'
+    } else {
+      emptyMovies.style.display = 'grid'
+      hasMovies.style.display = 'none'
+    }
+  }
+
+  useEffect(() => {
+    noMovies()
+  })
+
   useEffect(() => {
     async function fetchMovieNotes() {
       const response = await api.get(`/notes?title=${search}`)
@@ -33,10 +50,7 @@ export function Home({ children }) {
   return (
     <Container>
       <Header>
-        <Input
-          placeholder='Pesquisar pelo título'
-          onChange={e => setSearch(e.target.value)}
-        />
+        <Input placeholder='Pesquisar pelo título' onChange={e => setSearch(e.target.value)} />
       </Header>
 
       <SectionTitle>
@@ -48,16 +62,13 @@ export function Home({ children }) {
         </NewMovie>
       </SectionTitle>
 
-      <Content>
-        {
-          notes.map(note => (
-            <Movie 
-              key={String(note.id)} 
-              data={note} 
-              onClick={() => handleDetails(note.id)}
-            />
-          ))
-        }
+      <div className='empty'>
+        <h3>Nenhum filme adicionado</h3>
+      </div>
+      <Content className='divContent'>
+        {notes.map(note => (
+          <Movie key={String(note.id)} data={note} onClick={() => handleDetails(note.id)} />
+        ))}
       </Content>
     </Container>
   )

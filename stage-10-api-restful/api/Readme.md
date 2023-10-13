@@ -6,11 +6,11 @@
 <br><br><br>
 
 <!--About session-->
-<h1 align="center"> Notes App - Backend</h1>
+<h1 align="center"> Notes App - API Restful</h1>
 
 <div align="center">
   <!-- <video src=""></video> -->
-  <img alt="SPA Universe print" src="https://i.postimg.cc/T14fb4yY/Untitled.png" width="800">
+  <img alt="Notes App UML" src="https://i.postimg.cc/T14fb4yY/Untitled.png" width="800">
 </div>
 <br><br>
 
@@ -52,8 +52,10 @@ This challenge was developed using the following technologies/tools:
  - migrations
  - primary key and foreign key
  - operador like
- - where and whereIn filters
- - Inner Join
+ - inner join
+ - where, whereLike and whereIn filters
+ - orderBy
+ - groupBy
 
 <br>
 

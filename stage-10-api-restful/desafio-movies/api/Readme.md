@@ -6,7 +6,7 @@
 <br><br><br>
 
 <!--About session-->
-<h1 align="center"> Movies App - Backend</h1>
+<h1 align="center"> Movies App - API Restful</h1>
 
 <div align="center">
   <!-- <video src=""></video> -->
@@ -16,7 +16,12 @@
 
 <h3> 🏆 Challenge </h3>
 <p>
-  NodeJS aplication to save favorites movies, adding name, description, rating and tags.
+
+  **Front-end:** develop react application using styled components and react routes.
+
+  **Back-end:** nodeJS aplication to save favorites movies, adding name, description, rating and tags.
+
+  **API Restful:** implement integration of the interface (front-end) with the api (back-end), with authentication and image upload.
 
 <br><br>
 
@@ -58,8 +63,9 @@ This challenge was developed using the following technologies/tools:
  - migrations
  - primary key and foreign key
  - operador like
- - where and whereIn filters
- - Inner Join
+ - inner join
+ - where, whereIn and whereLike filters
+ - orderBy
 
 <br>
 

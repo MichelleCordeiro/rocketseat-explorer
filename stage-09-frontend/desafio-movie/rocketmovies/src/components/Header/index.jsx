@@ -31,7 +31,7 @@ export function Header({ children }) {
         type='text' 
         onChange={e => setSearch(e.target.value)}
       /> */}
-      <Search>{children}</Search>
+      <Search className='divSearch'>{children}</Search>
 
       <Profile to='/profile'>
         <strong>{user.name}</strong>
@@ -39,7 +39,7 @@ export function Header({ children }) {
         <img src={avatarUrl} alt={user.name} />
       </Profile>
 
-      <Logout onClick={handleSignOut}>Sair</Logout>
+      <Logout className='divLogout' onClick={handleSignOut}>Sair</Logout>
     </Container>
   )
 }

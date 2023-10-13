@@ -42,7 +42,8 @@ This challenge was developed using the following technologies/tools:
  - Add and delete links
  - Add and delete tags
  - Show all notes
- - Filter notes
+ - Filter by tags
+ - Search note
  - Note details
 
 <br>
