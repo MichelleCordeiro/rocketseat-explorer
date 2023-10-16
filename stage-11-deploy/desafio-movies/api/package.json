@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "API desenvolvida no desafio do Explorer da Rocketseat.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
