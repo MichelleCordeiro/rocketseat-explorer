@@ -30,6 +30,7 @@ This challenge was developed using the following technologies/tools:
   <code><img height="35" alt="react logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
   <code><img height="35" alt="react-router logo" src="https://i.postimg.cc/PqPNzDS8/react-router.png"></code>
   <code><img width="50" height="35" alt="styled-components logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/styled-components/styled-components.png"></code>
+  <code><img width="35" height="35" alt="netlify logo" src="https://i.postimg.cc/LsSLvVkq/netlify-logo-icon-169923.png"></code>
   <code><img height="33" alt="vs code logo" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png"></code>
   <code><img height="33" alt="figma logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/></code>
 </p>
@@ -58,6 +59,7 @@ This challenge was developed using the following technologies/tools:
  - react icons
  - map and filter
  - react routes
+ - netlify deploy
 
 <br>
 
