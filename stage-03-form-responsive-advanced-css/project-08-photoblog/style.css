@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+
+  --bg-body-search: #EEEEEE;
+  /* --bg-body-search: #F5F5F5; */
+  --bg-header-card-footer: #FFFFFF;
+  --fc-black: #202024;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-body-search);
+  color: var(--fc-black);
+}
+
+header, main .card, footer {
+  background: var(--bg-header-card-footer);
+  width: 39rem;
+  border-radius: 8px;
+}
+
+main .card {
+  display: grid;
+  gap: 4rem;
+}
+
+main .card img {
+  object-fit: cover;
+}

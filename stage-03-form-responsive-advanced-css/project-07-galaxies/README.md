@@ -11,7 +11,7 @@
 
 
 <div align="center">
-  <video src="./assets/proj_galaxies.webm"></video>
+  <video src="./assets/proj_galaxies.mp4"></video>
 </div>
 <br><br>
 
