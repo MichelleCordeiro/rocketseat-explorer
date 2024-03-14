@@ -3,72 +3,144 @@
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photoblog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/camera.ico" type="image/x-icon">
 </head>
+
 <body>
-  <header>
-    
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Galery</a>
-    </nav>
-    <div class="search"></div>
-    <img src="" alt="Profile photo">
-  </header>
-  <main>
-    <h1>Galery</h1>
-    <div class="card">
-      <img src="./assets/01.png" alt="">
-      <h2>Workspace elétrica</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/02.png" alt="">
-      <h2>Dark and red</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/03.png" alt="">
-      <h2>Organization e grids</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/04.png" alt="">
-      <h2>Hive</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/05.png" alt="">
-      <h2>Writer setup</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/06.png" alt="">
-      <h2>Ergonomics and colors</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/07.png" alt="">
-      <h2>Light show</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/08.png" alt="">
-      <h2>Deep purple</h2>
-      <button>tag</button>
-    </div>
-    <div class="card">
-      <img src="./assets/09.png" alt="">
-      <h2>Multi-Screen</h2>
-      <button>tag</button>
-    </div>
-  </main>
-  <footer>
-    <p>© 2023 - Rocketseat Explorer</p>
-  </footer>
+  <div id="app">
+    <header class="container">
+      <nav>
+        <a class="logo" href="#">
+          <img src="./assets/camera.png" alt="Ícone de câmera">
+        </a>
+        
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="active">
+            <a href="#galery">Galery</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form>
+        <div class="input-wrapper">
+          <label for="search">
+            Pesquise por imagens e coleções
+          </label>
+          <input 
+            type="search" 
+            id="search" 
+            placeholder="Pesquise por imagens e coleções">
+        </div>
+      </form>
+
+      <a href="#">
+        <img id="profile" src="https://randomuser.me/api/portraits/women/9.jpg" alt="Profile photo">
+      </a>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Galery</h1>
+
+        <section class="galery">
+          <figure class="card">
+            <img src="https://source.unsplash.com/random?a=1" alt="">
+            <figcaption class="infos">
+              <h2>Writer setup</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:0.6s">
+            <img src="https://source.unsplash.com/random?b=1" alt="">
+            <figcaption class="infos">
+              <h2>Dark and red</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:0.8s">
+            <img src="./assets/01.png" alt="">
+            <figcaption class="infos">
+              <h2>Workspace elétrica</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:1s">
+            <img src="./assets/03.png" alt="">
+            <figcaption class="infos">
+              <h2>Organization e grids</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:1.2s">
+            <img src="./assets/04.png" alt="">
+            <figcaption class="infos">
+              <h2>Hive</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:1.4s">
+            <img src="./assets/06.png" alt="">
+            <figcaption class="infos">
+              <h2>Ergonomics and colors</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:1.6s">
+            <img src="./assets/07.png" alt="">
+            <figcaption class="infos">
+              <h2>Light show</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:1.8s">
+            <img src="./assets/08.png" alt="">
+            <figcaption class="infos">
+              <h2>Deep purple</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card" style="--delay:2s">
+            <img src="./assets/09.png" alt="">
+            <figcaption class="infos">
+              <h2>Multi-Screen</h2>
+              <div class="tags">
+                <span>tag</span>
+              </div>
+            </figcaption>
+          </figure>
+        </section>
+      </div>
+    </main>
+
+    <footer class="container">
+      <p>
+        © 2023 - Rocketseat Explorer
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

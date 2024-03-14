@@ -2,35 +2,227 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
   font-size: 62.5%;
-  font-family: 'Mulish', sans-serif;
+  
+  --hue: 190;
+  --color-bg-white: hsl(0, 0%, 100%);
+  --color-bg-gray-100: hsl(0, 0%, 96%);
+  --color-bg-gray-300: hsl(0, 0%, 93%);
 
-  --bg-body-search: #EEEEEE;
-  /* --bg-body-search: #F5F5F5; */
-  --bg-header-card-footer: #FFFFFF;
-  --fc-black: #202024;
+  --fc-gray-300: hsl(var(--hue), 60%, 58%);
+  --fc-gray-500: hsl(0, 0%, 24%);
+  --fc-gray-900: hsl(var(--hue), 60%, 40%);
+  --fc-dark-gray: hsl(var(--hue), 4%, 38%);
+
+  --fs-nav: 1.8rem;
+  --fs-h1: 2.4rem;
+  --fs-h2: 1.8rem;
+  --fs-search: 1.6rem;
+  --fs-tag: 1.2rem;
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
 }
 
 body {
   font-size: 1.6rem;
-  background: var(--bg-body-search);
-  color: var(--fc-black);
+  background: var(--color-bg-white);
+  color: var(--fc-gray-900);
 }
 
-header, main .card, footer {
-  background: var(--bg-header-card-footer);
-  width: 39rem;
-  border-radius: 8px;
-}
-
-main .card {
+#app {
   display: grid;
-  gap: 4rem;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+
+.container {
+  /* max-width: 1440px; */
+  width: min(112rem, 100%);
+  /* height: fit-content; */
+  padding: 2rem 3.2rem;
+  margin: 0 auto;
+}
+
+header, nav, nav ul {
+  display: flex;
+  gap: 7.2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  --startY: -100%;
+  animation: move 300ms;
+}
+
+header img {
+  width: 4rem;
+  height: 4rem;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li:hover {
+  transform: scale(1.07);
+  color: var(--fc-dark-gray);
+}
+
+header ul a {
+  color: var(--fc-gray-300);
+  text-decoration: none;
+  font-size: var(--fs-nav);
+  font-weight: 700;
+}
+
+header ul .active a {
+  color: var(--fc-gray-900);
+}
+
+header form {
+  flex: 1;
+}
+
+form .input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+form .input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-bg-gray-300);
+  font-size: var(--fs-search);
+  font-weight: 600;
+}
+
+form .input-wrapper input::placeholder {
+  color: var(--fc-gray-500);
+  opacity: 0.56;
+}
+
+form input:focus {
+  outline:none;
+}
+
+#profile {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main {
+  height: 100%;
+  background: var(--color-bg-gray-100);
+  padding-block: 3.2rem;
+  
+  overflow-y: scroll;
+}
+
+main h1 {
+  font-size: var(--fs-h1);
+  padding-bottom: 3.6rem;
+}
+
+main .galery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+main .card {  
+  /* width: 39rem; */
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+
+  --delay: 0.4s;
+  animation: appear 400ms var(--delay) backwards;
+}
+
+main .card:hover {
+  transform: scale(1.01);
+  transition: all 300ms;
 }
 
 main .card img {
+  width: 100%;
+  aspect-ratio: 16/9;
   object-fit: cover;
+
+  transition: all 200ms ease-out;
+  display: block;
+}
+
+main .card img:hover {
+  transform: scale(1.1) rotate(-1deg);
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+
+main .card .infos {
+  background: var(--color-bg-white);
+  z-index: 1;
+  position: relative;
+  padding: 2.2rem;
+}
+
+main .infos h2 {
+  font-size: var(--fs-h2);
+  padding-bottom: 1.3rem;
+}
+
+.infos .tags span {
+  background: var(--color-bg-gray-100);
+  padding: 0.7rem;
+  border: none;
+  border-radius: 7px;
+  font-size: var(--fs-tag);
+  line-height: 0;
+  text-transform: uppercase;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 300ms;
+}
+
+footer p {
+  padding-inline: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }
