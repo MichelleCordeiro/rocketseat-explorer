@@ -11,7 +11,7 @@
 
 
 <div align="center">
-  <video src="./assets/proj_galaxies.mp4"></video>
+  <video alt="Photoblog" src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/beb35c49-324c-4fdb-b539-bd2c0debfffd">
 </div>
 <br><br>
 
