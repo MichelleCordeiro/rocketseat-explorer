@@ -25,6 +25,7 @@
 
 header, footer {
   background: var(--sky-500);
+  color: var(--white);
 }
 
 body {
@@ -32,13 +33,15 @@ body {
 }
 
 #app {
-  max-width: 43rem;
-  margin: 0 auto;
-  height: max-content;
-  
+  /* width: clamp(43rem, 20rem + 80vw, 144rem); */
+  /* margin: 0 auto; */
+
   display: grid;
-  grid-template-areas: header main sidebar;
-  grid-column: 1;
+  grid-template-areas: 
+  'header'
+  'main'
+  'sidebar'
+  'footer';
 }
 
 header .container, 
@@ -53,6 +56,10 @@ footer {
 
 header, sidebar {
   padding: 1.6rem 2.8rem;
+}
+
+header {
+  grid-area: header;
 }
 
 header .logo {
@@ -83,7 +90,6 @@ form .input-wrapper input {
   border-radius: 4px;
   padding: 1.2rem 1.4rem;
 
-  color: var(--white);
   font-size: var(--fs-p-search-footer);
   font-weight: 500;
   border: none;
@@ -99,7 +105,7 @@ form .input-wrapper input:focus {
 }
 
 main {
-  flex-direction: column;
+  grid-area: main;
 }
 
 main img {
@@ -108,7 +114,7 @@ main img {
 }
 
 main .infos {
-  padding: 0.6rem 2.6rem 3.4rem 2.2rem;
+  padding: 3rem 2.6rem 3.4rem 2.2rem;
 
   h1 {
     color: var(--black-title);
@@ -120,12 +126,12 @@ main .infos {
     font-weight: bold;
   }
 
-  .button-hand img {
+  .button-hands img {
     width: 4rem;
     height: 4rem;
     object-fit: cover;
 
-    padding-block: 1rem 3rem;
+    padding: 1rem 1.2rem 3rem 0;
     cursor: pointer;
   }
 
@@ -136,27 +142,28 @@ main .infos {
   }
 }
 
-main .button-hand img:nth-child(1) {
-  padding-right: 1.2rem;
-}
-
 sidebar {
+  grid-area: sidebar;
+  
   h2 {
     color: var(--black-title);
     font-size: var(--fs-title);
     font-weight: 700;
     line-height: 2.5rem;
   }
-
+  
   .posts {
     padding-top: 3.2rem;
   }
-
+  
   .posts figure {
+    justify-content: start;
     padding-bottom: 3.2rem;
     gap: 1.6rem;
 
     img {
+      width: clamp(10rem, 2rem + 10vw, 15rem);
+      height: auto;
       display: flex;
       object-fit: contain;
       align-self: start;
@@ -175,10 +182,53 @@ sidebar {
   }
 }
 
-
 footer {
-  color: var(--white);
+  grid-area: footer;
   font-size: var(--fs-p-search-footer);
   padding: 1.6rem 2.4rem;
   justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  #app {
+    grid-template-areas: 
+    'header header'
+    'main sidebar'
+    'footer footer'
+    ;
+    
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-columns: 60% 40%;
+  }
+
+  header, sidebar {
+    padding-block: 1.6rem;
+    padding-inline: clamp(3rem, 0.5rem + 6vw, 11.2rem);
+  }
+
+  main {
+    padding-block: 4rem;
+    padding-inline: clamp(3rem, 0.5rem + 6vw, 11.2rem) 0;
+
+    .infos {
+      padding: 3rem 0 4rem;
+
+      .infos-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+      }
+
+      .button-hands img {
+        padding: 0 0.2rem 0 1.2rem;
+      }
+    }
+  }
+
+  sidebar {
+    padding-block: 4rem;
+    /* padding: 4rem 11.2rem 4rem 3.4rem; */
+    padding-inline: 3.4rem clamp(3rem, 0.5rem + 6vw, 11.2rem);
+  }
 }
