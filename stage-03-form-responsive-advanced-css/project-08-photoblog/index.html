@@ -13,43 +13,63 @@
 
 <body>
   <div id="app">
-    <header class="container">
-      <nav>
-        <a class="logo" href="#">
-          <img src="./assets/camera.png" alt="Ícone de câmera">
+    <header>
+      <div class="container">
+        <nav>
+          <a class="logo" href="#">
+            <img src="./assets/camera.png" alt="Ícone de câmera">
+          </a>
+          
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="active">
+              <a href="#galery">Galery</a>
+            </li>
+          </ul>
+        </nav>
+
+        <form class="form-desktop">
+          <div class="input-wrapper">
+            <label for="search">
+              Pesquise por imagens e coleções
+            </label>
+            <input 
+              type="search" 
+              id="search" 
+              placeholder="Pesquise por imagens e coleções">
+          </div>
+        </form>
+
+        <a href="#">
+          <img id="profile" src="https://randomuser.me/api/portraits/women/9.jpg" alt="Profile photo">
         </a>
-        
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li class="active">
-            <a href="#galery">Galery</a>
-          </li>
-        </ul>
-      </nav>
+      </div>
 
-      <form>
-        <div class="input-wrapper">
-          <label for="search">
-            Pesquise por imagens e coleções
-          </label>
-          <input 
-            type="search" 
-            id="search" 
-            placeholder="Pesquise por imagens e coleções">
-        </div>
-      </form>
-
-      <a href="#">
-        <img id="profile" src="https://randomuser.me/api/portraits/women/9.jpg" alt="Profile photo">
-      </a>
+      <div class="container">
+        <form class="form-mobile">
+          <div class="input-wrapper">
+            <label for="search">
+              Pesquise por imagens e coleções
+            </label>
+            <input 
+              type="search" 
+              id="search" 
+              placeholder="Pesquise por imagens e coleções">
+          </div>
+        </form>
+      </div>
     </header>
 
     <main>
+      <div class="container-h1">
       <div class="container">
         <h1>Galery</h1>
+      </div>
+      </div>
 
+      <div class="container">
         <section class="galery">
           <figure class="card">
             <img src="https://source.unsplash.com/random?a=1" alt="">
@@ -136,11 +156,13 @@
       </div>
     </main>
 
-    <footer class="container">
-      <p>
-        © 2023 - Rocketseat Explorer
-      </p>
-    </footer>
+    <footer>
+      <div class="container">
+        <p>
+          © 2023 - Rocketseat Explorer
+        </p>
+      </div>
+    
   </div>
 </body>
 </html>

@@ -32,39 +32,49 @@ html, body, input {
 
 body {
   font-size: 1.6rem;
-  background: var(--color-bg-white);
   color: var(--fc-gray-900);
 }
 
 #app {
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
-  height: 100vh;
+  /* grid-template-rows: min-content 1fr min-content; */
+  grid-template-areas: 'Header Galery Footer';
+  grid-template-columns: auto;
 }
 
 .container {
-  /* max-width: 1440px; */
   width: min(112rem, 100%);
-  /* height: fit-content; */
   padding: 2rem 3.2rem;
   margin: 0 auto;
 }
 
-header, nav, nav ul {
+header .container, nav, nav ul, footer p {
   display: flex;
   gap: 7.2rem;
   align-items: center;
   justify-content: space-between;
 }
 
+header, main .container-h1, footer { 
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
 header {
+  background: var(--color-bg-white);
+  grid-area: 'Header';
+
+  display: flex;
+  flex-direction: column;
+  
   --startY: -100%;
   animation: move 300ms;
 }
 
 header img {
-  width: 4rem;
-  height: 4rem;
+  width: clamp(1rem, 3vw + 1.6rem, 4rem);
+  height: clamp(1rem, 3vw + 1.6rem, 4rem);
 }
 
 header ul {
@@ -89,6 +99,10 @@ header ul .active a {
 
 header form {
   flex: 1;
+}
+
+header .form-mobile {
+  display: none;
 }
 
 form .input-wrapper label {
@@ -118,29 +132,37 @@ form input:focus {
 }
 
 #profile {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: clamp(1.6rem, 3vw + 1.6rem, 4.2rem);
+  height: clamp(1.6rem, 3vw + 1.6rem, 4.2rem);
   border-radius: 50%;
   object-fit: cover;
 }
 
 main {
-  height: 100%;
+  grid-area: 'Galery';
   background: var(--color-bg-gray-100);
-  padding-block: 3.2rem;
-  
-  overflow-y: scroll;
+}
+
+main .container-h1 {
+  background: var(--color-bg-gray-100);
+  margin-top: 9rem;
 }
 
 main h1 {
   font-size: var(--fs-h1);
-  padding-bottom: 3.6rem;
+  /* padding-top: clamp(2rem, 1vh + 0.1rem, 3.6rem); */
+  padding-top: 3.6rem;
 }
 
 main .galery {
+  position: relative;
+  padding-block: 19rem 8rem;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.2rem;
+
+  overflow-y: scroll;
 }
 
 main .card {  
@@ -196,6 +218,10 @@ main .infos h2 {
 }
 
 footer {
+  background: var(--color-bg-white);
+  grid-area: 'Footer';
+  bottom: 0;
+
   --startY: 100%;
   animation: move 300ms;
 }
@@ -204,8 +230,6 @@ footer p {
   padding-inline: 1.6rem;
   line-height: 1.6rem;
   font-weight: 600;
-
-  display: flex;
   justify-content: center;
 }
 
@@ -224,5 +248,47 @@ footer p {
   50% {
     opacity: 0;
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 800px) {
+  header .container, header nav, nav ul {
+    gap: 4rem;
+  }
+  
+  header {
+    height: 130px;
+  }
+
+  header:nth-child(1)  {
+    .container {
+      padding-block: 1rem 0;
+    }
+  }
+  
+  header .form-desktop {
+    display: none;
+  }
+  
+  header .form-mobile {
+    display: block;
+  }
+
+  main {
+    margin-top: 4rem;
+
+    .container {
+      padding-top: 0rem;
+    }
+  }
+
+  main .galery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main .galery {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
