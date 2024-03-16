@@ -7,14 +7,13 @@
 <br><br><br>
 
 <!--About session-->
-<h1 align="center"> Project CatBlog - blog de gatos </h1>
+<h1 align="center"> Project CatBlog - Blog de gatos </h1>
 
 
 <div align="center">
-  <video alt="CatBlog - o blog de gatos" src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/53bf240c-71d6-425d-8a6b-d1688b58d8a4">
+  <video alt="CatBlog - o blog de gatos" src="https://github.com/MichelleCordeiro/rocketseat-explorer/assets/42891377/13b9ff5a-3ccd-4b8e-a4f4-6c235ba97a8c">
 </div>
 <br><br>
-
 
 <h3> 🚀 Technologies </h3>
 
@@ -30,14 +29,15 @@ This project was developed using the following technologies:
 <h3> 👩‍💻 Learnings </h3>
 
 You can see the project code in this [repository](
-  https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-08-photoblog) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-08-photoblog)
+  https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css/project-09-catblog) and see it online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-03-form-responsive-advanced-css/project-09-catblog)
 
  - grid layout
- <!-- - filters -->
- <!-- - animations -->
+ - mobile first
+ - filters
  - responsive layout
  - clamp function
  - CSS variables
+ - hue colors
 
 
 <br>
