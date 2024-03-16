@@ -14,10 +14,12 @@
   --fs-side-title: 1.8rem;
   --fs-side-p: 1.4rem;
 
-  --sky-300: hsl(195, 43%, 55%);
-  --sky-500: hsl(195, 46%, 40%);
-  --sky-800: hsl(195, 91%, 25%);
-  --black-title: hsl(240, 6%, 13%);
+  --hue: 585;
+  --sky-100: hsl(var(--hue), 30%, 97%);
+  --sky-300: hsl(var(--hue), 43%, 55%);
+  --sky-500: hsl(var(--hue), 46%, 40%);
+  --sky-800: hsl(var(--hue), 91%, 25%);
+  --black-title: hsl(var(--hue), 16%, 43%);
   --black-p: hsl(240, 5%, 7%);
   --white: hsl(0, 0%, 100%);
   
@@ -29,7 +31,7 @@ header, footer {
 }
 
 body {
-  background: var(--white);
+  background: var(--sky-100);
 }
 
 #app {
@@ -46,7 +48,8 @@ body {
 
 header .container, 
 header form .input-wrapper, 
-main, 
+main,
+sidebar .posts,
 sidebar .posts figure, 
 footer {
   display: flex;
@@ -90,6 +93,7 @@ form .input-wrapper input {
   border-radius: 4px;
   padding: 1.2rem 1.4rem;
 
+  color: var(--white);
   font-size: var(--fs-p-search-footer);
   font-weight: 500;
   border: none;
@@ -123,16 +127,20 @@ main .infos {
         x - 160%
         x = 25,6px */
     line-height: 2.5rem;
-    font-weight: bold;
+    font-weight: 700;
   }
 
-  .button-hands img {
-    width: 4rem;
-    height: 4rem;
-    object-fit: cover;
-
-    padding: 1rem 1.2rem 3rem 0;
+  .button-hands {
+    display: flex;
     cursor: pointer;
+    
+    .img-circle {
+      width: 4rem;
+      height: 4rem;
+      background: var(--sky-500);
+      border-radius: 50%;
+      margin: 1rem 1.2rem 3rem 0;
+    }
   }
 
   p {
@@ -148,29 +156,35 @@ sidebar {
   h2 {
     color: var(--black-title);
     font-size: var(--fs-title);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 2.5rem;
   }
   
   .posts {
     padding-top: 3.2rem;
+    flex-direction: column;
   }
   
   .posts figure {
+    background: var(--white);
+    border-radius: 8px;
     justify-content: start;
-    padding-bottom: 3.2rem;
     gap: 1.6rem;
-
+    padding: 1rem;
+    cursor: pointer;
+    
     img {
       width: clamp(10rem, 2rem + 10vw, 15rem);
       height: auto;
-      display: flex;
-      object-fit: contain;
-      align-self: start;
+      object-fit: cover;
+      
+      padding-top: 0.6rem;
     }
-
+    
     h3 {
+      color: var(--black-title);
       font-size: var(--fs-side-title);
+      font-weight: 600;
       padding-bottom: 1.2rem;
     }
 
@@ -178,6 +192,14 @@ sidebar {
       color: var(--black-p);
       font-size: var(--fs-side-p);
       line-height: 2rem;
+    }
+  }
+
+  .posts figure:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  
+    img {
+      filter: contrast(101%) saturate(200%);
     }
   }
 }
@@ -220,15 +242,14 @@ footer {
         padding-bottom: 3rem;
       }
 
-      .button-hands img {
-        padding: 0 0.2rem 0 1.2rem;
+      .button-hands .img-circle {
+        margin: 0 0.2rem 0 1.2rem;
       }
     }
   }
 
   sidebar {
     padding-block: 4rem;
-    /* padding: 4rem 11.2rem 4rem 3.4rem; */
     padding-inline: 3.4rem clamp(3rem, 0.5rem + 6vw, 11.2rem);
   }
 }
