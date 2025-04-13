@@ -8,7 +8,7 @@
 
 :root {
   font-size: 62.5%;
-  
+
   --hue: 190;
   --color-bg-white: hsl(0, 0%, 100%);
   --color-bg-gray-100: hsl(0, 0%, 96%);
@@ -38,8 +38,11 @@ body {
 #app {
   display: grid;
   /* grid-template-rows: min-content 1fr min-content; */
-  grid-template-areas: 'Header Galery Footer';
-  grid-template-columns: auto;
+  grid-template-areas:
+    'Header'
+    'Galery'
+    'Footer'
+  ;
 }
 
 .container {
@@ -55,21 +58,16 @@ header .container, nav, nav ul, footer p {
   justify-content: space-between;
 }
 
-header, main .container-h1, footer { 
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-}
-
 header {
   background: var(--color-bg-white);
   grid-area: 'Header';
 
   display: flex;
   flex-direction: column;
-  
-  --startY: -100%;
-  animation: move 300ms;
+}
+
+header .container:last-child {
+  padding: 0 3.2rem;
 }
 
 header img {
@@ -143,11 +141,6 @@ main {
   background: var(--color-bg-gray-100);
 }
 
-main .container-h1 {
-  background: var(--color-bg-gray-100);
-  margin-top: 9rem;
-}
-
 main h1 {
   font-size: var(--fs-h1);
   /* padding-top: clamp(2rem, 1vh + 0.1rem, 3.6rem); */
@@ -155,25 +148,20 @@ main h1 {
 }
 
 main .galery {
-  position: relative;
-  padding-block: 19rem 8rem;
+  padding-block: 3.6rem 6.4rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.2rem;
-
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
-main .card {  
+main .card {
   /* width: 39rem; */
   border: none;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
-
-  --delay: 0.4s;
-  animation: appear 400ms var(--delay) backwards;
 }
 
 main .card:hover {
@@ -197,8 +185,6 @@ main .card img:hover {
 
 main .card .infos {
   background: var(--color-bg-white);
-  z-index: 1;
-  position: relative;
   padding: 2.2rem;
 }
 
@@ -221,9 +207,6 @@ footer {
   background: var(--color-bg-white);
   grid-area: 'Footer';
   bottom: 0;
-
-  --startY: 100%;
-  animation: move 300ms;
 }
 
 footer p {
@@ -231,6 +214,57 @@ footer p {
   line-height: 1.6rem;
   font-weight: 600;
   justify-content: center;
+}
+
+@media (max-width: 800px) {
+  header .container, header nav, nav ul {
+    gap: 4rem;
+  }
+
+  header {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  header:nth-child(1)  {
+    .container {
+      padding-block: 1rem 0;
+    }
+  }
+
+  header .form-desktop {
+    display: none;
+  }
+
+  header .form-mobile {
+    display: block;
+  }
+
+  main .galery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main .galery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+header {
+  --startY: -100%;
+  animation: move 300ms;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 300ms;
+}
+
+main .card {
+  --delay: 0.4s;
+  animation: appear 400ms var(--delay) backwards;
 }
 
 @keyframes move {
@@ -248,47 +282,5 @@ footer p {
   50% {
     opacity: 0;
     transform: scale(1.2);
-  }
-}
-
-@media (max-width: 800px) {
-  header .container, header nav, nav ul {
-    gap: 4rem;
-  }
-  
-  header {
-    height: 130px;
-  }
-
-  header:nth-child(1)  {
-    .container {
-      padding-block: 1rem 0;
-    }
-  }
-  
-  header .form-desktop {
-    display: none;
-  }
-  
-  header .form-mobile {
-    display: block;
-  }
-
-  main {
-    margin-top: 4rem;
-
-    .container {
-      padding-top: 0rem;
-    }
-  }
-
-  main .galery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  main .galery {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
