@@ -27,10 +27,6 @@
   <code><img height="33" alt="figma logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/></code>
 </p>
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) - hypertext markup language used in building web applications
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - cascading style sheets is a language used for styling
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript) - programming language that allows you to implement complex items in web pages
-
 <br>
 
 <!-- Learnning session -->

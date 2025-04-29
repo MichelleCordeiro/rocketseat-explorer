@@ -215,3 +215,111 @@ footer {
   padding: 3.2rem;
   margin: auto;
 }
+
+@media (min-width: 870px) {
+  main .contact {
+    width: auto;
+    padding-left: 16rem;
+
+    background: url(./assets/background.png) no-repeat right;
+  }
+
+  main .contact .input-wrapper {
+    width: 50.5rem;
+  }
+
+  main .input-wrapper:last-child {
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1291px) {
+  :root {
+    --fs-title: 5.8rem;
+    --fs-h2: 4.2rem;
+    --fs-h3: 3.5rem;
+    --fs-subtitle: 3.2rem;
+    --fs-text: 2rem;
+    --fs-input: 1.6rem;
+  }
+
+  h2 {
+    font-size: var(--fs-h2);
+  }
+
+  header p {
+    font-size: var(--fs-subtitle);
+  }
+
+  footer p {
+    font-size: var(--fs-text);
+  }
+
+  header {
+    width: 120rem;
+    justify-self: center;
+
+    background-position: top right;
+    background-size: 71rem;
+
+    padding: 0;
+    margin-inline: 4rem;
+  }
+
+  header .content {
+    width: 100%;
+    justify-items: start;
+    margin-right: 2.8rem;
+    padding-block: 31.2rem 13.6rem;
+
+
+    button {
+      margin-top: 18rem;
+    }
+  }
+
+  main .cards {
+    display: grid;
+    justify-items: center;
+
+    padding-inline: 15rem;
+  }
+
+  main .input-wrapper button {
+    font-size: var(--fs-input);
+  }
+}
+
+
+  header {
+    animation: moveBackground 900ms;
+  }
+
+  main .card:first-child {
+    animation: showCards 900ms 0.5s;
+  }
+
+  main .card:nth-child(2) {
+    animation: showCards 900ms 1s;
+  }
+
+  main .card:last-child {
+    animation: showCards 900ms 1.5s;
+
+  }
+
+  @keyframes moveBackground {
+    from {
+      background-position-y: -500%;
+    }
+  }
+
+  @keyframes showCards {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
