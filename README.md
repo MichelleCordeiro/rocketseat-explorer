@@ -17,67 +17,77 @@
 <!-- Infos session -->
 <h3> 💻 Projetos </h3>
 
-├── [stage-02-html-css](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css)
-│   ├── project-01
-│   ├── project-01-bugs-desafio-iniciante
-│   ├── project-02
-│   ├── project-02-a11y-desafio-intermediario
-│   ├── project-02-bugs-desafio-iniciante
-│   ├── project-1extra-desafio-intermediario
-│   ├── project-2extra-desafio-avancado
-├── [stage-03-form-responsive-advanced-css](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css)
-│   ├── project-03-form-desafio-intermediario
-│   ├── project-05-mobile-desafio-avancado
-│   ├── project-05-mobile-desafio-intermediario
-│   ├── project-05-toupeiras-desafio-avancado
-│   ├── project-06-cheesecake
-│   ├── project-07-galaxies
-│   ├── project-08-photoblog
-│   ├── project-09-catblog
-│   ├── project-extra-desafio-avancado
-│   ├── projeto-03
-│   ├── projeto-04
-│   └── projeto-05
-├── [extras](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/extras/indieland)
-│   └── indieland
-├── [stage-01-04-intensivao](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-01-04-intensivao/desafio-explore-sem-limites)
-│   └── desafio-explore-sem-limites
-├── [stage-04-javascript](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-04-javascript)
-│   ├── 01
-│   ├── 02
-│   ├── 03
-│   ├── 04
-│   ├── 05
-│   ├── 06
-│   ├── 07
-│   ├── 08
-│   ├── 09
-│   ├── 10
-│   ├── desafio01
-│   ├── desafio02
-├── [stage-05-javascript-advanced](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-05-javascript-advanced)
-│   ├── proj-01-desafio-fortune-cookie
-│   ├── proj-01-guessing-game
-│   ├── proj-02-imc
-│   ├── proj-03-modules-anotations
-│   ├── proj-04-focus-timer
-│   └── proj-05-focus-timer-desafio
-├── [stage-06-javascript-spa](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa)
-│   ├── proj-01-desafio-universe
-│   ├── proj-01-spa-node
-│   ├── proj-02-desafio-drinkFav
-│   └── proj-02-github-favorites
-├── [stage-08-backend](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-08-backend)
-│   ├── api
-│   └── desafio-movies
-├── [stage-09-frontend](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-09-frontend)
-│   ├── desafio-movie
-│   └── rocketnotes
-├── [stage-10-api-restful](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-10-api-restful)
-│   ├── api
-│   └── desafio-movies
-└── [stage-11-deploy](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-11-deploy/desafio-movies)
-    └── desafio-movies
+├──📁 [stage-02-html-css/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-02-html-css)<br>
+│   ├───📁 project-01/<br>
+│   ├───📁 project-01-bugs-desafio-iniciante/<br>
+│   ├───📁 project-02/<br>
+│   ├───📁 project-02-a11y-desafio-intermediario/<br>
+│   ├───📁 project-02-bugs-desafio-iniciante/<br>
+│   ├───📁 project-1extra-desafio-intermediario/<br>
+│   └───📁 project-2extra-desafio-avancado/<br>
+├──📁 [stage-03-form-responsive-advanced-css/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-03-form-responsive-advanced-css)<br>
+│   ├───📁 project-03-form-desafio-intermediario/<br>
+│   ├───📁 project-05-mobile-desafio-avancado/<br>
+│   ├───📁 project-05-mobile-desafio-intermediario/<br>
+│   ├───📁 project-05-toupeiras-desafio-avancado/<br>
+│   ├───📁 project-06-cheesecake/<br>
+│   ├───📁 project-07-galaxies/<br>
+│   ├───📁 project-08-photoblog/<br>
+│   ├───📁 project-09-catblog/<br>
+│   ├───📁 project-extra-desafio-avancado/<br>
+│   ├───📁 projeto-03/<br>
+│   ├───📁 projeto-04/<br>
+│   └───📁 projeto-05/<br>
+├──📁 [extras/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/extras/indieland)<br>
+│   └───📁 indieland/<br>
+├──📁 [stage-04-javascript/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-04-javascript)<br>
+│   ├───📁 01/<br>
+│   ├───📁 02/<br>
+│   ├───📁 03/<br>
+│   ├───📁 04/<br>
+│   ├───📁 05/<br>
+│   ├───📁 06/<br>
+│   ├───📁 07/<br>
+│   ├───📁 08/<br>
+│   ├───📁 09/<br>
+│   ├───📁 10/<br>
+│   ├───📁 desafio01/<br>
+│   └───📁 desafio02/<br>
+├──📁 [stage-01-04-intensivao/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-01-04-intensivao/desafio-explore-sem-limites)<br>
+│   └───📁 desafio-explore-sem-limites/<br>
+│   └───📁 [desafios-javascript/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-01-04-intensivao/desafios-javascript)<br>
+│       ├───📁 01/<br>
+│       ├───📁 02/<br>
+│       ├───📁 03/<br>
+│       ├───📁 04/<br>
+│       ├───📁 05/<br>
+│       ├───📁 06/<br>
+│       ├───📁 07/<br>
+│       ├───📁 08/<br>
+│       └───📁 09-10/<br>
+├──📁 [stage-05-javascript-advanced/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-05-javascript-advanced)<br>
+│   ├───📁 proj-01-desafio-fortune-cookie/<br>
+│   ├───📁 proj-01-guessing-game/<br>
+│   ├───📁 proj-02-imc/<br>
+│   ├───📁 proj-03-modules-anotations/<br>
+│   ├───📁 proj-04-focus-timer/<br>
+│   └───📁 proj-05-focus-timer-desafio/<br>
+├──📁 [stage-06-javascript-spa/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa)<br>
+│   ├───📁 proj-01-desafio-universe/<br>
+│   ├───📁 proj-01-spa-node/<br>
+│   ├───📁 proj-02-desafio-drinkFav/<br>
+│   └───📁 proj-02-github-favorites/<br>
+├──📁 [stage-08-backend/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-08-backend)<br>
+│   ├───📁 api/<br>
+│   └───📁 desafio-movies/<br>
+├──📁 [stage-09-frontend/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-09-frontend)<br>
+│   ├───📁 desafio-movie/<br>
+│   └───📁 rocketnotes/<br>
+├──📁 [stage-10-api-restful/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-10-api-restful)<br>
+│   ├───📁 api/<br>
+│   └───📁 desafio-movies/<br>
+├──📁 [stage-11-deploy/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-11-deploy/desafio-movies)<br>
+│   └───📁 desafio-movies/<br>
 
 
 <br>
