@@ -4,19 +4,19 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 :root {
   font-size: 62.5%;
-  --fs-h1-h2: 3.2rem;
+  --fs-title: 3.2rem;
   --fs-h3: 2.9rem;
-  --fs-subtitle-footer: 2rem;
-  --fs-p-input: 1.6rem;
+  --fs-subtitle: 2rem;
+  --fs-text: 1.6rem;
   --fs-summit: 1.4rem;
-  --fs-card-p-input: 0.8rem;
 
   --background-primary: #F9F4FB;
-  --background-secondary: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  --background-secondary: linear-gradient(96.21deg, #3376DB 0%, #302C63 99.68%);
   --color-title: #B52184;
   --color-text: #312D64;
 }
@@ -27,11 +27,30 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-  font-size: var(--fs-h1-h2);
+  font-size: var(--fs-title);
 }
 
 header p, footer p {
-  font-size: var(--fs-subtitle-footer);
+  font-size: var(--fs-subtitle);
+}
+
+main .cards,
+main .contact .input-wrapper button,
+footer {
+  background: var(--background-secondary);
+  color: var(--background-primary);
+}
+
+body,
+main .card,
+main .input-wrapper input,
+main .input-wrapper input::placeholder,
+main .input-wrapper textarea,
+main .input-wrapper textarea::placeholder {
+  font: 600 var(--fs-text) "Mulish", sans-serif;
+  user-select: none;
+  background: var(--background-primary);
+  color: var(--color-text);
 }
 
 button {
@@ -39,16 +58,7 @@ button {
   cursor: pointer;
 }
 
-body {
-  font: 600 var(--fs-p-input) "Mulish", sans-serif;
-  background-color: var(--background-primary);
-  color: var(--color-text);
-
-  user-select: none;
-}
-
 #app {
-  max-width: 43rem;
   margin: 0 auto;
 
   display: grid;
@@ -63,9 +73,11 @@ header {
   grid-area: 'hero';
   justify-items: center;
 
-  img {
-    max-width: 38.4rem;
-  }
+  background: url(./assets/astronaut.png) no-repeat;
+  background-position: top center;
+  background-size: 36.4rem;
+
+  padding-top: 37rem;
 }
 
 header .content {
@@ -73,36 +85,38 @@ header .content {
   padding-block: 1.7rem 9.3rem;
 
   h1 {
-    font-size: var(--fs-h1-h2);
     padding-bottom: 0.5rem;
   }
 
-  button {
+  .main-btn img {
     margin-top: 3.5rem;
-    line-height: 0;
+    transition: scale 0.3s ease-in-out;
+  }
+
+  .main-btn:hover {
+    filter: hue-rotate(280deg);
+    scale: 1.02;
   }
 }
 
 main {
   grid-area: 'main';
-  margin: auto;
 }
 
 main .cards {
-  background: var(--background-secondary);
   padding: 5.3rem 3.9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(35.2rem, 36.6rem));
+
   gap: 5rem;
 }
 
 main .card {
-  max-width: 35.2rem;
-  background: var(--background-primary);
   border-radius: 2rem;
-
   padding: 2.6rem 6rem 2.6rem 2.6rem;
+
+  transition: box-shadow 0.7s ease-in-out;
 
   .card-img {
     max-width: 8rem;
@@ -115,13 +129,16 @@ main .card {
   }
 }
 
-main .contact {
-  max-width: 35.2rem;
-  margin: auto;
-  padding-top: 7.8rem;
-  /* padding-bottom: calc(6.5rem - 2.4rem); */
+main .card:hover {
+  box-shadow: 2px 3px 19px 0px var(--background-primary);
+  -webkit-box-shadow: 2px 3px 19px 0px var(--background-primary);
+  -moz-box-shadow: 2px 3px 19px 0px var(--background-primary);
+}
 
-  /* background: url(./assets/background.png) no-repeat right; */
+main .contact {
+  width: 35.2rem;
+  margin: auto;
+  padding-block: 7.8rem 6.5rem;
 
   h2 {
     padding-bottom: 4.3rem;
@@ -139,7 +156,6 @@ main .contact .input-wrapper {
   margin-bottom: 2.4rem;
 
   .input-icon {
-    /* position: absolute; */
     width: 2.4rem;
     height: 2.4rem;
     pointer-events: none;
@@ -156,21 +172,12 @@ main .contact .input-wrapper {
 }
 
 main .input-wrapper input,
-main .input-wrapper input::placeholder,
-main .input-wrapper textarea,
-main .input-wrapper textarea::placeholder {
-  font: 600 var(--fs-p-input) "Mulish", sans-serif;
-  color: var(--color-text);
-}
-
-main .input-wrapper input,
 main .input-wrapper textarea,
 main .input-wrapper button {
   width: 100%;
   height: 100%;
   padding-block: 1.2rem;
 
-  background-color: transparent;
   border: none;
 }
 
@@ -184,20 +191,25 @@ main .input-wrapper:last-child {
   overflow: hidden;
 
   padding-inline: 0;
-  margin-block: 9rem 6.5rem;
+  margin-top: 9rem;
 }
 
 main .input-wrapper button {
   width: auto;
-  background: var(--background-secondary);
-  color: var(--background-primary);
   font-size: var(--fs-summit);
   padding-inline: 1.4rem;
+  transition: filter,scale 0.5s ease-out;
+}
+
+main .input-wrapper button:hover {
+  filter: hue-rotate(20deg);
+  scale: 1.02;
 }
 
 footer {
-  background: var(--background-secondary);
-  color: var(--background-primary);
+  grid-area: 'footer';
+  width: 100%;
+
   justify-items: center;
 
   padding: 3.2rem;
