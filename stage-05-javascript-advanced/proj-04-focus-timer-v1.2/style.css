@@ -8,10 +8,51 @@
   font-size: clamp(40%, 1% + 2vw, 62.5%);
 
   --hue: 194;
-  --text-color: hsl(0, 0%, 100%);
-  --bg-color: hsl(240, 5%, 7%);
+  --bg-color: hsl(var(--hue), 5%, 7%);
+  --text-color: hsl(var(--hue), 20%, 92%);
   --primary-color: hsl(var(--hue), 100%, 63%);
-  --controls-bg-color: hsl(var(--hue), 0, 14%);
+  --controls-bg-color: hsl(var(--hue), 0%, 14%);
+  --button-secondary: hsl(var(--hue), 40%, 98%);
+}
+
+html.light {
+  --bg-color: hsl(var(--hue), 20%, 92%);
+  --text-color: hsl(var(--hue), 5%, 7%);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+  display: none;
+}
+
+.no-select {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+
+  font-size: 3.2rem;
+  line-height: 0;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
 }
 
 body {
@@ -35,13 +76,6 @@ body {
   display: flex;
 }
 
-.no-select {
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-}
-
 #timer {
   font-size: 9.6rem;
   font-weight: bold;
@@ -56,6 +90,13 @@ body {
   gap: 1.6rem;
 }
 
+/* controls */
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none {
+  display: none;
+}
+
 button {
   background: transparent;
   color: var(--primary-color);
@@ -67,5 +108,5 @@ button {
 }
 
 .secondary {
-  color: var(--text-color)
+  color: var(--button-secondary)
 }
