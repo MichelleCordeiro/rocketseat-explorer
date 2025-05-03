@@ -6,11 +6,11 @@
 <br><br><br>
 
 <!--About session-->
-<h1 align="center"> Focus Timer - Pomodore </h1>
+<h1 align="center"> Focus Timer v1.2  - Pomodore </h1>
 
 
 <div align="center">
-  <video src="https://user-images.githubusercontent.com/42891377/233504005-1fe74d51-8388-4a9b-934b-d00a4c15adc8.mp4"></video>
+  <img src="./assets/desktop-mobile.png" alt="Imagem desktop e mobile" width="700">
 </div>
 <br>
 
@@ -47,7 +47,7 @@ This challenge was developed using the following technologies:
 
 Develop project from [figma layout](https://www.figma.com/design/mzO69yGTFaMWyLF8h8mYhC/Focus-Timer-V2-%E2%80%A2-Projeto-Explorer--Community-?node-id=1418-2&t=Zg00DXLEn7C2Abm7-0).
 
-You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-04-focus-timer/).
+You can see the project online [here](https://MichelleCordeiro.github.io/rocketseat-explorer/stage-05-javascript-advanced/proj-04-focus-timer-v1.2/).
 
 <br><br>
 

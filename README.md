@@ -56,21 +56,22 @@
 ├──📁 [stage-01-04-intensivao/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-01-04-intensivao/desafio-explore-sem-limites)<br>
 │   └───📁 desafio-explore-sem-limites/<br>
 │   └───📁 [desafios-javascript/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-01-04-intensivao/desafios-javascript)<br>
-│       ├───📁 01/<br>
-│       ├───📁 02/<br>
-│       ├───📁 03/<br>
-│       ├───📁 04/<br>
-│       ├───📁 05/<br>
-│       ├───📁 06/<br>
-│       ├───📁 07/<br>
-│       ├───📁 08/<br>
-│       └───📁 09-10/<br>
+│   ├─────📁 01/<br>
+│   ├─────📁 02/<br>
+│   ├─────📁 03/<br>
+│   ├─────📁 04/<br>
+│   ├─────📁 05/<br>
+│   ├─────📁 06/<br>
+│   ├─────📁 07/<br>
+│   ├─────📁 08/<br>
+│   └─────📁 09-10/<br>
 ├──📁 [stage-05-javascript-advanced/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-05-javascript-advanced)<br>
 │   ├───📁 proj-01-desafio-fortune-cookie/<br>
 │   ├───📁 proj-01-guessing-game/<br>
 │   ├───📁 proj-02-imc/<br>
 │   ├───📁 proj-03-modules-anotations/<br>
 │   ├───📁 proj-04-focus-timer/<br>
+│   ├───📁 proj-04-focus-timer-v1.2/<br>
 │   └───📁 proj-05-focus-timer-desafio/<br>
 ├──📁 [stage-06-javascript-spa/](https://github.com/MichelleCordeiro/rocketseat-explorer/tree/main/stage-06-javascript-spa)<br>
 │   ├───📁 proj-01-desafio-universe/<br>
